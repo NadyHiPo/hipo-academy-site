@@ -58,6 +58,23 @@ hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(-
 
 /* MAIN COURSE */
 .course-hero{display:grid;grid-template-columns:1.3fr 1fr;gap:4rem;align-items:start}
+
+/* TARIFF BLOCKS */
+.tariff-block{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;margin-bottom:1.5rem}
+.tariff-block.featured{border-color:var(--gold-border2);background:rgba(201,162,87,.04)}
+.tariff-block-head{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--gold-border)}
+.tariff-block-tag{font-size:.68rem;font-weight:500;letter-spacing:.16em;color:var(--teal);margin-bottom:.4rem;text-transform:uppercase}
+.tariff-block-name{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;color:var(--gold);margin-bottom:.85rem;line-height:1.1}
+.tariff-block-desc{font-size:.95rem;color:var(--text2);line-height:1.8;font-weight:300;max-width:520px}
+.tariff-block-price{text-align:right;min-width:160px}
+.tp-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--white);line-height:1}
+.module-detail{margin-bottom:1.75rem}
+.module-detail:last-child{margin-bottom:0}
+.module-num{font-size:.68rem;font-weight:600;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:.4rem}
+.module-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;color:var(--white);margin-bottom:.85rem;line-height:1.25}
+.module-points{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.5rem}
+.module-points li{font-size:.87rem;color:var(--text2);padding-left:1rem;position:relative;line-height:1.5;font-weight:300}
+.module-points li::before{content:'—';position:absolute;left:0;color:var(--gold)}
 .course-tag{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:1rem}
 .course-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:500;color:var(--white);line-height:1.1;margin-bottom:1.25rem}
 .course-title em{font-style:italic;color:var(--gold)}
@@ -107,11 +124,15 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
 .footer-links a{font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-decoration:none}
 .footer-links a:hover{color:var(--gold)}
-.footer-copy{font-size:.72rem;color:var(--muted);line-height:1.8;text-align:right}
+.footer-copy{font-size:.78rem;color:#a8b0c8;line-height:1.9;text-align:right}
+.footer-copy a{color:var(--gold);text-decoration:underline}
 
 @media(max-width:900px){
   .free-banner,.course-hero{grid-template-columns:1fr}
   .mods-full,.tariffs-grid,.testi-grid{grid-template-columns:1fr}
+  .tariff-block-head{grid-template-columns:1fr}
+  .tariff-block-price{text-align:left}
+  .module-points{grid-template-columns:1fr}
 }
 @media(max-width:640px){
   .mods-full{grid-template-columns:1fr 1fr}
@@ -164,64 +185,165 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   <div class="wrap">
     <div class="eyebrow-sec">Флагманский курс</div>
     <h2 class="sec">«Мастер <em>управления</em>»</h2>
-    <p class="sec-sub">Системная программа для руководителей — от основ лидерства до коучинг-стиля управления командой.</p>
+    <p class="sec-sub">Системная программа для руководителей — от фундамента до полного погружения в управление командой.</p>
 
-    <div class="course-hero">
-      <div>
-        <div class="course-tag">Что входит</div>
-        <div class="course-title">9 модулей <em>живого обучения</em></div>
-        <p class="course-desc">Живые встречи, разборы реальных кейсов, игра «Корпорация Звёзд» как часть программы, персональная обратная связь от эксперта на каждом этапе.</p>
-        <div class="mods-full" style="margin-top:0">
-          <div class="mod-card"><div class="mod-n">01</div><div class="mod-title">Основы управления</div></div>
-          <div class="mod-card"><div class="mod-n">02</div><div class="mod-title">Роль руководителя</div></div>
-          <div class="mod-card"><div class="mod-n">03</div><div class="mod-title">Ситуационное лидерство</div></div>
-          <div class="mod-card"><div class="mod-n">04</div><div class="mod-title">Гибкое управление</div></div>
-          <div class="mod-card"><div class="mod-n">05</div><div class="mod-title">Найм и адаптация</div></div>
-          <div class="mod-card"><div class="mod-n">06</div><div class="mod-title">Мотивация команды</div></div>
-          <div class="mod-card"><div class="mod-n">07</div><div class="mod-title">Контроль без стресса</div></div>
-          <div class="mod-card"><div class="mod-n">08</div><div class="mod-title">Коучинг-стиль</div></div>
-          <div class="mod-card"><div class="mod-n">09</div><div class="mod-title">Манипуляции и стресс</div></div>
+    <div class="levels-box" style="margin-bottom:3rem">
+      <div class="levels-title">Работаем на трёх уровнях</div>
+      <div class="level"><div class="level-n">01</div><div class="level-text"><strong>Личность руководителя</strong><br>уверенность, эмоциональный интеллект, готовность к роли</div></div>
+      <div class="level"><div class="level-n">02</div><div class="level-text"><strong>Команда и процессы</strong><br>делегирование, KPI, обратная связь, мотивация</div></div>
+      <div class="level"><div class="level-n">03</div><div class="level-text"><strong>Бизнес-модель и масштабирование</strong><br>системное мышление и рост без хаоса</div></div>
+    </div>
+
+    <!-- TARIFF OSNOVA -->
+    <div class="tariff-block">
+      <div class="tariff-block-head">
+        <div>
+          <div class="tariff-block-tag">Тариф</div>
+          <div class="tariff-block-name">Основа</div>
+          <p class="tariff-block-desc">Базовые знания об управлении — фундаментальные основы, от которых можно дальше развивать навыки и инструменты. Первые 3 модуля — стартовая точка в управлении.</p>
+        </div>
+        <div class="tariff-block-price">
+          <div class="tp-num">36 000 ₽</div>
+          <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline" style="font-size:.78rem;padding:.6rem 1.5rem;margin-top:.75rem">Выбрать тариф</a>
         </div>
       </div>
-      <div class="levels-box">
-        <div class="levels-title">Работаем на трёх уровнях</div>
-        <div class="level"><div class="level-n">01</div><div class="level-text"><strong>Личность руководителя</strong><br>уверенность, эмоциональный интеллект, готовность к роли</div></div>
-        <div class="level"><div class="level-n">02</div><div class="level-text"><strong>Команда и процессы</strong><br>делегирование, KPI, обратная связь, мотивация</div></div>
-        <div class="level"><div class="level-n">03</div><div class="level-text"><strong>Бизнес-модель и масштабирование</strong><br>системное мышление и рост без хаоса</div></div>
+      <div class="module-detail">
+        <div class="module-num">Модуль 1</div>
+        <div class="module-name">Основы управления персоналом</div>
+        <ul class="module-points">
+          <li>Что такое управление персоналом</li>
+          <li>Этапы формирования команды</li>
+          <li>Командная культура и ценности</li>
+          <li>Круги влияния и ответственности</li>
+          <li>Работа с конфликтами</li>
+          <li>Нейронаука и психология в управлении</li>
+        </ul>
+      </div>
+      <div class="module-detail">
+        <div class="module-num">Модуль 2</div>
+        <div class="module-name">Роль руководителя и управление процессами</div>
+        <ul class="module-points">
+          <li>Роль руководителя</li>
+          <li>Цикл управления персоналом</li>
+          <li>Планирование</li>
+          <li>Организация процессов и ресурсов</li>
+          <li>Мотивация</li>
+          <li>Контроль</li>
+        </ul>
+      </div>
+      <div class="module-detail">
+        <div class="module-num">Модуль 3</div>
+        <div class="module-name">Ситуационное лидерство</div>
+        <ul class="module-points">
+          <li>Концепция ситуационного лидерства</li>
+          <li>Уровни развития сотрудников и стили руководства</li>
+          <li>Диагностика стиля</li>
+          <li>Применение в реальных кейсах</li>
+          <li>Закрепление через фильмы</li>
+          <li>Типология DISC</li>
+        </ul>
       </div>
     </div>
 
-    <div id="tariffs" class="tariffs-grid">
-      <div class="tcard">
-        <div class="t-name">Основа</div>
-        <div class="t-price">36 000 ₽</div>
-        <ul class="t-list">
-          <li>9 модулей программы</li>
-          <li>Доступ к записям встреч</li>
-          <li>Рабочие материалы и шаблоны</li>
-        </ul>
-        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline" style="width:100%">Выбрать тариф</a>
+    <!-- TARIFF MASTER -->
+    <div class="tariff-block featured">
+      <div class="tariff-block-head">
+        <div>
+          <div class="tariff-block-tag">Тариф</div>
+          <div class="tariff-block-name">Мастер</div>
+          <p class="tariff-block-desc">Углубление в знания и навыки. Если у вас уже есть база — начните сразу с тарифа «Мастер» и совершенствуйтесь. Включает модули 4–9.</p>
+        </div>
+        <div class="tariff-block-price">
+          <div class="tp-num">64 000 ₽</div>
+          <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.6rem 1.5rem;margin-top:.75rem">Выбрать тариф</a>
+        </div>
       </div>
-      <div class="tcard">
-        <div class="t-name">Мастер</div>
-        <div class="t-price">36 000 ₽</div>
-        <ul class="t-list">
-          <li>Всё из тарифа «Основа»</li>
-          <li>Игра «Корпорация Звёзд» в программе</li>
-          <li>Групповые разборы кейсов</li>
+      <div class="module-detail">
+        <div class="module-num">Модуль 4</div>
+        <div class="module-name">Гибкое управление и адаптация к реальности</div>
+        <ul class="module-points">
+          <li>Управление в нестабильных условиях</li>
+          <li>Диагностика команды</li>
+          <li>Коррекция процессов</li>
+          <li>Быстрая смена курса без потерь</li>
+          <li>Работа с сопротивлением</li>
+          <li>Инструменты антикризисного управления</li>
         </ul>
-        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline" style="width:100%">Выбрать тариф</a>
       </div>
-      <div class="tcard featured">
-        <div class="t-name">Эксперт</div>
-        <div class="t-price">64 000 ₽</div>
-        <ul class="t-list">
-          <li>Всё из тарифа «Мастер»</li>
-          <li>Персональная обратная связь</li>
-          <li>Индивидуальная мини-стратсессия</li>
+      <div class="module-detail">
+        <div class="module-num">Модуль 5</div>
+        <div class="module-name">Найм и адаптация сотрудников</div>
+        <ul class="module-points">
+          <li>Подбор под задачи</li>
+          <li>Интервью по компетенциям</li>
+          <li>Адаптационный маршрут</li>
+          <li>Наставничество</li>
+          <li>Ошибки в найме и как их избежать</li>
         </ul>
-        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold" style="width:100%">Выбрать тариф</a>
       </div>
+      <div class="module-detail">
+        <div class="module-num">Модуль 6</div>
+        <div class="module-name">Мотивация и самомотивация</div>
+        <ul class="module-points">
+          <li>Внутренние и внешние стимулы</li>
+          <li>Типы мотивации сотрудников</li>
+          <li>Как не «перегорать» самому</li>
+          <li>Поддержание вовлечённости</li>
+          <li>Мотивационные ошибки</li>
+          <li>Система признания и смысла</li>
+        </ul>
+      </div>
+      <div class="module-detail">
+        <div class="module-num">Модуль 7</div>
+        <div class="module-name">Контроль, который не душит</div>
+        <ul class="module-points">
+          <li>Методы контроля</li>
+          <li>KPI, OKR, информационные панели</li>
+          <li>Как делегировать полномочия и при этом знать, что всё под контролем</li>
+          <li>Финансовый контроль</li>
+          <li>Инструменты визуализации</li>
+          <li>Ретроспективы</li>
+        </ul>
+      </div>
+      <div class="module-detail">
+        <div class="module-num">Модуль 8</div>
+        <div class="module-name">Коучинг-стиль управления</div>
+        <ul class="module-points">
+          <li>Коучинговый подход</li>
+          <li>Вопросы, которые развивают</li>
+          <li>GROW-модель</li>
+          <li>Доверие в команде</li>
+          <li>Возвращение ответственности сотрудникам</li>
+          <li>Коучинг под развитие</li>
+        </ul>
+      </div>
+      <div class="module-detail">
+        <div class="module-num">Модуль 9</div>
+        <div class="module-name">Работа с манипуляциями и стрессом</div>
+        <ul class="module-points">
+          <li>Как распознавать манипуляции</li>
+          <li>Эмоциональная устойчивость</li>
+          <li>Стресс-менеджмент</li>
+          <li>Конфликты и сложные переговоры</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TARIFF EXPERT -->
+    <div class="tariff-block">
+      <div class="tariff-block-head">
+        <div>
+          <div class="tariff-block-tag">Тариф</div>
+          <div class="tariff-block-name">Эксперт</div>
+          <p class="tariff-block-desc">Все блоки вместе — для тех, кто любит полное погружение в обучение. Все 9 модулей сразу: от фундамента «Основы» до глубины «Мастера».</p>
+        </div>
+        <div class="tariff-block-price">
+          <div class="tp-num">90 000 ₽</div>
+          <div style="font-size:.72rem;color:var(--muted);margin-bottom:.5rem">все 9 модулей</div>
+          <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline" style="font-size:.78rem;padding:.6rem 1.5rem">Выбрать тариф</a>
+        </div>
+      </div>
+      <p style="font-size:.9rem;color:var(--text2);font-weight:300;line-height:1.7">Включает полную программу тарифов «Основа» и «Мастер» — модули 1–9, живые встречи, разборы кейсов, игра «Корпорация Звёзд» в составе программы, персональная обратная связь от эксперта на каждом этапе.</p>
     </div>
   </div>
 </section>
@@ -280,7 +402,11 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
       <a href="korporaciya-zvezd.html">Игра «Корпорация Звёзд»</a>
       <a href="https://t.me/Hipo_academy" target="_blank">Telegram-канал</a>
     </div>
-    <div class="footer-copy">© 2025 Hipo Academy · hipoacademy.ru<br>Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590<br><a href="privacy.html" style="color:var(--muted);text-decoration:underline">Политика конфиденциальности</a></div>
+    <div class="footer-copy">
+      <div style="margin-bottom:.5rem">© 2025 Hipo Academy · hipoacademy.ru</div>
+      <div style="opacity:.85">Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590</div>
+      <div style="margin-top:.4rem"><a href="privacy.html">Политика конфиденциальности</a></div>
+    </div>
   </div>
 </footer>
 

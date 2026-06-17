@@ -134,7 +134,8 @@ footer{padding:2rem;border-top:1px solid var(--border)}
 .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
 .footer-links a{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none}
 .footer-links a:hover{color:var(--gold)}
-.footer-copy{font-size:.72rem;color:var(--muted);line-height:1.8;text-align:right}
+.footer-copy{font-size:.78rem;color:#a8b0c8;line-height:1.9;text-align:right}
+.footer-copy a{color:var(--gold);text-decoration:underline}
 
 /* RESPONSIVE */
 @media(max-width:900px){
@@ -392,39 +393,50 @@ footer{padding:2rem;border-top:1px solid var(--border)}
   <div class="wrap">
     <div class="sec-tag">Форматы участия</div>
     <h2 class="sec-title">Выберите <span>свой формат</span></h2>
-    <p class="sec-sub">Игра доступна индивидуально — бесплатно. Для команды и корпоративного обучения — отдельные форматы.</p>
-    <div class="formats-grid">
+    <p class="sec-sub">От бесплатного демо до сертификации игропрактика — выберите формат под свою задачу.</p>
+    <div class="formats-grid" style="grid-template-columns:repeat(4,1fr)">
+      <div class="fmt-card">
+        <span class="fmt-icon">🎮</span>
+        <div class="fmt-title">Демо-версия</div>
+        <p class="fmt-desc" style="font-size:.85rem">Попробуйте механику игры онлайн — несколько ситуаций для знакомства с форматом.</p>
+        <div class="fmt-price">Бесплатно</div>
+        <div class="fmt-price-sub">онлайн · без регистрации</div>
+        <div style="margin-top:1.5rem">
+          <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.65rem 1.5rem;width:100%;text-align:center;display:block">Играть бесплатно</a>
+        </div>
+      </div>
       <div class="fmt-card">
         <span class="fmt-icon">👤</span>
-        <div class="fmt-title">Для себя</div>
-        <p class="fmt-desc">Пройдите игру самостоятельно онлайн. Узнайте свой стиль управления и получите SWOT-анализ компетенций прямо сейчас.</p>
-        <div class="fmt-price">Бесплатно</div>
-        <div class="fmt-price-sub">онлайн · без регистрации · 20–30 минут</div>
+        <div class="fmt-title">Индивидуально</div>
+        <p class="fmt-desc" style="font-size:.85rem">Полная версия игры один на один с ведущим. SWOT-анализ вашего стиля управления.</p>
+        <div class="fmt-price">7 000 ₽</div>
+        <div class="fmt-price-sub">1 игра · 20–30 минут</div>
         <div style="margin-top:1.5rem">
-          <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold" style="font-size:.8rem;padding:.7rem 1.75rem;width:100%;text-align:center;display:block">Играть бесплатно</a>
+          <a href="https://t.me/hipo_game" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.65rem 1.5rem;width:100%;text-align:center;display:block">Записаться</a>
         </div>
       </div>
       <div class="fmt-card featured">
         <span class="fmt-icon">👥</span>
         <div class="fmt-title">Для команды</div>
-        <p class="fmt-desc">Игровая сессия для команды руководителей с фасилитацией и разбором результатов. Онлайн или очно.</p>
-        <div class="fmt-price">от 20 000 ₽</div>
+        <p class="fmt-desc" style="font-size:.85rem">Игровая сессия для команды руководителей с фасилитацией и разбором результатов. Онлайн или очно.</p>
+        <div class="fmt-price">от 30 000 ₽</div>
         <div class="fmt-price-sub">корпоративный формат · с разбором</div>
         <div style="margin-top:1.5rem">
-          <a href="https://t.me/hipo_game" target="_blank" class="btn-gold" style="font-size:.8rem;padding:.7rem 1.75rem;width:100%;text-align:center;display:block">Обсудить формат</a>
+          <a href="https://t.me/hipo_game" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.65rem 1.5rem;width:100%;text-align:center;display:block">Обсудить формат</a>
         </div>
       </div>
       <div class="fmt-card">
-        <span class="fmt-icon">🏢</span>
-        <div class="fmt-title">Для HR и обучения</div>
-        <p class="fmt-desc">Используйте игру как инструмент оценки персонала, ассессмента или элемент корпоративной обучающей программы.</p>
-        <div class="fmt-price">По запросу</div>
-        <div class="fmt-price-sub">индивидуальные условия</div>
+        <span class="fmt-icon">🎓</span>
+        <div class="fmt-title">Игропрактик</div>
+        <p class="fmt-desc" style="font-size:.85rem">Купите игру и пройдите обучение, чтобы проводить её самостоятельно. Обучение входит в стоимость.</p>
+        <div class="fmt-price">60 000 ₽</div>
+        <div class="fmt-price-sub">игра + сертификация</div>
         <div style="margin-top:1.5rem">
-          <a href="https://t.me/hipo_game" target="_blank" class="btn-outline" style="font-size:.8rem;padding:.7rem 1.75rem;width:100%;text-align:center;display:block">Написать Надежде</a>
+          <a href="https://t.me/hipo_game" target="_blank" class="btn-outline" style="font-size:.78rem;padding:.65rem 1.5rem;width:100%;text-align:center;display:block">Узнать подробнее</a>
         </div>
       </div>
     </div>
+    <p style="text-align:center;font-size:.85rem;color:var(--muted);margin-top:2rem">Также доступно для HR и корпоративного обучения — индивидуальные условия по запросу</p>
   </div>
 </section>
 
@@ -435,7 +447,7 @@ footer{padding:2rem;border-top:1px solid var(--border)}
     <p>20–30 минут — и вы получите развёрнутый SWOT-анализ своих управленческих компетенций. Бесплатно, онлайн, без регистрации.</p>
     <div class="cta-btns">
       <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold">Играть бесплатно</a>
-      <a href="https://t.me/hipo_game" target="_blank" class="btn-outline">Игра — от 20 000 ₽</a>
+      <a href="https://t.me/hipo_game" target="_blank" class="btn-outline">Игра для команды — от 30 000 ₽</a>
     </div>
     <div class="cta-note">Есть вопросы? Напишите в Telegram <a href="https://t.me/hipo_game" target="_blank" style="color:var(--gold);text-decoration:none">@hipo_game</a></div>
   </div>
@@ -450,7 +462,11 @@ footer{padding:2rem;border-top:1px solid var(--border)}
       <a href="https://hipoacademy.ru/master_management" target="_blank">Курс «Мастер управления»</a>
       <a href="https://t.me/Hipo_academy" target="_blank">Telegram-канал</a>
     </div>
-    <div class="footer-copy">© 2025 Hipo Academy · hipoacademy.ru<br>Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590<br><a href="privacy.html" style="color:var(--muted);text-decoration:underline">Политика конфиденциальности</a></div>
+    <div class="footer-copy">
+      <div style="margin-bottom:.5rem">© 2025 Hipo Academy · hipoacademy.ru</div>
+      <div style="opacity:.85">Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590</div>
+      <div style="margin-top:.4rem"><a href="privacy.html">Политика конфиденциальности</a></div>
+    </div>
   </div>
 </footer>
 
