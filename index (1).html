@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hipo Academy — Системное развитие бизнеса</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0c14;
+  --bg2:#0f1220;
+  --bg3:#141828;
+  --bg4:#1a1f32;
+  --gold:#c9a257;
+  --gold-light:#ddb96a;
+  --gold-dim:rgba(201,162,87,.15);
+  --gold-border:rgba(201,162,87,.25);
+  --gold-border2:rgba(201,162,87,.45);
+  --white:#ffffff;
+  --text:#e8eaf2;
+  --text2:#c8ccd8;
+  --muted:#7a8099;
+  --teal:#5ab4ae;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2.5rem}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
+.logo span{color:var(--text);font-weight:400}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.75rem;font-weight:500;letter-spacing:.06em;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-btn{background:transparent;border:1px solid var(--gold-border2);color:var(--gold);padding:.45rem 1.4rem;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:2px;transition:all .2s}
+.nav-btn:hover{background:var(--gold);color:var(--bg)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:22px;height:1px;background:var(--text)}
+.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--gold-border);z-index:299;padding:1rem 2rem 1.5rem}
+.mob-menu.open{display:block}
+.mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;padding:.7rem 0;border-bottom:1px solid var(--gold-border)}
+.mob-menu a:last-child{color:var(--gold);border-bottom:none}
+
+/* ── BUTTONS ── */
+.btn-gold{background:var(--gold);color:var(--bg);padding:.8rem 2.25rem;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid var(--gold);border-radius:2px}
+.btn-gold:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.btn-outline{background:transparent;color:var(--text);padding:.8rem 2.25rem;font-size:.8rem;font-weight:500;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid rgba(232,234,242,.25);border-radius:2px}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:8rem 2.5rem 5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-20%;left:-10%;width:60%;height:80%;background:radial-gradient(ellipse,rgba(201,162,87,.05) 0%,transparent 65%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-10%;right:-5%;width:40%;height:60%;background:radial-gradient(ellipse,rgba(90,180,174,.04) 0%,transparent 65%);pointer-events:none}
+.hero-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;width:100%;position:relative;z-index:1}
+.eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,6vw,5.8rem);font-weight:500;line-height:1.06;color:var(--white);margin-bottom:1rem;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:var(--text2);line-height:1.85;margin-bottom:2.5rem;font-weight:300;max-width:480px}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:3rem}
+.hero-divider{height:1px;background:var(--gold-border);margin-bottom:2rem}
+.hero-stats{display:flex;gap:3rem;flex-wrap:wrap}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:500;color:var(--gold);line-height:1}
+.stat-l{font-size:.72rem;color:var(--muted);letter-spacing:.06em;margin-top:.3rem}
+.hero-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;position:relative;overflow:hidden}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero-card-tag{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:1.5rem;display:flex;align-items:center;gap:.5rem}
+.hero-card-tag::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--teal);flex-shrink:0}
+.hero-card-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:500;color:var(--gold);margin-bottom:.5rem;line-height:1.1}
+.hero-card-sub{font-size:.85rem;color:var(--muted);margin-bottom:2rem;line-height:1.6}
+.feat-list{display:flex;flex-direction:column;gap:.65rem;margin-bottom:2rem}
+.feat{display:flex;align-items:center;gap:.75rem;font-size:.88rem;color:var(--text2)}
+.feat-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.hero-card-price{display:flex;align-items:baseline;gap:.5rem;padding-top:1.25rem;border-top:1px solid var(--gold-border)}
+.price-free{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--gold)}
+.price-note{font-size:.75rem;color:var(--muted)}
+
+/* ── SECTION ── */
+section{padding:6rem 2.5rem}
+.wrap{max-width:1200px;margin:0 auto}
+.eyebrow-sec{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow-sec::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+h2.sec{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:500;color:var(--white);line-height:1.12;margin-bottom:.75rem}
+h2.sec em{font-style:italic;color:var(--gold)}
+.sec-sub{font-size:1rem;color:var(--text2);max-width:520px;line-height:1.85;margin-bottom:3rem;font-weight:300}
+hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border2),transparent)}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:280px 1fr;gap:3.5rem;align-items:start}
+.about-photo{aspect-ratio:1/1;background:var(--bg3);border:1px solid var(--gold-border);position:relative;overflow:hidden;display:flex;align-items:flex-end;border-radius:4px}
+.photo-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(201,162,87,.06),transparent 60%)}
+.photo-initials{position:absolute;top:50%;left:50%;transform:translate(-50%,-65%);font-family:'Cormorant Garamond',serif;font-size:7rem;font-weight:300;color:rgba(201,162,87,.12);line-height:1;user-select:none}
+.photo-caption{position:relative;width:100%;background:linear-gradient(transparent,rgba(10,12,20,.95));padding:1.75rem 1.25rem 1.1rem}
+.photo-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--gold)}
+.photo-title{font-size:.7rem;color:var(--muted);margin-top:.25rem;letter-spacing:.04em}
+.photo-hint{font-size:.68rem;color:var(--muted);font-style:italic;margin-top:.4rem;opacity:.6}
+.about-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.tag{font-size:.68rem;font-weight:500;letter-spacing:.06em;color:var(--gold);border:1px solid var(--gold-border);padding:.3rem .85rem;border-radius:1px}
+.about-p{font-size:1rem;color:var(--text2);line-height:1.9;margin-bottom:1rem;font-weight:300}
+.about-p strong{color:var(--text);font-weight:500}
+.creds{margin-top:2rem}
+.cred{display:flex;gap:1.25rem;padding:1rem 0;border-top:1px solid var(--gold-border)}
+.cred-n{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--gold);min-width:24px;line-height:1.2;opacity:.8}
+.cred-text{font-size:.95rem;color:var(--text2);line-height:1.7;font-weight:300}
+.cred-text strong{color:var(--text);font-weight:500}
+.about-btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2.25rem}
+.mission-strip{background:var(--bg3);border:1px solid var(--gold-border2);border-left:3px solid var(--gold);padding:1.75rem 2.25rem;margin:2.5rem 0;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.mission-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--gold);line-height:1;flex-shrink:0}
+.mission-text{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--text);line-height:1.4}
+.competence-line{font-size:.95rem;color:var(--text2);margin-top:.5rem;font-weight:300}
+.competence-line strong{color:var(--gold);font-weight:500}
+
+/* REQUESTS BLOCK */
+.requests-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gold-border)}
+.req-item{background:var(--bg3);padding:1.5rem 1.75rem;font-size:.93rem;color:var(--text2);line-height:1.5;transition:background .2s;display:flex;align-items:center;gap:.85rem}
+.req-item:hover{background:var(--bg4);color:var(--text)}
+.req-mark{color:var(--gold);font-size:1.1rem;flex-shrink:0;font-family:'Cormorant Garamond',serif}
+
+/* MINI CASES (people) */
+.mini-cases{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.mini-case{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem;transition:border-color .2s}
+.mini-case:hover{border-color:var(--gold-border2)}
+.mini-case-tag{font-size:.65rem;font-weight:500;letter-spacing:.1em;color:var(--teal);margin-bottom:.6rem}
+.mini-case-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--white);margin-bottom:.85rem}
+.mini-case-quote{font-size:.9rem;color:var(--text2);line-height:1.7;font-style:italic;margin-bottom:1rem;font-weight:300}
+.mini-case-result{font-size:.82rem;color:var(--gold);font-weight:500}
+.quote-block{background:var(--bg3);border-left:3px solid var(--gold);padding:2.25rem 2.75rem;text-align:center}
+.quote-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.2vw,1.6rem);font-weight:500;color:var(--white);line-height:1.5;font-style:italic;margin-bottom:1rem}
+.quote-author{font-size:.78rem;color:var(--gold);letter-spacing:.08em;font-weight:500}
+
+/* ── DIRECTIONS ── */
+.dirs{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
+.dir{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;cursor:pointer;transition:all .25s;position:relative;overflow:hidden}
+.dir::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width .4s}
+.dir:hover{border-color:var(--gold-border2);background:var(--bg4)}
+.dir:hover::after{width:100%}
+.dir-n{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(201,162,87,.1);line-height:1;margin-bottom:.75rem}
+.dir-en{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.5rem}
+.dir-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--white);margin-bottom:.75rem;line-height:1.2}
+.dir-desc{font-size:.93rem;color:var(--text2);line-height:1.75;font-weight:300}
+.dir-link{font-size:.72rem;color:var(--gold);letter-spacing:.06em;margin-top:1.25rem;display:inline-flex;align-items:center;gap:.35rem}
+
+/* ── GAMES ── */
+.game-hero{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:center;margin-bottom:3rem}
+.live-dot{display:inline-flex;align-items:center;gap:.5rem;color:var(--teal);font-size:.7rem;font-weight:500;letter-spacing:.12em;margin-bottom:1.25rem}
+.live-dot::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);display:block}
+.game-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:500;color:var(--white);line-height:1.1;margin-bottom:.75rem}
+.game-title em{font-style:italic;color:var(--gold)}
+.game-desc{font-size:1rem;color:var(--text2);line-height:1.85;margin-bottom:1.75rem;font-weight:300}
+.game-feats{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin:1.5rem 0 2rem}
+.gf{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--text2)}
+.gf-dot{width:3px;height:3px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.price-line{font-size:.8rem;color:var(--muted);margin-top:.85rem}
+.game-visual{background:var(--bg3);border:1px solid var(--gold-border);padding:3rem 2rem;text-align:center;position:relative}
+.game-visual::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.game-icon{font-size:4.5rem;display:block;margin-bottom:1.25rem}
+.game-visual-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--gold);margin-bottom:.4rem}
+.game-visual-sub{font-size:.82rem;color:var(--muted);margin-bottom:2rem;line-height:1.55}
+.game2{background:var(--bg3);border:1px solid var(--gold-border);padding:1.75rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.game2-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--white);margin-bottom:.3rem}
+.game2-desc{font-size:.88rem;color:var(--text2);font-weight:300;max-width:520px}
+.badge-soon{font-size:.68rem;font-weight:500;letter-spacing:.12em;color:var(--muted);border:1px solid var(--gold-border);padding:.3rem .9rem;white-space:nowrap}
+
+/* ── LEARNING ── */
+.learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.learn-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;transition:border-color .2s}
+.learn-card:hover{border-color:var(--gold-border2)}
+.learn-badge{display:inline-block;background:var(--gold);color:var(--bg);font-size:.65rem;font-weight:600;letter-spacing:.1em;padding:.28rem .8rem;margin-bottom:1.1rem;border-radius:1px}
+.learn-badge-line{display:inline-block;background:transparent;border:1px solid var(--gold-border2);color:var(--gold);font-size:.65rem;font-weight:500;letter-spacing:.1em;padding:.28rem .8rem;margin-bottom:1.1rem;border-radius:1px}
+.learn-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--white);margin-bottom:.6rem;line-height:1.2}
+.learn-desc{font-size:.95rem;color:var(--text2);line-height:1.8;margin-bottom:1.5rem;font-weight:300}
+.mods{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:1rem 0 1.5rem}
+.mod{background:var(--bg4);padding:.5rem .75rem;font-size:.78rem;color:var(--text2);line-height:1.4;font-weight:300}
+.mod b{color:var(--gold);font-weight:500;font-family:'Cormorant Garamond',serif}
+.tariffs{display:flex;gap:.75rem;margin:1.25rem 0;flex-wrap:wrap}
+.tariff{border:1px solid var(--gold-border);padding:.65rem 1.1rem;border-radius:2px;flex:1;min-width:80px;text-align:center}
+.tariff.hot{border-color:var(--gold)}
+.tariff-p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:var(--gold)}
+.tariff-n{font-size:.62rem;letter-spacing:.08em;color:var(--muted);margin-top:.2rem}
+.learn-coming{background:var(--bg3);border:1px solid var(--gold-border);padding:1.5rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:1.5rem}
+.learn-coming-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--white)}
+
+/* ── SALES ── */
+.pain-block{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:4rem}
+.pain-label{font-size:.7rem;font-weight:500;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-bottom:1.25rem}
+.pain-list{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+.pain-item{display:flex;gap:.75rem;font-size:.97rem;color:var(--text2);line-height:1.6;font-weight:300}
+.pain-dash{color:var(--gold);flex-shrink:0;font-size:.85rem;margin-top:.15em}
+.pain-conclusion{background:var(--gold);color:var(--bg);padding:1.25rem 1.75rem;margin-top:1.75rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;line-height:1.45}
+.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.adv{background:var(--bg3);border:1px solid var(--gold-border);padding:1.1rem 1.25rem;border-radius:1px}
+.adv-title{font-size:.78rem;font-weight:600;color:var(--text);margin-bottom:.25rem}
+.adv-text{font-size:.82rem;color:var(--text2);line-height:1.55;font-weight:300}
+.formats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem}
+.fmt{background:var(--bg3);border:1px solid var(--gold-border);padding:2.25rem;transition:all .2s}
+.fmt:hover{border-color:var(--gold-border2)}
+.fmt-tag{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.4rem}
+.fmt-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--white);margin-bottom:1rem;line-height:1.2}
+.fmt-list{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.fmt-list li{font-size:.9rem;color:var(--text2);padding-left:.9rem;position:relative;line-height:1.55;font-weight:300}
+.fmt-list li::before{content:'—';position:absolute;left:0;color:var(--gold);font-size:.75rem}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;margin:2.5rem 0}
+.step{text-align:center}
+.step-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.5rem;opacity:.7}
+.step-title{font-size:.75rem;font-weight:600;color:var(--text);letter-spacing:.04em;margin-bottom:.35rem}
+.step-desc{font-size:.82rem;color:var(--text2);line-height:1.55;font-weight:300}
+.case{background:var(--bg3);border:1px solid var(--gold-border2);padding:2.5rem;display:grid;grid-template-columns:1.6fr 1fr;gap:3rem;align-items:center}
+.case-tag{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.5rem}
+.case-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--white);margin-bottom:.6rem}
+.case-desc{font-size:.93rem;color:var(--text2);line-height:1.7;font-weight:300}
+.case-nums{display:flex;flex-direction:column;gap:1.5rem}
+.case-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:400;color:var(--gold);line-height:1}
+.case-num-label{font-size:.7rem;letter-spacing:.08em;color:var(--muted);margin-top:.2rem}
+.sales-btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
+
+/* ── CONSULT ── */
+.consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem}
+.c-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;transition:border-color .2s}
+.c-card:hover{border-color:var(--gold-border2)}
+.c-tag{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.5rem}
+.c-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--white);margin-bottom:.5rem}
+.c-price{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:400;color:var(--gold);margin:.75rem 0 .25rem;line-height:1}
+.c-price-sub{font-size:.72rem;color:var(--muted);letter-spacing:.04em}
+.c-hr{border:none;height:1px;background:var(--gold-border);margin:1.25rem 0}
+.c-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.c-list li{font-size:.92rem;color:var(--text2);padding-left:1rem;position:relative;font-weight:300;line-height:1.6}
+.c-list li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:.72rem;top:.15em}
+.c-event{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.c-event-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--white);margin-bottom:.35rem}
+.c-event-desc{font-size:.88rem;color:var(--text2);font-weight:300}
+
+/* ── CTA ── */
+.cta{background:var(--bg2);border-top:1px solid var(--gold-border2);border-bottom:1px solid var(--gold-border2);padding:6rem 2.5rem;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(201,162,87,.04),transparent);pointer-events:none}
+.cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:500;color:var(--white);margin-bottom:.75rem;line-height:1.1}
+.cta h2 em{font-style:italic;color:var(--gold)}
+.cta-sub{font-size:1rem;color:var(--text2);max-width:460px;margin:0 auto 2.5rem;line-height:1.8;font-weight:300}
+.cta-btns{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.25rem}
+.cta-contacts{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap}
+.cta-contact{font-size:.75rem;letter-spacing:.06em;color:var(--muted)}
+.cta-contact a{color:var(--gold-light);text-decoration:none}
+.cta-contact a:hover{color:var(--gold)}
+
+/* ── FOOTER ── */
+footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-decoration:none}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.footer-links a{font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:.72rem;color:var(--muted);line-height:1.8;text-align:right}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .hero-wrap,.about-grid,.game-hero,.pain-block,.consult-grid,.case{grid-template-columns:1fr}
+  .hero-card,.game-visual{display:none}
+  .dirs,.formats,.learn-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .adv-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav-links,.nav-btn{display:none}
+  .burger{display:flex}
+  .steps{grid-template-columns:1fr}
+  .game-feats,.mods{grid-template-columns:1fr}
+  .tariffs{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Hipo <span>Academy</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="korporaciya-zvezd.html">Игры</a></li>
+      <li><a href="obuchenie.html">Обучение</a></li>
+      <li><a href="sales-force.html">Отдел продаж</a></li>
+      <li><a href="consulting.html">Работа со мной</a></li>
+      <li><a href="cases.html">Кейсы</a></li>
+    </ul>
+    <a href="https://t.me/hipo_game" target="_blank" class="nav-btn">Обсудить задачу</a>
+    <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="#about" onclick="closeMob()">О нас</a>
+  <a href="korporaciya-zvezd.html">Игры</a>
+  <a href="obuchenie.html">Обучение</a>
+  <a href="sales-force.html">Отдел продаж</a>
+  <a href="consulting.html">Работа со мной</a>
+  <a href="cases.html">Кейсы</a>
+  <a href="https://t.me/hipo_game" target="_blank">Telegram @hipo_game</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-wrap">
+    <div>
+      <div class="eyebrow">Системное развитие бизнеса</div>
+      <h1>Управление.<br><em>Продажи.</em><br>Результат.</h1>
+      <p class="hero-sub">Обучение руководителей, построение отделов продаж и бизнес-консалтинг. Практики с 10-летним опытом для тех, кто хочет системный рост без хаоса.</p>
+      <div class="hero-btns">
+        <a href="korporaciya-zvezd.html" class="btn-gold">Игры</a>
+        <a href="obuchenie.html" class="btn-outline">Обучение</a>
+        <a href="consulting.html" class="btn-outline">Персональная работа</a>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stats">
+        <div><div class="stat-n">10+</div><div class="stat-l">лет практики</div></div>
+        <div><div class="stat-n">×2</div><div class="stat-l">рост выручки клиентов</div></div>
+        <div><div class="stat-n">30</div><div class="stat-l">дней до запуска ОП</div></div>
+        <div><div class="stat-n">4</div><div class="stat-l">направления</div></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-tag">Флагманская игра · демо-версия бесплатно</div>
+      <div class="hero-card-title">«Корпорация Звёзд»</div>
+      <div class="hero-card-sub">Единственная в мире управленческая симуляция. Разработана командой Hipo Academy.</div>
+      <div class="feat-list">
+        <div class="feat"><div class="feat-dot"></div>14 управленческих ситуаций</div>
+        <div class="feat"><div class="feat-dot"></div>SWOT-анализ компетенций в финале</div>
+        <div class="feat"><div class="feat-dot"></div>Счётчик баллов в реальном времени</div>
+        <div class="feat"><div class="feat-dot"></div>20–30 минут, без регистрации</div>
+      </div>
+      <div class="hero-card-price">
+        <div class="price-free">Демо бесплатно</div>
+        <div class="price-note">Полная игра — индивидуально или командой, от 20 000 ₽</div>
+      </div>
+      <div style="margin-top:1.5rem">
+        <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold" style="width:100%;text-align:center;display:block">Попробовать демо →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ABOUT -->
+<section id="about" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="images/nadezhda-photo.jpg" alt="Надежда Коновалова" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;position:absolute;inset:0">
+        <div class="photo-caption">
+          <div class="photo-name">Надежда Коновалова</div>
+          <div class="photo-title">Основатель Hipo Academy</div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow-sec">Кто мы</div>
+        <h2 class="sec" style="margin-bottom:1.5rem">Hipo<br><em>Academy</em></h2>
+        <div class="about-tags">
+          <span class="tag">Управление командами</span>
+          <span class="tag">Построение продаж</span>
+          <span class="tag">Международный опыт</span>
+          <span class="tag">Бизнес-консалтинг</span>
+        </div>
+        <p class="about-p"><strong>Hipo Academy</strong> — команда практикующих экспертов с 10-летним опытом управления, продаж и развития бизнеса. Мы не обучаем теории — мы передаём инструменты, которые сами применяем прямо сейчас.</p>
+        <p class="about-p"><strong>Работаем с компаниями в России, Казахстане, Турции, ОАЭ, Испании и на Бали:</strong> выстраиваем команды с нуля, создаём системы продаж и помогаем собственникам масштабироваться без хаоса.</p>
+        <p class="about-p">В основе нашего подхода — реальная практика международного бизнеса, асессмент и коучинг. Авторы уникальной управленческой игры «Корпорация Звёзд».</p>
+        <div class="creds">
+          <div class="cred"><div class="cred-n">01</div><div class="cred-text"><strong>Реальный опыт, не теория</strong> — всё, чему обучаем, применяем в собственной практике управления прямо сейчас.</div></div>
+          <div class="cred"><div class="cred-n">02</div><div class="cred-text"><strong>Международные проекты</strong> — строим продажи и команды в России, Казахстане, Турции, ОАЭ, Испании и на Бали.</div></div>
+          <div class="cred"><div class="cred-n">03</div><div class="cred-text"><strong>Системный результат</strong> — выстраиваем механизмы, которые работают без постоянного участия собственника.</div></div>
+        </div>
+        <div class="mission-strip">
+          <div class="mission-num">7</div>
+          <div class="mission-text">«1 хороший управленец = минимум 7 счастливых людей» — наша миссия</div>
+        </div>
+        <p class="competence-line"><strong>Ключевая компетенция:</strong> мы мотивируем и выстраиваем систему — роли, структуру, KPI, продажи, команду, масштаб.</p>
+        <div class="about-btns">
+          <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Написать нам</a>
+          <a href="https://wa.me/79173520942" target="_blank" class="btn-outline">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- WITH WHAT REQUESTS -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow-sec">Узнаёте себя?</div>
+    <h2 class="sec">С какими запросами <em>к нам приходят</em></h2>
+    <p class="sec-sub">Если хотя бы один пункт откликается — мы знаем, с чего начать.</p>
+    <div class="requests-grid">
+      <div class="req-item"><span class="req-mark">—</span>Хаос в управлении</div>
+      <div class="req-item"><span class="req-mark">—</span>Собственник в операционке</div>
+      <div class="req-item"><span class="req-mark">—</span>Команда не слышит друг друга</div>
+      <div class="req-item"><span class="req-mark">—</span>Нет KPI</div>
+      <div class="req-item"><span class="req-mark">—</span>Отдел продаж не даёт результата</div>
+      <div class="req-item"><span class="req-mark">—</span>Невозможно масштабироваться</div>
+      <div class="req-item"><span class="req-mark">—</span>Внутренний конфликт фаундеров</div>
+      <div class="req-item"><span class="req-mark">—</span>Потеря роли руководителя</div>
+      <div class="req-item"><span class="req-mark">—</span>«Могу ли я стать управленцем?»</div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- DIRECTIONS -->
+<section style="background:var(--bg);padding:5rem 2.5rem">
+  <div class="wrap">
+    <div class="eyebrow-sec">Направления</div>
+    <h2 class="sec">Четыре направления работы</h2>
+    <div class="dirs">
+      <div class="dir" onclick="location.href='korporaciya-zvezd.html'">
+        <div class="dir-n">01</div>
+        <div class="dir-en">Games</div>
+        <div class="dir-title">Бизнес-игры</div>
+        <div class="dir-desc">Уникальные управленческие симуляторы для развития компетенций руководителей через игровые механики.</div>
+        <div class="dir-link">Подробнее →</div>
+      </div>
+      <div class="dir" onclick="location.href='obuchenie.html'">
+        <div class="dir-n">02</div>
+        <div class="dir-en">Education</div>
+        <div class="dir-title">Обучение</div>
+        <div class="dir-desc">Курс «Мастер управления» — 9 модулей. Бесплатный стартовый курс в подарок.</div>
+        <div class="dir-link">Подробнее →</div>
+      </div>
+      <div class="dir" onclick="location.href='sales-force.html'">
+        <div class="dir-n">03</div>
+        <div class="dir-en">Sales Force</div>
+        <div class="dir-title">Отдел продаж</div>
+        <div class="dir-desc">Построение системы продаж, аренда команды, партнёрство по росту и AI. Запуск за 30 дней.</div>
+        <div class="dir-link">Подробнее →</div>
+      </div>
+      <div class="dir" onclick="location.href='consulting.html'">
+        <div class="dir-n">04</div>
+        <div class="dir-en">Consulting</div>
+        <div class="dir-title">Работа со мной</div>
+        <div class="dir-desc">Бизнес-консалтинг и стратегические сессии для собственников и топ-менеджеров.</div>
+        <div class="dir-link">Подробнее →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- GAMES -->
+<section id="games" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow-sec">Бизнес-игры</div>
+    <h2 class="sec">Обучение через <em>действие</em></h2>
+    <p class="sec-sub">Уникальные симуляторы — инструменты для развития управленческих компетенций без скучной теории.</p>
+    <div class="game-hero">
+      <div>
+        <div class="live-dot">Демо-версия · бесплатно</div>
+        <div class="game-title">«Корпорация <em>Звёзд</em>»</div>
+        <p class="game-desc">Единственная в мире бизнес-трансформационная управленческая игра. 14 ситуаций, SWOT-анализ стиля руководства, разработана командой Hipo Academy.</p>
+        <div class="game-feats">
+          <div class="gf"><div class="gf-dot"></div>14 управленческих кейсов</div>
+          <div class="gf"><div class="gf-dot"></div>SWOT-анализ 4 компетенций</div>
+        </div>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+          <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold">Попробовать демо</a>
+          <a href="korporaciya-zvezd.html" class="btn-outline">Подробнее об игре →</a>
+        </div>
+        <p class="price-line">Демо — бесплатно · полная игра индивидуально или командой — от 20 000 ₽</p>
+      </div>
+      <div class="game-visual">
+        <span class="game-icon">⭐</span>
+        <div class="game-visual-title">Корпорация Звёзд</div>
+        <div class="game-visual-sub">Авторский симулятор · демо 20–30 мин</div>
+        <a href="korporaciya-zvezd.html" class="btn-gold" style="font-size:.78rem;padding:.7rem 1.5rem">Узнать больше →</a>
+      </div>
+    </div>
+    <div class="game2">
+      <div>
+        <div style="font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.35rem">В разработке</div>
+        <div class="game2-title">«Сила аргумента»</div>
+        <div class="game2-desc">Игра на развитие навыков убеждения и аргументации. Демо доступно на английском языке.</div>
+      </div>
+      <a href="https://argumentos.netlify.app/" target="_blank" class="btn-outline" style="font-size:.75rem;padding:.6rem 1.5rem;white-space:nowrap">Демо (EN) →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- LEARNING -->
+<section id="learning" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="eyebrow-sec">Обучение</div>
+    <h2 class="sec">Курсы и программы</h2>
+    <p class="sec-sub">От бесплатного старта до глубокого погружения с индивидуальным наставничеством.</p>
+    <div class="learn-grid">
+      <div class="learn-card">
+        <div class="learn-badge">Бесплатно · Подарок</div>
+        <div class="learn-title">Управление без стресса за 3 шага</div>
+        <p class="learn-desc">Три практических шага, чтобы перестать гореть на работе и начать управлять легко. Доступен в Telegram-боте прямо сейчас.</p>
+        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.7rem 1.75rem">Получить бесплатно</a>
+      </div>
+      <div class="learn-card">
+        <div class="learn-badge-line">Флагманский курс</div>
+        <div class="learn-title">Мастер управления</div>
+        <p class="learn-desc">9 модулей — от основ лидерства до коучинг-стиля. Живые встречи, разборы кейсов, игра «Корпорация Звёзд», обратная связь эксперта. 3 тарифа от 36 000 ₽.</p>
+        <a href="obuchenie.html" class="btn-outline" style="font-size:.78rem;padding:.7rem 1.75rem">Подробнее о курсе →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- SALES -->
+<section id="sales" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow-sec">Hipo Sales Force</div>
+    <h2 class="sec">Системный <em>отдел продаж</em></h2>
+    <p class="sec-sub">Заявки есть, а продаж меньше, чем должно быть? Значит, у вас не отдел продаж — у вас люди, которые что-то продают. Мы строим систему: запуск за 30 дней, эксклюзивность по сегменту, отчёты каждую неделю.</p>
+
+    <div class="formats" style="margin-bottom:2rem">
+      <div class="fmt">
+        <div class="fmt-tag">Sales Architecture</div>
+        <div class="fmt-title">Построение системы продаж</div>
+        <p style="font-size:.85rem;color:var(--text2);font-weight:300;line-height:1.6">Аудит, CRM, скрипты, KPI — выстраиваем систему и передаём вашей команде</p>
+      </div>
+      <div class="fmt">
+        <div class="fmt-tag">Rent Sales Team</div>
+        <div class="fmt-title">Аренда отдела продаж</div>
+        <p style="font-size:.85rem;color:var(--text2);font-weight:300;line-height:1.6">РОП и менеджеры под ключ — без затрат на найм и управление</p>
+      </div>
+      <div class="fmt">
+        <div class="fmt-tag">Sales Growth Partnership</div>
+        <div class="fmt-title">Партнёрство по росту</div>
+        <p style="font-size:.85rem;color:var(--text2);font-weight:300;line-height:1.6">Самый глубокий формат — работаем с командой и бизнес-моделью</p>
+      </div>
+      <div class="fmt">
+        <div class="fmt-tag">Sales AI System</div>
+        <div class="fmt-title">AI-квалификация лидов</div>
+        <p style="font-size:.85rem;color:var(--text2);font-weight:300;line-height:1.6">Ответ клиенту за 1 минуту 24/7 — никто не теряется ночью</p>
+      </div>
+    </div>
+
+    <div class="case">
+      <div>
+        <div class="case-tag">Реальный кейс — Garden Flowers, Дубай</div>
+        <div class="case-title">Пересборка системы и подготовка к франшизе</div>
+        <p class="case-desc">6 месяцев консалтинга: пересборка команды, аутсорс отдела продаж, CRM, автоворонки. <strong style="color:var(--text)">Команда не выгорела, система стала масштабируемой.</strong></p>
+      </div>
+      <div class="case-nums">
+        <div><div class="case-num">× 2</div><div class="case-num-label">выручка в пиковый сезон</div></div>
+        <div><div class="case-num">↑</div><div class="case-num-label">самый высокий оборот в истории</div></div>
+      </div>
+    </div>
+    <div class="sales-btns">
+      <a href="sales-force.html" class="btn-gold">Подробнее о форматах →</a>
+      <a href="https://t.me/JIZN_NK" target="_blank" class="btn-outline">Получить чек-лист команды</a>
+      <a href="cases.html" class="btn-outline">Смотреть все 5 кейсов</a>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- CONSULT -->
+<section id="consult" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="eyebrow-sec">Работа со мной</div>
+    <h2 class="sec">Бизнес-консалтинг <em>и стратегия</em></h2>
+    <p class="sec-sub">Работаем с фаундерами и топ-менеджерами. Не даём советы — строим рабочие механизмы и остаёмся до результата.</p>
+    <div class="consult-grid">
+      <div class="c-card">
+        <div class="c-tag">Strategy Session</div>
+        <div class="c-title">Стратегическая сессия</div>
+        <div class="c-price">70 000 ₽</div>
+        <div class="c-price-sub">за сессию · для собственника или команды</div>
+        <div class="c-hr"></div>
+        <ul class="c-list">
+          <li>Фокус на ключевой задаче компании</li>
+          <li>Снятие тумана — ясность следующих шагов</li>
+        </ul>
+        <a href="consulting.html" class="btn-gold" style="margin-top:1.75rem;font-size:.78rem;padding:.7rem 1.75rem">Все форматы работы →</a>
+      </div>
+      <div class="c-card">
+        <div class="c-tag">Business Consulting</div>
+        <div class="c-title">Бизнес-консалтинг</div>
+        <div class="c-price">6 недель</div>
+        <div class="c-price-sub">цикл · стоимость по запросу</div>
+        <div class="c-hr"></div>
+        <ul class="c-list">
+          <li>Стратегия роста и масштабирование</li>
+          <li>Пересборка команды и процессов</li>
+        </ul>
+        <a href="consulting.html" class="btn-outline" style="margin-top:1.75rem;font-size:.78rem;padding:.7rem 1.75rem">Подробнее →</a>
+      </div>
+    </div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:1.5rem">Также: игровая диагностика, перестройка и аутсорс отдела продаж, выездные мероприятия — <a href="consulting.html" style="color:var(--gold);text-decoration:none">смотреть все 6 форматов</a></p>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section style="background:var(--bg2);padding:5rem 2.5rem;text-align:center">
+  <div class="wrap" style="max-width:760px">
+    <div class="quote-block" style="margin:0 auto">
+      <div class="quote-text">«Если вы сосредоточитесь только на главном, всё остальное отпадёт само собой»</div>
+      <div class="quote-author">— Уоррен Баффет</div>
+    </div>
+    <p style="font-size:1.05rem;color:var(--text2);margin-top:2rem;line-height:1.8;font-weight:300">Мы помогаем найти это главное и не распыляться. Сильный бизнес — это не энергия собственника. Это система, которая работает без его постоянного участия.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <div class="wrap">
+    <h2>Готовы к <em>системному росту?</em></h2>
+    <p class="cta-sub">Расскажите о задаче — подберём формат и обсудим, как можем помочь.</p>
+    <div class="cta-btns">
+      <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Написать в Telegram</a>
+      <a href="https://wa.me/79173520942" target="_blank" class="btn-outline">WhatsApp</a>
+    </div>
+    <div class="cta-contacts">
+      <div class="cta-contact">Email: <a href="mailto:hipo.corporationofstars@gmail.com">hipo.corporationofstars@gmail.com</a></div>
+      <div class="cta-contact">Канал: <a href="https://t.me/Hipo_academy" target="_blank">@Hipo_academy</a></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">Hipo Academy</a>
+    <div class="footer-links">
+      <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="korporaciya-zvezd.html">Игра «Корпорация Звёзд»</a>
+      <a href="https://hipoacademy.ru/master_management" target="_blank">Курс «Мастер управления»</a>
+      <a href="https://t.me/Hipo_academy" target="_blank">Telegram-канал</a>
+    </div>
+    <div class="footer-copy">© 2025 Hipo Academy · hipoacademy.ru<br>Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590<br><a href="privacy.html" style="color:var(--muted);text-decoration:underline">Политика конфиденциальности</a></div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open')}
+function closeMob(){document.getElementById('mobMenu').classList.remove('open')}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('nav')&&!e.target.closest('.mob-menu'))
+    document.getElementById('mobMenu').classList.remove('open');
+});
+const secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',function(){
+  const y=window.scrollY+80;
+  secs.forEach(s=>{
+    const a=document.querySelector('.nav-links a[href="#'+s.id+'"]');
+    if(a) a.style.color=y>=s.offsetTop&&y<s.offsetTop+s.offsetHeight?'var(--gold)':'';
+  });
+});
+</script>
+</body>
+</html>

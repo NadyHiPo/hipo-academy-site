@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бизнес-консалтинг и стратегия — Hipo Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0c14;--bg2:#0f1220;--bg3:#141828;--bg4:#1a1f32;
+  --gold:#c9a257;--gold-light:#ddb96a;--gold-border:rgba(201,162,87,.25);--gold-border2:rgba(201,162,87,.45);
+  --white:#ffffff;--text:#e8eaf2;--text2:#c8ccd8;--muted:#7a8099;--teal:#5ab4ae;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2.5rem}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
+.logo span{color:var(--text);font-weight:400}
+.nav-back{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;transition:color .2s;display:flex;align-items:center;gap:.4rem}
+.nav-back:hover{color:var(--gold)}
+.nav-btn{background:transparent;border:1px solid var(--gold-border2);color:var(--gold);padding:.45rem 1.4rem;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:2px;transition:all .2s}
+.nav-btn:hover{background:var(--gold);color:var(--bg)}
+
+.btn-gold{background:var(--gold);color:var(--bg);padding:.8rem 2.25rem;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid var(--gold);border-radius:2px}
+.btn-gold:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.btn-outline{background:transparent;color:var(--text);padding:.8rem 2.25rem;font-size:.8rem;font-weight:500;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid rgba(232,234,242,.25);border-radius:2px}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+.hero{padding:9rem 2.5rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-20%;left:-10%;width:50%;height:70%;background:radial-gradient(ellipse,rgba(201,162,87,.06) 0%,transparent 65%);pointer-events:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1}
+.hero .wrap{padding:0}
+.eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,4.3rem);font-weight:500;line-height:1.1;color:var(--white);margin-bottom:1rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:var(--text2);max-width:600px;line-height:1.85;font-weight:300;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
+
+section{padding:5rem 2.5rem}
+.eyebrow-sec{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow-sec::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+h2.sec{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:500;color:var(--white);line-height:1.12;margin-bottom:.75rem}
+h2.sec em{font-style:italic;color:var(--gold)}
+.sec-sub{font-size:1rem;color:var(--text2);max-width:560px;line-height:1.85;margin-bottom:3rem;font-weight:300}
+hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border2),transparent)}
+
+/* MISSION */
+.mission-strip{background:var(--bg3);border:1px solid var(--gold-border2);border-left:3px solid var(--gold);padding:1.75rem 2.25rem;margin-bottom:2.5rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.mission-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--gold);line-height:1;flex-shrink:0}
+.mission-text{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--text);line-height:1.4}
+
+/* REQUESTS */
+.requests-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gold-border)}
+.req-item{background:var(--bg3);padding:1.5rem 1.75rem;font-size:.93rem;color:var(--text2);line-height:1.5;transition:background .2s;display:flex;align-items:center;gap:.85rem}
+.req-item:hover{background:var(--bg4);color:var(--text)}
+.req-mark{color:var(--gold);font-size:1.1rem;flex-shrink:0;font-family:'Cormorant Garamond',serif}
+
+/* FORMATS FULL DETAIL */
+.fmt-full{background:var(--bg3);border:1px solid var(--gold-border);padding:2.25rem;margin-bottom:1.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start}
+.fmt-full:hover{border-color:var(--gold-border2)}
+.fmt-tag{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.4rem}
+.fmt-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--white);margin-bottom:.85rem;line-height:1.2}
+.fmt-desc{font-size:.92rem;color:var(--text2);line-height:1.75;font-weight:300}
+.fmt-side{text-align:right;min-width:160px}
+.fmt-price{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;color:var(--gold);line-height:1;margin-bottom:.3rem}
+.fmt-price-sub{font-size:.72rem;color:var(--muted);margin-bottom:1rem}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:2.5rem 0}
+.step{text-align:center}
+.step-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.5rem;opacity:.7}
+.step-title{font-size:.78rem;font-weight:600;color:var(--text);letter-spacing:.04em;margin-bottom:.35rem}
+.step-desc{font-size:.85rem;color:var(--text2);line-height:1.6;font-weight:300}
+
+/* COMPETENCE */
+.competence-box{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;text-align:center}
+.competence-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--white);margin-bottom:1.5rem}
+.competence-tags{display:flex;flex-wrap:wrap;gap:.65rem;justify-content:center}
+.ctag{font-size:.85rem;color:var(--gold);border:1px solid var(--gold-border2);padding:.5rem 1.25rem;border-radius:1px}
+
+/* MINI CASES */
+.mini-cases{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.mini-case{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem}
+.mini-case:hover{border-color:var(--gold-border2)}
+.mini-case-tag{font-size:.65rem;font-weight:500;letter-spacing:.1em;color:var(--teal);margin-bottom:.6rem}
+.mini-case-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--white);margin-bottom:.85rem}
+.mini-case-quote{font-size:.9rem;color:var(--text2);line-height:1.7;font-style:italic;margin-bottom:1rem;font-weight:300}
+.mini-case-result{font-size:.82rem;color:var(--gold);font-weight:500}
+
+/* QUOTE */
+.quote-block{background:var(--bg3);border-left:3px solid var(--gold);padding:2.25rem 2.75rem;text-align:center}
+.quote-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.2vw,1.6rem);font-weight:500;color:var(--white);line-height:1.5;font-style:italic;margin-bottom:1rem}
+.quote-author{font-size:.78rem;color:var(--gold);letter-spacing:.08em;font-weight:500}
+
+.cta{background:var(--bg2);border-top:1px solid var(--gold-border2);border-bottom:1px solid var(--gold-border2);padding:6rem 2.5rem;text-align:center}
+.cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--white);margin-bottom:.75rem}
+.cta h2 em{font-style:italic;color:var(--gold)}
+.cta p{font-size:1rem;color:var(--text2);max-width:460px;margin:0 auto 2.25rem;line-height:1.8;font-weight:300}
+.cta-btns{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap}
+
+footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-decoration:none}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.footer-links a{font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:.72rem;color:var(--muted);line-height:1.8;text-align:right}
+
+@media(max-width:900px){
+  .requests-grid{grid-template-columns:1fr}
+  .fmt-full{grid-template-columns:1fr}
+  .fmt-side{text-align:left}
+  .steps{grid-template-columns:1fr 1fr}
+  .mini-cases{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Hipo <span>Academy</span></a>
+    <a href="index.html" class="nav-back">← На главную</a>
+    <a href="https://t.me/hipo_game" target="_blank" class="nav-btn">Обсудить задачу</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Работа со мной</div>
+    <h1>Бизнес-консалтинг<br>и <em>стратегия</em></h1>
+    <p class="hero-sub">Работаем с фаундерами и топ-менеджерами. Не даём советы — строим рабочие механизмы и остаёмся до результата.</p>
+    <div class="hero-btns">
+      <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Написать нам</a>
+      <a href="cases.html" class="btn-outline">Смотреть кейсы</a>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- MISSION + REQUESTS -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="mission-strip">
+      <div class="mission-num">7</div>
+      <div class="mission-text">«1 хороший управленец = минимум 7 счастливых людей» — наша миссия</div>
+    </div>
+    <div class="eyebrow-sec">Узнаёте себя?</div>
+    <h2 class="sec">С какими запросами <em>к нам приходят</em></h2>
+    <p class="sec-sub">Если хотя бы один пункт откликается — мы знаем, с чего начать.</p>
+    <div class="requests-grid">
+      <div class="req-item"><span class="req-mark">—</span>Хаос в управлении</div>
+      <div class="req-item"><span class="req-mark">—</span>Собственник в операционке</div>
+      <div class="req-item"><span class="req-mark">—</span>Команда не слышит друг друга</div>
+      <div class="req-item"><span class="req-mark">—</span>Нет KPI</div>
+      <div class="req-item"><span class="req-mark">—</span>Отдел продаж не даёт результата</div>
+      <div class="req-item"><span class="req-mark">—</span>Невозможно масштабироваться</div>
+      <div class="req-item"><span class="req-mark">—</span>Внутренний конфликт фаундеров</div>
+      <div class="req-item"><span class="req-mark">—</span>Потеря роли руководителя</div>
+      <div class="req-item"><span class="req-mark">—</span>«Могу ли я стать управленцем?»</div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- FORMATS -->
+<section style="background:var(--bg)">
+  <div class="wrap">
+    <div class="eyebrow-sec">Форматы работы</div>
+    <h2 class="sec">Выберите <em>формат под задачу</em></h2>
+    <p class="sec-sub">От разовой стратегической сессии до длительного партнёрства по развитию бизнеса.</p>
+
+    <div class="fmt-full">
+      <div>
+        <div class="fmt-tag">Strategy Session</div>
+        <div class="fmt-title">Стратегическая сессия</div>
+        <p class="fmt-desc">Фокус-сессия для собственника или команды управленцев. Снимаем туман, расставляем приоритеты, принимаем ключевые стратегические решения здесь и сейчас. Формат — онлайн или очно.</p>
+      </div>
+      <div class="fmt-side">
+        <div class="fmt-price">70 000 ₽</div>
+        <div class="fmt-price-sub">за сессию</div>
+        <a href="https://t.me/hipo_game" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.65rem 1.5rem">Записаться</a>
+      </div>
+    </div>
+
+    <div class="fmt-full">
+      <div>
+        <div class="fmt-tag">Business Consulting</div>
+        <div class="fmt-title">Бизнес-консалтинг</div>
+        <p class="fmt-desc">Цикл работы на 6 недель: стратегия роста, пересборка команды и процессов, настройка системы управления под ключ. Не разовая консультация — сопровождение до результата.</p>
+      </div>
+      <div class="fmt-side">
+        <div class="fmt-price">6 недель</div>
+        <div class="fmt-price-sub">стоимость по запросу</div>
+        <a href="https://t.me/hipo_game" target="_blank" class="btn-outline" style="font-size:.78rem;padding:.65rem 1.5rem">Обсудить</a>
+      </div>
+    </div>
+
+    <div class="fmt-full">
+      <div>
+        <div class="fmt-tag">Game Diagnostics</div>
+        <div class="fmt-title">Игровая диагностика «Корпорация Звёзд»</div>
+        <p class="fmt-desc">Игровая сессия для команды управленцев с фасилитацией. Выявляем слепые зоны, получаем SWOT-анализ каждого участника, разбираем результаты вместе.</p>
+      </div>
+      <div class="fmt-side">
+        <div class="fmt-price">70 000 ₽</div>
+        <div class="fmt-price-sub">за сессию для команды</div>
+        <a href="korporaciya-zvezd.html" class="btn-outline" style="font-size:.78rem;padding:.65rem 1.5rem">Подробнее об игре</a>
+      </div>
+    </div>
+
+    <div class="fmt-full">
+      <div>
+        <div class="fmt-tag">Sales Restructure</div>
+        <div class="fmt-title">Перестройка отдела продаж</div>
+        <p class="fmt-desc">Аудит, новые роли, KPI, скрипты, настройка CRM — глубокая пересборка существующего отдела продаж без полного аутсорса.</p>
+      </div>
+      <div class="fmt-side">
+        <div class="fmt-price-sub" style="margin-top:.5rem">Часть Hipo Sales Force</div>
+        <a href="sales-force.html" class="btn-outline" style="font-size:.78rem;padding:.65rem 1.5rem">Перейти в Sales Force</a>
+      </div>
+    </div>
+
+    <div class="fmt-full">
+      <div>
+        <div class="fmt-tag">Sales Outsource</div>
+        <div class="fmt-title">Аутсорс отдела продаж</div>
+        <p class="fmt-desc">Полностью внешний отдел продаж под управлением нашей команды — РОП, менеджеры, CRM, контроль качества и аналитика.</p>
+      </div>
+      <div class="fmt-side">
+        <div class="fmt-price-sub" style="margin-top:.5rem">Часть Hipo Sales Force</div>
+        <a href="sales-force.html" class="btn-outline" style="font-size:.78rem;padding:.65rem 1.5rem">Перейти в Sales Force</a>
+      </div>
+    </div>
+
+    <div class="fmt-full">
+      <div>
+        <div class="fmt-tag">Education</div>
+        <div class="fmt-title">Обучение руководителей «Мастер управления»</div>
+        <p class="fmt-desc">Системная программа из 9 модулей для развития управленческих компетенций — от основ лидерства до коучинг-стиля.</p>
+      </div>
+      <div class="fmt-side">
+        <div class="fmt-price-sub" style="margin-top:.5rem">От 36 000 ₽</div>
+        <a href="obuchenie.html" class="btn-outline" style="font-size:.78rem;padding:.65rem 1.5rem">Перейти к курсу</a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin:3rem 0">
+      <a href="https://shescale.taplink.id/" target="_blank" class="btn-outline">Выездные мероприятия для предпринимателей · 8 дней →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- PROCESS -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow-sec">Как начинается работа</div>
+    <h2 class="sec">4 шага <em>к результату</em></h2>
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><div class="step-title">Диагностика</div><div class="step-desc">Смотрим на текущую систему и находим точки потерь</div></div>
+      <div class="step"><div class="step-n">2</div><div class="step-title">Стратегическая сессия</div><div class="step-desc">Расставляем приоритеты и принимаем решения</div></div>
+      <div class="step"><div class="step-n">3</div><div class="step-title">План внедрения</div><div class="step-desc">Чёткие шаги, роли и сроки реализации</div></div>
+      <div class="step"><div class="step-n">4</div><div class="step-title">Сопровождение</div><div class="step-desc">Идём с вами до результата, а не до отчёта</div></div>
+    </div>
+
+    <div class="competence-box">
+      <div class="competence-title">«Я мотивирую и выстраиваю систему»</div>
+      <div class="competence-tags">
+        <span class="ctag">Роли</span>
+        <span class="ctag">Структура</span>
+        <span class="ctag">KPI</span>
+        <span class="ctag">Продажи</span>
+        <span class="ctag">Команда</span>
+        <span class="ctag">Масштаб</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- MINI CASES -->
+<section style="background:var(--bg)">
+  <div class="wrap">
+    <div class="eyebrow-sec">Истории людей</div>
+    <h2 class="sec">От запроса <em>к результату</em></h2>
+    <div class="mini-cases">
+      <div class="mini-case">
+        <div class="mini-case-tag">Руководитель в банке</div>
+        <div class="mini-case-name">Ксения Каюмова</div>
+        <p class="mini-case-quote">Пришла с выгоранием, потерей уверенности и готовностью уйти из управления. Прошла игру-диагностику и программу «Мастер управления».</p>
+        <div class="mini-case-result">→ Лучший руководитель по NPS, повышение, региональная позиция</div>
+      </div>
+      <div class="mini-case">
+        <div class="mini-case-tag">От участницы игры — к практике</div>
+        <div class="mini-case-name">Дарья Вебер</div>
+        <p class="mini-case-quote">Сомневалась в себе, не видела свои сильные стороны. После игры и обучения структурировала знания и получила менторскую поддержку.</p>
+        <div class="mini-case-result">→ Контракт с заводом, роль кризисного управляющего</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="cases.html" class="btn-outline">Смотреть все 5 кейсов →</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section style="background:var(--bg2);text-align:center">
+  <div class="wrap" style="max-width:760px;padding:0">
+    <div class="quote-block">
+      <div class="quote-text">«Если вы сосредоточитесь только на главном, всё остальное отпадёт само собой»</div>
+      <div class="quote-author">— Уоррен Баффет</div>
+    </div>
+    <p style="font-size:1.05rem;color:var(--text2);margin-top:2rem;line-height:1.8;font-weight:300">Мы помогаем найти это главное и не распыляться. Сильный бизнес — это не энергия собственника. Это система, которая работает без его постоянного участия.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <div class="wrap" style="padding:0">
+    <h2>Готовы найти <em>главное?</em></h2>
+    <p>Расскажите о своей задаче — подберём формат, который реально решит её.</p>
+    <div class="cta-btns">
+      <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Написать в Telegram</a>
+      <a href="https://wa.me/79173520942" target="_blank" class="btn-outline">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">Hipo Academy</a>
+    <div class="footer-links">
+      <a href="index.html">На главную</a>
+      <a href="cases.html">Кейсы</a>
+      <a href="sales-force.html">Отдел продаж</a>
+      <a href="obuchenie.html">Обучение</a>
+    </div>
+    <div class="footer-copy">© 2025 Hipo Academy · hipoacademy.ru<br>Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590<br><a href="privacy.html" style="color:var(--muted);text-decoration:underline">Политика конфиденциальности</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

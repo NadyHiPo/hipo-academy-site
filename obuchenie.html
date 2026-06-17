@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Обучение — Hipo Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0c14;--bg2:#0f1220;--bg3:#141828;--bg4:#1a1f32;
+  --gold:#c9a257;--gold-light:#ddb96a;--gold-border:rgba(201,162,87,.25);--gold-border2:rgba(201,162,87,.45);
+  --white:#ffffff;--text:#e8eaf2;--text2:#c8ccd8;--muted:#7a8099;--teal:#5ab4ae;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2.5rem}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
+.logo span{color:var(--text);font-weight:400}
+.nav-back{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;transition:color .2s;display:flex;align-items:center;gap:.4rem}
+.nav-back:hover{color:var(--gold)}
+.nav-btn{background:transparent;border:1px solid var(--gold-border2);color:var(--gold);padding:.45rem 1.4rem;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:2px;transition:all .2s}
+.nav-btn:hover{background:var(--gold);color:var(--bg)}
+
+.btn-gold{background:var(--gold);color:var(--bg);padding:.8rem 2.25rem;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid var(--gold);border-radius:2px}
+.btn-gold:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.btn-outline{background:transparent;color:var(--text);padding:.8rem 2.25rem;font-size:.8rem;font-weight:500;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid rgba(232,234,242,.25);border-radius:2px}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+.hero{padding:9rem 2.5rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-20%;left:-10%;width:50%;height:70%;background:radial-gradient(ellipse,rgba(201,162,87,.06) 0%,transparent 65%);pointer-events:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1}
+.hero .wrap{padding:0}
+.eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,4.3rem);font-weight:500;line-height:1.1;color:var(--white);margin-bottom:1rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:var(--text2);max-width:600px;line-height:1.85;font-weight:300;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
+
+section{padding:5rem 2.5rem}
+.eyebrow-sec{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow-sec::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+h2.sec{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:500;color:var(--white);line-height:1.12;margin-bottom:.75rem}
+h2.sec em{font-style:italic;color:var(--gold)}
+.sec-sub{font-size:1rem;color:var(--text2);max-width:560px;line-height:1.85;margin-bottom:3rem;font-weight:300}
+hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border2),transparent)}
+
+/* FREE COURSE BANNER */
+.free-banner{background:var(--bg3);border:1px solid var(--gold-border2);padding:2.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.free-tag{display:inline-block;background:var(--gold);color:var(--bg);font-size:.65rem;font-weight:600;letter-spacing:.1em;padding:.28rem .8rem;margin-bottom:1rem;border-radius:1px}
+.free-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--white);margin-bottom:.6rem}
+.free-desc{font-size:.95rem;color:var(--text2);line-height:1.75;max-width:480px;font-weight:300}
+
+/* MAIN COURSE */
+.course-hero{display:grid;grid-template-columns:1.3fr 1fr;gap:4rem;align-items:start}
+.course-tag{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:1rem}
+.course-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:500;color:var(--white);line-height:1.1;margin-bottom:1.25rem}
+.course-title em{font-style:italic;color:var(--gold)}
+.course-desc{font-size:1rem;color:var(--text2);line-height:1.85;margin-bottom:2rem;font-weight:300}
+.levels-box{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem}
+.levels-title{font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--gold);text-transform:uppercase;margin-bottom:1.25rem}
+.level{display:flex;gap:1rem;padding:.9rem 0;border-top:1px solid var(--gold-border)}
+.level:first-child{border-top:none;padding-top:0}
+.level-n{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);font-weight:400;min-width:24px}
+.level-text{font-size:.9rem;color:var(--text2);line-height:1.55;font-weight:300}
+.level-text strong{color:var(--text);font-weight:500}
+
+/* MODULES */
+.mods-full{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gold-border);margin:2.5rem 0}
+.mod-card{background:var(--bg3);padding:1.75rem;transition:background .2s}
+.mod-card:hover{background:var(--bg4)}
+.mod-n{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:rgba(201,162,87,.25);font-weight:400;line-height:1;margin-bottom:.6rem}
+.mod-title{font-size:.92rem;font-weight:600;color:var(--text);line-height:1.4}
+
+/* TARIFFS */
+.tariffs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.tcard{background:var(--bg3);border:1px solid var(--gold-border);padding:2.25rem;text-align:center;transition:border-color .2s}
+.tcard:hover{border-color:var(--gold-border2)}
+.tcard.featured{border-color:var(--gold);background:rgba(201,162,87,.05)}
+.t-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--gold);margin-bottom:.5rem}
+.t-price{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--white);margin-bottom:1.25rem}
+.t-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;text-align:left;margin-bottom:1.75rem}
+.t-list li{font-size:.87rem;color:var(--text2);padding-left:1.1rem;position:relative;line-height:1.5;font-weight:300}
+.t-list li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-size:.78rem}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.testi-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem}
+.testi-text{font-size:.93rem;color:var(--text2);line-height:1.75;font-style:italic;font-weight:300;margin-bottom:1rem}
+.testi-author{font-size:.82rem;color:var(--gold);font-weight:500}
+.testi-result{font-size:.78rem;color:var(--muted);margin-top:.3rem}
+
+.cta{background:var(--bg2);border-top:1px solid var(--gold-border2);border-bottom:1px solid var(--gold-border2);padding:6rem 2.5rem;text-align:center}
+.cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--white);margin-bottom:.75rem}
+.cta h2 em{font-style:italic;color:var(--gold)}
+.cta p{font-size:1rem;color:var(--text2);max-width:460px;margin:0 auto 2.25rem;line-height:1.8;font-weight:300}
+.cta-btns{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap}
+
+footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-decoration:none}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.footer-links a{font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:.72rem;color:var(--muted);line-height:1.8;text-align:right}
+
+@media(max-width:900px){
+  .free-banner,.course-hero{grid-template-columns:1fr}
+  .mods-full,.tariffs-grid,.testi-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .mods-full{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Hipo <span>Academy</span></a>
+    <a href="index.html" class="nav-back">← На главную</a>
+    <a href="https://t.me/hipo_game" target="_blank" class="nav-btn">Обсудить задачу</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Обучение и развитие</div>
+    <h1>Курсы для тех,<br>кто хочет управлять <em>без хаоса</em></h1>
+    <p class="hero-sub">От бесплатного старта до глубокого погружения в систему управления людьми и командами. Авторская методология, проверенная на реальной практике.</p>
+    <div class="hero-btns">
+      <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold">Получить бесплатный курс</a>
+      <a href="#tariffs" class="btn-outline">Смотреть тарифы</a>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- FREE COURSE -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="free-banner">
+      <div>
+        <div class="free-tag">Бесплатно · Подарок</div>
+        <div class="free-title">Управление без стресса за 3 шага</div>
+        <p class="free-desc">Три практических шага, чтобы перестать гореть на работе и начать управлять легко. Мини-курс доступен прямо сейчас в нашем Telegram-боте — без оплаты и регистрации на сайте.</p>
+      </div>
+      <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold" style="white-space:nowrap">Получить курс →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- MAIN COURSE -->
+<section style="background:var(--bg)">
+  <div class="wrap">
+    <div class="eyebrow-sec">Флагманский курс</div>
+    <h2 class="sec">«Мастер <em>управления</em>»</h2>
+    <p class="sec-sub">Системная программа для руководителей — от основ лидерства до коучинг-стиля управления командой.</p>
+
+    <div class="course-hero">
+      <div>
+        <div class="course-tag">Что входит</div>
+        <div class="course-title">9 модулей <em>живого обучения</em></div>
+        <p class="course-desc">Живые встречи, разборы реальных кейсов, игра «Корпорация Звёзд» как часть программы, персональная обратная связь от эксперта на каждом этапе.</p>
+        <div class="mods-full" style="margin-top:0">
+          <div class="mod-card"><div class="mod-n">01</div><div class="mod-title">Основы управления</div></div>
+          <div class="mod-card"><div class="mod-n">02</div><div class="mod-title">Роль руководителя</div></div>
+          <div class="mod-card"><div class="mod-n">03</div><div class="mod-title">Ситуационное лидерство</div></div>
+          <div class="mod-card"><div class="mod-n">04</div><div class="mod-title">Гибкое управление</div></div>
+          <div class="mod-card"><div class="mod-n">05</div><div class="mod-title">Найм и адаптация</div></div>
+          <div class="mod-card"><div class="mod-n">06</div><div class="mod-title">Мотивация команды</div></div>
+          <div class="mod-card"><div class="mod-n">07</div><div class="mod-title">Контроль без стресса</div></div>
+          <div class="mod-card"><div class="mod-n">08</div><div class="mod-title">Коучинг-стиль</div></div>
+          <div class="mod-card"><div class="mod-n">09</div><div class="mod-title">Манипуляции и стресс</div></div>
+        </div>
+      </div>
+      <div class="levels-box">
+        <div class="levels-title">Работаем на трёх уровнях</div>
+        <div class="level"><div class="level-n">01</div><div class="level-text"><strong>Личность руководителя</strong><br>уверенность, эмоциональный интеллект, готовность к роли</div></div>
+        <div class="level"><div class="level-n">02</div><div class="level-text"><strong>Команда и процессы</strong><br>делегирование, KPI, обратная связь, мотивация</div></div>
+        <div class="level"><div class="level-n">03</div><div class="level-text"><strong>Бизнес-модель и масштабирование</strong><br>системное мышление и рост без хаоса</div></div>
+      </div>
+    </div>
+
+    <div id="tariffs" class="tariffs-grid">
+      <div class="tcard">
+        <div class="t-name">Основа</div>
+        <div class="t-price">36 000 ₽</div>
+        <ul class="t-list">
+          <li>9 модулей программы</li>
+          <li>Доступ к записям встреч</li>
+          <li>Рабочие материалы и шаблоны</li>
+        </ul>
+        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline" style="width:100%">Выбрать тариф</a>
+      </div>
+      <div class="tcard">
+        <div class="t-name">Мастер</div>
+        <div class="t-price">36 000 ₽</div>
+        <ul class="t-list">
+          <li>Всё из тарифа «Основа»</li>
+          <li>Игра «Корпорация Звёзд» в программе</li>
+          <li>Групповые разборы кейсов</li>
+        </ul>
+        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline" style="width:100%">Выбрать тариф</a>
+      </div>
+      <div class="tcard featured">
+        <div class="t-name">Эксперт</div>
+        <div class="t-price">64 000 ₽</div>
+        <ul class="t-list">
+          <li>Всё из тарифа «Мастер»</li>
+          <li>Персональная обратная связь</li>
+          <li>Индивидуальная мини-стратсессия</li>
+        </ul>
+        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold" style="width:100%">Выбрать тариф</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow-sec">Отзывы участников</div>
+    <h2 class="sec">Что говорят <em>после курса</em></h2>
+    <p class="sec-sub">Реальные сообщения от людей, прошедших программу «Мастер управления».</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-text">«Хотела с тобой поделиться, я как пошла на обучение всё вокруг стало меняться в компании. А благодаря курсу я влетела в это подготовленная, и соответственно меньше стресса, тревоги, страхов за невыполнение KPI»</p>
+        <div class="testi-author">Ксения Каюмова</div>
+        <div class="testi-result">Руководитель в банке → лучший руководитель по NPS</div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">«Тебе спасибо, Надя, мне бы без твоего обучения было тяжко. В нём и понимание процессов, как все должно проходить, и сама мотивация реально так подкинула, что хочется нестись на всех крыльях роста и счастья»</p>
+        <div class="testi-author">Участница программы «Мастер управления»</div>
+        <div class="testi-result">Изменение подхода к задачам и команде</div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">«Надя, и тебе спасибо! Твои вопросы и знания, которые ты мне передала — это новый уровень, который способствует лучшему качеству моей жизни и совершенно новый виток в моей работе!»</p>
+        <div class="testi-author">Дарья Вебер</div>
+        <div class="testi-result">От участницы игры — к роли кризисного управляющего</div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">«О, неожиданно было увидеть завершающий модуль! Супер, спасибо! Я зачем парилась вчера как и куда я буду встраивать инструменты курса. А ты даже план внедрения для нас подготовила»</p>
+        <div class="testi-author">Участница программы</div>
+        <div class="testi-result">Завершение курса с готовым планом внедрения</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <div class="wrap" style="padding:0">
+    <h2>Готовы начать <em>с малого?</em></h2>
+    <p>Заберите бесплатный мини-курс — а потом решите, нужен ли вам полный «Мастер управления».</p>
+    <div class="cta-btns">
+      <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold">Получить бесплатный курс</a>
+      <a href="https://t.me/hipo_game" target="_blank" class="btn-outline">Спросить о программе</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">Hipo Academy</a>
+    <div class="footer-links">
+      <a href="index.html">На главную</a>
+      <a href="cases.html">Кейсы</a>
+      <a href="korporaciya-zvezd.html">Игра «Корпорация Звёзд»</a>
+      <a href="https://t.me/Hipo_academy" target="_blank">Telegram-канал</a>
+    </div>
+    <div class="footer-copy">© 2025 Hipo Academy · hipoacademy.ru<br>Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590<br><a href="privacy.html" style="color:var(--muted);text-decoration:underline">Политика конфиденциальности</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
