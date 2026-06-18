@@ -65,11 +65,15 @@ hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(-
 .tariff-block-head{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--gold-border)}
 .tariff-block-tag{font-size:.68rem;font-weight:500;letter-spacing:.16em;color:var(--teal);margin-bottom:.4rem;text-transform:uppercase}
 .tariff-block-name{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;color:var(--gold);margin-bottom:.85rem;line-height:1.1}
-.tariff-block-desc{font-size:.95rem;color:var(--text2);line-height:1.8;font-weight:300;max-width:520px}
+.tariff-block-desc{font-size:.95rem;color:var(--text2);line-height:1.8;font-weight:300;max-width:640px}
 .tariff-block-price{text-align:right;min-width:160px}
 .tp-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--white);line-height:1}
 .module-detail{margin-bottom:1.75rem}
 .module-detail:last-child{margin-bottom:0}
+.included-box{background:rgba(201,162,87,.06);border:1px solid var(--gold-border2);padding:1.5rem 1.75rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(2,1fr);gap:.65rem 1.5rem}
+.included-label{grid-column:1/-1;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+.included-item{font-size:.88rem;color:var(--text2);padding-left:1.1rem;position:relative;line-height:1.5;font-weight:300}
+.included-item::before{content:'✓';position:absolute;left:0;color:var(--gold);font-size:.78rem}
 .module-num{font-size:.68rem;font-weight:600;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:.4rem}
 .module-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;color:var(--white);margin-bottom:.85rem;line-height:1.25}
 .module-points{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.5rem}
@@ -131,6 +135,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   .free-banner,.course-hero{grid-template-columns:1fr}
   .mods-full,.tariffs-grid,.testi-grid{grid-template-columns:1fr}
   .tariff-block-head{grid-template-columns:1fr}
+  .included-box{grid-template-columns:1fr}
   .tariff-block-price{text-align:left}
   .module-points{grid-template-columns:1fr}
 }
@@ -207,6 +212,13 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
           <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline" style="font-size:.78rem;padding:.6rem 1.5rem;margin-top:.75rem">Выбрать тариф</a>
         </div>
       </div>
+      <div class="included-box">
+        <div class="included-label">В этот тариф входит</div>
+        <div class="included-item">Авторская игра «Корпорация Звёзд»</div>
+        <div class="included-item">Чат поддержки на весь период обучения</div>
+        <div class="included-item">3 групповые встречи с разбором кейсов</div>
+        <div class="included-item">Участие в обучающих играх программы</div>
+      </div>
       <div class="module-detail">
         <div class="module-num">Модуль 1</div>
         <div class="module-name">Основы управления персоналом</div>
@@ -254,9 +266,16 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
           <p class="tariff-block-desc">Углубление в знания и навыки. Если у вас уже есть база — начните сразу с тарифа «Мастер» и совершенствуйтесь. Включает модули 4–9.</p>
         </div>
         <div class="tariff-block-price">
-          <div class="tp-num">64 000 ₽</div>
+          <div class="tp-num">44 000 ₽</div>
           <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.6rem 1.5rem;margin-top:.75rem">Выбрать тариф</a>
         </div>
+      </div>
+      <div class="included-box">
+        <div class="included-label">В этот тариф входит</div>
+        <div class="included-item">Авторская игра «Корпорация Звёзд»</div>
+        <div class="included-item">Чат поддержки на весь период обучения</div>
+        <div class="included-item">3 групповые встречи с разбором кейсов</div>
+        <div class="included-item">Участие в обучающих играх программы</div>
       </div>
       <div class="module-detail">
         <div class="module-num">Модуль 4</div>
@@ -338,12 +357,19 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
           <p class="tariff-block-desc">Все блоки вместе — для тех, кто любит полное погружение в обучение. Все 9 модулей сразу: от фундамента «Основы» до глубины «Мастера».</p>
         </div>
         <div class="tariff-block-price">
-          <div class="tp-num">90 000 ₽</div>
+          <div class="tp-num">69 000 ₽</div>
           <div style="font-size:.72rem;color:var(--muted);margin-bottom:.5rem">все 9 модулей</div>
           <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline" style="font-size:.78rem;padding:.6rem 1.5rem">Выбрать тариф</a>
         </div>
       </div>
-      <p style="font-size:.9rem;color:var(--text2);font-weight:300;line-height:1.7">Включает полную программу тарифов «Основа» и «Мастер» — модули 1–9, живые встречи, разборы кейсов, игра «Корпорация Звёзд» в составе программы, персональная обратная связь от эксперта на каждом этапе.</p>
+      <div class="included-box">
+        <div class="included-label">В этот тариф входит</div>
+        <div class="included-item">Авторская игра «Корпорация Звёзд»</div>
+        <div class="included-item">Чат поддержки на весь период обучения</div>
+        <div class="included-item">3 групповые встречи с разбором кейсов</div>
+        <div class="included-item">Участие в обучающих играх программы</div>
+      </div>
+      <p style="font-size:.9rem;color:var(--text2);font-weight:300;line-height:1.7">Включает полную программу тарифов «Основа» и «Мастер» — все 9 модулей, персональная обратная связь от эксперта на каждом этапе.</p>
     </div>
   </div>
 </section>
