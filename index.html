@@ -168,6 +168,9 @@ hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(-
 .learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 .learn-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;transition:border-color .2s}
 .learn-card:hover{border-color:var(--gold-border2)}
+.learn-photo{width:100%;aspect-ratio:16/9;background:var(--bg4);border-radius:2px;margin-bottom:1.75rem;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.learn-photo img{width:100%;height:100%;object-fit:cover}
+.learn-photo-placeholder{color:var(--muted);font-size:.78rem;letter-spacing:.04em;text-align:center}
 .learn-badge{display:inline-block;background:var(--gold);color:var(--bg);font-size:.65rem;font-weight:600;letter-spacing:.1em;padding:.28rem .8rem;margin-bottom:1.1rem;border-radius:1px}
 .learn-badge-line{display:inline-block;background:transparent;border:1px solid var(--gold-border2);color:var(--gold);font-size:.65rem;font-weight:500;letter-spacing:.1em;padding:.28rem .8rem;margin-bottom:1.1rem;border-radius:1px}
 .learn-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--white);margin-bottom:.6rem;line-height:1.2}
@@ -496,12 +499,14 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     <p class="sec-sub">От бесплатного старта до глубокого погружения с индивидуальным наставничеством.</p>
     <div class="learn-grid">
       <div class="learn-card">
+        <div class="learn-photo" data-slot="stress-free-course"><img src="stress-free-course.jpg" alt="Командная работа над задачами"></div>
         <div class="learn-badge">Бесплатно · Подарок</div>
         <div class="learn-title">Управление без стресса за 3 шага</div>
         <p class="learn-desc">Три практических шага, чтобы перестать гореть на работе и начать управлять легко. Доступен в Telegram-боте прямо сейчас.</p>
         <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.7rem 1.75rem">Получить бесплатно</a>
       </div>
       <div class="learn-card">
+        <div class="learn-photo" data-slot="master-management-course"><img src="master-management-course.jpg" alt="Надежда Коновалова выступает с темой про переговоры и конфликты"></div>
         <div class="learn-badge-line">Флагманский курс</div>
         <div class="learn-title">Мастер управления</div>
         <p class="learn-desc">9 модулей — от основ лидерства до коучинг-стиля. Живые встречи, разборы кейсов, игра «Корпорация Звёзд», обратная связь эксперта. 3 тарифа от 36 000 ₽.</p>
@@ -586,8 +591,8 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
       <div class="c-card">
         <div class="c-tag">Business Consulting</div>
         <div class="c-title">Бизнес-консалтинг</div>
-        <div class="c-price">6 недель</div>
-        <div class="c-price-sub">цикл · стоимость по запросу</div>
+        <div class="c-price">200 000 ₽</div>
+        <div class="c-price-sub">за цикл · 6 недель</div>
         <div class="c-hr"></div>
         <ul class="c-list">
           <li>Стратегия роста и масштабирование</li>

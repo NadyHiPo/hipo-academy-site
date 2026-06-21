@@ -10,9 +10,9 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --navy:#0d1033;
-  --navy2:#111640;
-  --navy3:#181e4a;
+  --navy:#0a0c14;
+  --navy2:#0f1220;
+  --navy3:#141828;
   --navy4:#1e2555;
   --gold:#f5c842;
   --gold2:#fad96a;
@@ -29,7 +29,7 @@ body{background:var(--navy);color:var(--text);font-family:'Inter',sans-serif;ove
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(13,16,51,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2rem}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
 .logo span{color:var(--text);font-weight:400}
 .nav-back{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:color .2s;display:flex;align-items:center;gap:.4rem}
 .nav-links{display:flex;gap:2.25rem;list-style:none}
@@ -123,6 +123,9 @@ section{padding:5rem 2rem}
 
 /* PROCESS */
 .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:3rem}
+.game-process-photo{width:100%;aspect-ratio:16/6;background:var(--navy2);border-radius:2px;margin-bottom:2.5rem;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.game-process-photo img{width:100%;height:100%;object-fit:cover}
+.game-process-photo-placeholder{color:var(--muted);font-size:.78rem;letter-spacing:.04em;text-align:center}
 .ps{background:var(--navy2);padding:1.75rem 1.5rem;position:relative}
 .ps::after{content:'→';position:absolute;right:-1px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:1.2rem;z-index:1;background:var(--navy2);padding:.25rem}
 .ps:last-child::after{display:none}
@@ -390,6 +393,7 @@ footer{padding:2rem;border-top:1px solid var(--border)}
     <div class="sec-tag">Как устроена игра</div>
     <h2 class="sec-title">Как проходит <span>игра</span></h2>
     <p class="sec-sub">Четыре шага — от старта до развёрнутого анализа ваших управленческих компетенций.</p>
+    <div class="game-process-photo" data-slot="how-game-works"><img src="game-process.jpg" alt="Участники проходят игру «Корпорация Звёзд»"></div>
     <div class="process-steps">
       <div class="ps">
         <div class="ps-n">1</div>

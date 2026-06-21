@@ -60,7 +60,10 @@ h2.sec em{font-style:italic;color:var(--gold)}
 hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border2),transparent)}
 
 /* FREE COURSE BANNER */
-.free-banner{background:var(--bg3);border:1px solid var(--gold-border2);padding:2.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.free-banner{background:var(--bg3);border:1px solid var(--gold-border2);padding:2.5rem;display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:center}
+.free-banner-photo{width:120px;height:120px;border-radius:2px;background:var(--bg4);overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.free-banner-photo img{width:100%;height:100%;object-fit:cover}
+.free-banner-photo-placeholder{color:var(--muted);font-size:.65rem;text-align:center;padding:.5rem}
 .free-tag{display:inline-block;background:var(--gold);color:var(--bg);font-size:.65rem;font-weight:600;letter-spacing:.1em;padding:.28rem .8rem;margin-bottom:1rem;border-radius:1px}
 .free-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--white);margin-bottom:.6rem}
 .free-desc{font-size:.95rem;color:var(--text2);line-height:1.75;max-width:480px;font-weight:300}
@@ -71,7 +74,10 @@ hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(-
 /* TARIFF BLOCKS */
 .tariff-block{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;margin-bottom:1.5rem}
 .tariff-block.featured{border-color:var(--gold-border2);background:rgba(201,162,87,.04)}
-.tariff-block-head{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--gold-border)}
+.tariff-block-head{display:grid;grid-template-columns:auto 1fr auto;gap:1.75rem;align-items:start;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--gold-border)}
+.tariff-photo{width:88px;height:88px;border-radius:2px;background:var(--bg4);overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tariff-photo img{width:100%;height:100%;object-fit:cover}
+.tariff-photo-placeholder{color:var(--muted);font-size:.6rem;text-align:center;padding:.4rem}
 .tariff-block-tag{font-size:.68rem;font-weight:500;letter-spacing:.16em;color:var(--teal);margin-bottom:.4rem;text-transform:uppercase}
 .tariff-block-name{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;color:var(--gold);margin-bottom:.85rem;line-height:1.1}
 .tariff-block-desc{font-size:.95rem;color:var(--text2);line-height:1.8;font-weight:300;max-width:640px}
@@ -146,6 +152,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   .free-banner,.course-hero{grid-template-columns:1fr}
   .mods-full,.tariffs-grid,.testi-grid{grid-template-columns:1fr}
   .tariff-block-head{grid-template-columns:1fr}
+  .tariff-photo{width:64px;height:64px}
   .included-box{grid-template-columns:1fr}
   .tariff-block-price{text-align:left}
   .module-points{grid-template-columns:1fr}
@@ -201,6 +208,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <section style="background:var(--bg2)">
   <div class="wrap">
     <div class="free-banner">
+      <div class="free-banner-photo" data-slot="stress-free-course"><img src="stress-free-course.jpg" alt="Командная работа над задачами"></div>
       <div>
         <div class="free-tag">Бесплатно · Подарок</div>
         <div class="free-title">Управление без стресса за 3 шага</div>
@@ -230,6 +238,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     <!-- TARIFF OSNOVA -->
     <div class="tariff-block">
       <div class="tariff-block-head">
+        <div class="tariff-photo" data-slot="tariff-osnova"><div class="tariff-photo-placeholder">📷</div></div>
         <div>
           <div class="tariff-block-tag">Тариф</div>
           <div class="tariff-block-name">Основа</div>
@@ -288,6 +297,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     <!-- TARIFF MASTER -->
     <div class="tariff-block featured">
       <div class="tariff-block-head">
+        <div class="tariff-photo" data-slot="tariff-master"><img src="tariff-master.jpg" alt="Надежда Коновалова с буклетом игры «Корпорация Звёзд»"></div>
         <div>
           <div class="tariff-block-tag">Тариф</div>
           <div class="tariff-block-name">Мастер</div>
@@ -379,6 +389,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     <!-- TARIFF EXPERT -->
     <div class="tariff-block">
       <div class="tariff-block-head">
+        <div class="tariff-photo" data-slot="tariff-expert"><img src="tariff-expert.jpg" alt="Живое общение на мероприятии"></div>
         <div>
           <div class="tariff-block-tag">Тариф</div>
           <div class="tariff-block-name">Эксперт</div>
