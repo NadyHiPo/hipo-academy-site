@@ -32,6 +32,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(13,16,51,.96
 .logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
 .logo span{color:var(--text);font-weight:400}
 .nav-back{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:color .2s;display:flex;align-items:center;gap:.4rem}
+.nav-links{display:flex;gap:2.25rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.75rem;font-weight:500;letter-spacing:.06em;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:22px;height:1px;background:var(--text)}
+.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--gold-border);z-index:299;padding:1rem 2rem 1.5rem}
+.mob-menu.open{display:block}
+.mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;padding:.7rem 0;border-bottom:1px solid var(--gold-border)}
+.mob-menu a:last-child{color:var(--gold);border-bottom:none}
 .nav-back:hover{color:var(--gold)}
 .nav-btn{background:var(--gold);color:var(--navy);padding:.45rem 1.4rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .2s}
 .nav-btn:hover{background:var(--gold2)}
@@ -140,6 +149,8 @@ footer{padding:2rem;border-top:1px solid var(--border)}
 
 /* RESPONSIVE */
 @media(max-width:900px){
+  .nav-links,.nav-btn{display:none}
+  .burger{display:flex}
   .hero-wrap{grid-template-columns:1fr}
   .hero-visual{display:none}
   .skills-intro{grid-template-columns:1fr}
@@ -162,10 +173,27 @@ footer{padding:2rem;border-top:1px solid var(--border)}
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">Hipo <span>Academy</span></a>
-    <a href="index.html" class="nav-back">← На главную</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">Об авторе</a></li>
+      <li><a href="korporaciya-zvezd.html">Игры</a></li>
+      <li><a href="obuchenie.html">Обучение</a></li>
+      <li><a href="sales-force.html">Отдел продаж</a></li>
+      <li><a href="consulting.html">Работа со мной</a></li>
+      <li><a href="cases.html">Кейсы</a></li>
+    </ul>
     <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="nav-btn">Играть сейчас</a>
+    <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </div>
 </nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html#about" onclick="closeMob()">Об авторе</a>
+  <a href="korporaciya-zvezd.html">Игры</a>
+  <a href="obuchenie.html">Обучение</a>
+  <a href="sales-force.html">Отдел продаж</a>
+  <a href="consulting.html">Работа со мной</a>
+  <a href="cases.html">Кейсы</a>
+  <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank">Telegram</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -471,5 +499,9 @@ footer{padding:2rem;border-top:1px solid var(--border)}
   </div>
 </footer>
 
+<script>
+function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open')}
+function closeMob(){document.getElementById('mobMenu').classList.remove('open')}
+</script>
 </body>
 </html>

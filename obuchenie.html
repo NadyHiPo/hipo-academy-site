@@ -12,7 +12,7 @@
 :root{
   --bg:#0a0c14;--bg2:#0f1220;--bg3:#141828;--bg4:#1a1f32;
   --gold:#c9a257;--gold-light:#ddb96a;--gold-border:rgba(201,162,87,.25);--gold-border2:rgba(201,162,87,.45);
-  --white:#ffffff;--text:#e8eaf2;--text2:#c8ccd8;--muted:#7a8099;--teal:#5ab4ae;
+  --white:#ffffff;--text:#e8eaf2;--text2:#c8ccd8;--muted:#8e94ab;--teal:#5ab4ae;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -22,6 +22,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97
 .logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
 .logo span{color:var(--text);font-weight:400}
 .nav-back{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;transition:color .2s;display:flex;align-items:center;gap:.4rem}
+.nav-links{display:flex;gap:2.25rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.75rem;font-weight:500;letter-spacing:.06em;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:22px;height:1px;background:var(--text)}
+.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--gold-border);z-index:299;padding:1rem 2rem 1.5rem}
+.mob-menu.open{display:block}
+.mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;padding:.7rem 0;border-bottom:1px solid var(--gold-border)}
+.mob-menu a:last-child{color:var(--gold);border-bottom:none}
 .nav-back:hover{color:var(--gold)}
 .nav-btn{background:transparent;border:1px solid var(--gold-border2);color:var(--gold);padding:.45rem 1.4rem;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:2px;transition:all .2s}
 .nav-btn:hover{background:var(--gold);color:var(--bg)}
@@ -132,6 +141,8 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .footer-copy a{color:var(--gold);text-decoration:underline}
 
 @media(max-width:900px){
+  .nav-links,.nav-btn{display:none}
+  .burger{display:flex}
   .free-banner,.course-hero{grid-template-columns:1fr}
   .mods-full,.tariffs-grid,.testi-grid{grid-template-columns:1fr}
   .tariff-block-head{grid-template-columns:1fr}
@@ -149,10 +160,27 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">Hipo <span>Academy</span></a>
-    <a href="index.html" class="nav-back">← На главную</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">Об авторе</a></li>
+      <li><a href="korporaciya-zvezd.html">Игры</a></li>
+      <li><a href="obuchenie.html">Обучение</a></li>
+      <li><a href="sales-force.html">Отдел продаж</a></li>
+      <li><a href="consulting.html">Работа со мной</a></li>
+      <li><a href="cases.html">Кейсы</a></li>
+    </ul>
     <a href="https://t.me/hipo_game" target="_blank" class="nav-btn">Обсудить задачу</a>
+    <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </div>
 </nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html#about" onclick="closeMob()">Об авторе</a>
+  <a href="korporaciya-zvezd.html">Игры</a>
+  <a href="obuchenie.html">Обучение</a>
+  <a href="sales-force.html">Отдел продаж</a>
+  <a href="consulting.html">Работа со мной</a>
+  <a href="cases.html">Кейсы</a>
+  <a href="https://t.me/hipo_game" target="_blank">Telegram @hipo_game</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -189,7 +217,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <section style="background:var(--bg)">
   <div class="wrap">
     <div class="eyebrow-sec">Флагманский курс</div>
-    <h2 class="sec">«Мастер <em>управления</em>»</h2>
+    <h2 class="sec">«Мастер управления»</h2>
     <p class="sec-sub">Системная программа для руководителей — от фундамента до полного погружения в управление командой.</p>
 
     <div class="levels-box" style="margin-bottom:3rem">
@@ -380,7 +408,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <section style="background:var(--bg2)">
   <div class="wrap">
     <div class="eyebrow-sec">Отзывы участников</div>
-    <h2 class="sec">Что говорят <em>после курса</em></h2>
+    <h2 class="sec">Что говорят после курса</h2>
     <p class="sec-sub">Реальные сообщения от людей, прошедших программу «Мастер управления».</p>
     <div class="testi-grid">
       <div class="testi-card">
@@ -436,5 +464,9 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   </div>
 </footer>
 
+<script>
+function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open')}
+function closeMob(){document.getElementById('mobMenu').classList.remove('open')}
+</script>
 </body>
 </html>

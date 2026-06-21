@@ -12,7 +12,7 @@
 :root{
   --bg:#0a0c14;--bg2:#0f1220;--bg3:#141828;--bg4:#1a1f32;
   --gold:#c9a257;--gold-light:#ddb96a;--gold-border:rgba(201,162,87,.25);--gold-border2:rgba(201,162,87,.45);
-  --white:#ffffff;--text:#e8eaf2;--text2:#c8ccd8;--muted:#7a8099;--teal:#5ab4ae;
+  --white:#ffffff;--text:#e8eaf2;--text2:#c8ccd8;--muted:#8e94ab;--teal:#5ab4ae;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -22,6 +22,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97
 .logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
 .logo span{color:var(--text);font-weight:400}
 .nav-back{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;transition:color .2s;display:flex;align-items:center;gap:.4rem}
+.nav-links{display:flex;gap:2.25rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.75rem;font-weight:500;letter-spacing:.06em;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:22px;height:1px;background:var(--text)}
+.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--gold-border);z-index:299;padding:1rem 2rem 1.5rem}
+.mob-menu.open{display:block}
+.mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;padding:.7rem 0;border-bottom:1px solid var(--gold-border)}
+.mob-menu a:last-child{color:var(--gold);border-bottom:none}
 .nav-back:hover{color:var(--gold)}
 .nav-btn{background:transparent;border:1px solid var(--gold-border2);color:var(--gold);padding:.45rem 1.4rem;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:2px;transition:all .2s}
 .nav-btn:hover{background:var(--gold);color:var(--bg)}
@@ -114,6 +123,8 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .footer-copy a{color:var(--gold);text-decoration:underline}
 
 @media(max-width:900px){
+  .nav-links,.nav-btn{display:none}
+  .burger{display:flex}
   .requests-grid{grid-template-columns:1fr}
   .fmt-full{grid-template-columns:1fr}
   .fmt-side{text-align:left}
@@ -130,16 +141,33 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">Hipo <span>Academy</span></a>
-    <a href="index.html" class="nav-back">← На главную</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">Об авторе</a></li>
+      <li><a href="korporaciya-zvezd.html">Игры</a></li>
+      <li><a href="obuchenie.html">Обучение</a></li>
+      <li><a href="sales-force.html">Отдел продаж</a></li>
+      <li><a href="consulting.html">Работа со мной</a></li>
+      <li><a href="cases.html">Кейсы</a></li>
+    </ul>
     <a href="https://t.me/hipo_game" target="_blank" class="nav-btn">Обсудить задачу</a>
+    <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </div>
 </nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html#about" onclick="closeMob()">Об авторе</a>
+  <a href="korporaciya-zvezd.html">Игры</a>
+  <a href="obuchenie.html">Обучение</a>
+  <a href="sales-force.html">Отдел продаж</a>
+  <a href="consulting.html">Работа со мной</a>
+  <a href="cases.html">Кейсы</a>
+  <a href="https://t.me/hipo_game" target="_blank">Telegram</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
     <div class="eyebrow">Работа со мной</div>
-    <h1>Бизнес-консалтинг<br>и <em>стратегия</em></h1>
+    <h1>Бизнес-консалтинг<br>и стратегия</h1>
     <p class="hero-sub">Работаю с фаундерами и топ-менеджерами. Не даю советы — строю рабочие механизмы и остаюсь до результата.</p>
     <div class="hero-btns">
       <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Написать мне</a>
@@ -158,7 +186,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
       <div class="mission-text">«1 хороший управленец = минимум 7 счастливых людей» — моя миссия</div>
     </div>
     <div class="eyebrow-sec">Узнаёте себя?</div>
-    <h2 class="sec">С какими запросами <em>ко мне приходят</em></h2>
+    <h2 class="sec">С какими запросами ко мне приходят</h2>
     <p class="sec-sub">Если хотя бы один пункт откликается — мы знаем, с чего начать.</p>
     <div class="requests-grid">
       <div class="req-item"><span class="req-mark">—</span>Хаос в управлении</div>
@@ -180,7 +208,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <section style="background:var(--bg)">
   <div class="wrap">
     <div class="eyebrow-sec">Форматы работы</div>
-    <h2 class="sec">Выберите <em>формат под задачу</em></h2>
+    <h2 class="sec">Выберите формат под задачу</h2>
     <p class="sec-sub">От разовой стратегической сессии до длительного партнёрства по развитию бизнеса.</p>
 
     <div class="fmt-full">
@@ -270,7 +298,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <section style="background:var(--bg2)">
   <div class="wrap">
     <div class="eyebrow-sec">Как начинается работа</div>
-    <h2 class="sec">4 шага <em>к результату</em></h2>
+    <h2 class="sec">4 шага к результату</h2>
     <div class="steps">
       <div class="step"><div class="step-n">1</div><div class="step-title">Диагностика</div><div class="step-desc">Смотрим на текущую систему и находим точки потерь</div></div>
       <div class="step"><div class="step-n">2</div><div class="step-title">Стратегическая сессия</div><div class="step-desc">Расставляем приоритеты и принимаем решения</div></div>
@@ -298,7 +326,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <section style="background:var(--bg)">
   <div class="wrap">
     <div class="eyebrow-sec">Истории людей</div>
-    <h2 class="sec">От запроса <em>к результату</em></h2>
+    <h2 class="sec">От запроса к результату</h2>
     <div class="mini-cases">
       <div class="mini-case">
         <div class="mini-case-tag">Руководитель в банке</div>
@@ -359,5 +387,9 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   </div>
 </footer>
 
+<script>
+function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open')}
+function closeMob(){document.getElementById('mobMenu').classList.remove('open')}
+</script>
 </body>
 </html>

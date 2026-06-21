@@ -12,7 +12,7 @@
 :root{
   --bg:#0a0c14;--bg2:#0f1220;--bg3:#141828;--bg4:#1a1f32;
   --gold:#c9a257;--gold-light:#ddb96a;--gold-border:rgba(201,162,87,.25);--gold-border2:rgba(201,162,87,.45);
-  --white:#ffffff;--text:#e8eaf2;--text2:#c8ccd8;--muted:#7a8099;--teal:#5ab4ae;
+  --white:#ffffff;--text:#e8eaf2;--text2:#c8ccd8;--muted:#8e94ab;--teal:#5ab4ae;
   --red:#c97a6a;--green:#7ab896;
 }
 html{scroll-behavior:smooth}
@@ -23,6 +23,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97
 .logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
 .logo span{color:var(--text);font-weight:400}
 .nav-back{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;transition:color .2s;display:flex;align-items:center;gap:.4rem}
+.nav-links{display:flex;gap:2.25rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.75rem;font-weight:500;letter-spacing:.06em;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:22px;height:1px;background:var(--text)}
+.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--gold-border);z-index:299;padding:1rem 2rem 1.5rem}
+.mob-menu.open{display:block}
+.mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;padding:.7rem 0;border-bottom:1px solid var(--gold-border)}
+.mob-menu a:last-child{color:var(--gold);border-bottom:none}
 .nav-back:hover{color:var(--gold)}
 .nav-btn{background:transparent;border:1px solid var(--gold-border2);color:var(--gold);padding:.45rem 1.4rem;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:2px;transition:all .2s}
 .nav-btn:hover{background:var(--gold);color:var(--bg)}
@@ -55,7 +64,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97
 .case-titlebox{}
 .case-eyebrow{font-size:.68rem;font-weight:500;letter-spacing:.16em;color:var(--teal);margin-bottom:.4rem}
 .case-h{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:500;color:var(--white);line-height:1.15}
-.case-logo{width:64px;height:64px;border-radius:50%;background:var(--bg3);border:1px solid var(--gold-border2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);font-weight:600;flex-shrink:0}
+.case-logo{width:64px;height:64px;border-radius:50%;background:var(--bg3);border:1px solid var(--gold-border2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);font-weight:600;flex-shrink:0;overflow:hidden}
+.case-logo img{width:100%;height:100%;object-fit:cover}
 
 .case-body{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-bottom:2rem}
 .before-after{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem}
@@ -71,6 +81,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97
 .after .ba-list li::before{color:var(--gold)}
 
 .case-what{background:var(--bg3);border:1px solid var(--gold-border);padding:1.75rem 2rem;margin-bottom:2rem}
+.case-photo{width:100%;aspect-ratio:16/7;background:var(--bg3);border:1px solid var(--gold-border);border-radius:2px;margin-bottom:2rem;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.case-photo img{width:100%;height:100%;object-fit:cover}
+.case-photo-placeholder{color:var(--muted);font-size:.78rem;letter-spacing:.06em;text-align:center;padding:2rem}
 .what-label{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
 .what-tags{display:flex;flex-wrap:wrap;gap:.5rem}
 .what-tag{font-size:.82rem;color:var(--text2);border:1px solid var(--gold-border);padding:.4rem .9rem;border-radius:2px}
@@ -102,6 +115,8 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .footer-copy a{color:var(--gold);text-decoration:underline}
 
 @media(max-width:900px){
+  .nav-links,.nav-btn{display:none}
+  .burger{display:flex}
   .case-header{grid-template-columns:1fr;text-align:center}
   .case-logo{margin:0 auto}
   .case-body{grid-template-columns:1fr}
@@ -114,10 +129,27 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">Hipo <span>Academy</span></a>
-    <a href="index.html" class="nav-back">← На главную</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">Об авторе</a></li>
+      <li><a href="korporaciya-zvezd.html">Игры</a></li>
+      <li><a href="obuchenie.html">Обучение</a></li>
+      <li><a href="sales-force.html">Отдел продаж</a></li>
+      <li><a href="consulting.html">Работа со мной</a></li>
+      <li><a href="cases.html">Кейсы</a></li>
+    </ul>
     <a href="https://t.me/hipo_game" target="_blank" class="nav-btn">Обсудить проект</a>
+    <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </div>
 </nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html#about" onclick="closeMob()">Об авторе</a>
+  <a href="korporaciya-zvezd.html">Игры</a>
+  <a href="obuchenie.html">Обучение</a>
+  <a href="sales-force.html">Отдел продаж</a>
+  <a href="consulting.html">Работа со мной</a>
+  <a href="cases.html">Кейсы</a>
+  <a href="https://t.me/hipo_game" target="_blank">Telegram</a>
+</div>
 
 <section class="hero">
   <div class="eyebrow">Реальные результаты</div>
@@ -183,6 +215,10 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     </div>
   </div>
 
+  <div class="case-photo" data-slot="mochiland">
+    <div class="case-photo-placeholder">📷 Фото команды Mochiland или магазинов сети</div>
+  </div>
+
   <div class="case-result">
     <div class="result-main">Главное: <strong>бизнес стал масштабируемым</strong></div>
   </div>
@@ -244,6 +280,10 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     </div>
   </div>
 
+  <div class="case-photo" data-slot="turinvoice">
+    <div class="case-photo-placeholder">📷 Фото команды Turinvoice или продукта</div>
+  </div>
+
   <div class="case-result">
     <div class="result-main">Главное: <strong>стартап стал управляемым</strong></div>
   </div>
@@ -295,6 +335,10 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     </div>
   </div>
 
+  <div class="case-photo" data-slot="kseniya">
+    <div class="case-photo-placeholder">📷 Фото Ксении Каюмовой за работой</div>
+  </div>
+
   <div class="case-result">
     <div class="result-main">Главное: <strong>нашла свои сильные стороны и стала сильным управленцем</strong></div>
   </div>
@@ -344,6 +388,10 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
       <span class="what-tag">Структурирование знаний</span>
       <span class="what-tag">Менторство</span>
     </div>
+  </div>
+
+  <div class="case-photo" data-slot="darya">
+    <div class="case-photo-placeholder">📷 Фото Дарьи Вебер на объекте/в работе</div>
   </div>
 
   <div class="case-result">
@@ -403,6 +451,10 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     </div>
   </div>
 
+  <div class="case-photo" data-slot="garden-flowers">
+    <div class="case-photo-placeholder">📷 Фото магазина или команды Garden Flowers</div>
+  </div>
+
   <div class="case-result">
     <div class="result-main">Главное: <strong>бизнес стал готов к франшизе</strong></div>
   </div>
@@ -448,5 +500,9 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   </div>
 </footer>
 
+<script>
+function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open')}
+function closeMob(){document.getElementById('mobMenu').classList.remove('open')}
+</script>
 </body>
 </html>
