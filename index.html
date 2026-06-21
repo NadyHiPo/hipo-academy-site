@@ -168,12 +168,12 @@ hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(-
 .learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 .learn-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;transition:border-color .2s}
 .learn-card:hover{border-color:var(--gold-border2)}
-.learn-photo{width:100%;aspect-ratio:16/9;background:var(--bg4);border-radius:2px;margin-bottom:1.75rem;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.learn-photo{width:100%;aspect-ratio:16/9;max-height:220px;background:var(--bg4);border-radius:2px;margin-bottom:1.75rem;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .learn-photo img{width:100%;height:100%;object-fit:cover}
 .learn-photo-placeholder{color:var(--muted);font-size:.78rem;letter-spacing:.04em;text-align:center}
 .learn-badge{display:inline-block;background:var(--gold);color:var(--bg);font-size:.65rem;font-weight:600;letter-spacing:.1em;padding:.28rem .8rem;margin-bottom:1.1rem;border-radius:1px}
 .learn-badge-line{display:inline-block;background:transparent;border:1px solid var(--gold-border2);color:var(--gold);font-size:.65rem;font-weight:500;letter-spacing:.1em;padding:.28rem .8rem;margin-bottom:1.1rem;border-radius:1px}
-.learn-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--white);margin-bottom:.6rem;line-height:1.2}
+.learn-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:500;color:var(--white);margin-bottom:.75rem;line-height:1.15}
 .learn-desc{font-size:.95rem;color:var(--text2);line-height:1.8;margin-bottom:1.5rem;font-weight:300}
 .mods{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:1rem 0 1.5rem}
 .mod{background:var(--bg4);padding:.5rem .75rem;font-size:.78rem;color:var(--text2);line-height:1.4;font-weight:300}
@@ -198,10 +198,11 @@ hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(-
 .adv-title{font-size:.78rem;font-weight:600;color:var(--text);margin-bottom:.25rem}
 .adv-text{font-size:.82rem;color:var(--text2);line-height:1.55;font-weight:300}
 .formats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem}
-.fmt{background:var(--bg3);border:1px solid var(--gold-border);padding:2.25rem;transition:all .2s}
+.fmt{background:var(--bg3);border:1px solid var(--gold-border2);border-left:3px solid var(--gold);padding:2.25rem;transition:all .2s}
+.fmt:hover{border-color:var(--gold)}
 .fmt:hover{border-color:var(--gold-border2)}
 .fmt-tag{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.4rem}
-.fmt-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--white);margin-bottom:1rem;line-height:1.2}
+.fmt-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--white);margin-bottom:1rem;line-height:1.2}
 .fmt-list{list-style:none;display:flex;flex-direction:column;gap:.45rem}
 .fmt-list li{font-size:.9rem;color:var(--text2);padding-left:.9rem;position:relative;line-height:1.55;font-weight:300}
 .fmt-list li::before{content:'—';position:absolute;left:0;color:var(--gold);font-size:.75rem}
@@ -210,7 +211,7 @@ hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(-
 .step-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.5rem;opacity:.7}
 .step-title{font-size:.75rem;font-weight:600;color:var(--text);letter-spacing:.04em;margin-bottom:.35rem}
 .step-desc{font-size:.82rem;color:var(--text2);line-height:1.55;font-weight:300}
-.case{background:var(--bg3);border:1px solid var(--gold-border2);padding:2.5rem;display:grid;grid-template-columns:1.6fr 1fr;gap:3rem;align-items:center}
+.case{background:var(--bg3);border:1px solid var(--gold-border2);border-left:3px solid var(--gold);padding:2.5rem;display:grid;grid-template-columns:1.6fr 1fr;gap:3rem;align-items:center}
 .case-tag{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.5rem}
 .case-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--white);margin-bottom:.6rem}
 .case-desc{font-size:.93rem;color:var(--text2);line-height:1.7;font-weight:300}
