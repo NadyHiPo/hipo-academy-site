@@ -50,6 +50,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97
 .hero h1 em{font-style:italic;color:var(--gold)}
 .hero-sub{font-size:1.05rem;color:var(--text2);max-width:600px;line-height:1.85;font-weight:300;margin-bottom:2.5rem}
 .hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:3.5rem;align-items:center}
+.hero-photo{aspect-ratio:3/4;background:var(--bg3);border:1px solid var(--gold-border);position:relative;overflow:hidden;border-radius:4px}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;position:absolute;inset:0}
 
 section{padding:5rem 2.5rem}
 .eyebrow-sec{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
@@ -84,8 +87,8 @@ hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(-
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:2.5rem 0}
 .step{text-align:center}
 .step-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.5rem;opacity:.7}
-.step-title{font-size:.78rem;font-weight:600;color:var(--text);letter-spacing:.04em;margin-bottom:.35rem}
-.step-desc{font-size:.85rem;color:var(--text2);line-height:1.6;font-weight:300}
+.step-title{font-size:.95rem;font-weight:600;color:var(--text);letter-spacing:.04em;margin-bottom:.35rem}
+.step-desc{font-size:.92rem;color:var(--text2);line-height:1.6;font-weight:300}
 
 /* COMPETENCE */
 .competence-box{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;text-align:center}
@@ -130,6 +133,8 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   .fmt-side{text-align:left}
   .steps{grid-template-columns:1fr 1fr}
   .mini-cases{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr;gap:2rem}
+  .hero-photo{max-width:280px;margin:0 auto}
 }
 @media(max-width:640px){
   .steps{grid-template-columns:1fr}
@@ -166,12 +171,19 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Работа со мной</div>
-    <h1>Бизнес-консалтинг<br>и стратегия</h1>
-    <p class="hero-sub">Работаю с фаундерами и топ-менеджерами. Не даю советы — строю рабочие механизмы и остаюсь до результата.</p>
-    <div class="hero-btns">
-      <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Написать мне</a>
-      <a href="cases.html" class="btn-outline">Смотреть кейсы</a>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Работа со мной</div>
+        <h1>Бизнес-консалтинг<br>и стратегия</h1>
+        <p class="hero-sub">Работаю с фаундерами и топ-менеджерами. Не даю советы — строю рабочие механизмы и остаюсь до результата.</p>
+        <div class="hero-btns">
+          <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Написать мне</a>
+          <a href="cases.html" class="btn-outline">Смотреть кейсы</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="nadezhda-photo.jpg" alt="Надежда Коновалова — Hipo Academy">
+      </div>
     </div>
   </div>
 </section>
