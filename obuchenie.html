@@ -32,6 +32,8 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overf
 
 nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2.5rem}
+.logo{display:flex;align-items:center;gap:.5rem}
+.logo-img{height:28px;width:28px;object-fit:contain;flex-shrink:0}
 .logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
 .logo span{color:var(--text);font-weight:400}
 .nav-back{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;transition:color .2s;display:flex;align-items:center;gap:.4rem}
@@ -152,7 +154,8 @@ hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(-
 
 footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-decoration:none}
+.footer-logo{display:flex;align-items:center;gap:.4rem;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-decoration:none}
+.footer-logo-img{height:22px;width:22px;object-fit:contain}
 .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
 .footer-links a{font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-decoration:none}
 .footer-links a:hover{color:var(--gold)}
@@ -179,7 +182,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="logo">Hipo <span>Academy</span></a>
+    <a href="index.html" class="logo"><img src="logo-icon.png" alt="Hipo Academy" class="logo-img">Hipo <span>Academy</span></a>
     <ul class="nav-links">
       <li><a href="index.html#about">Об авторе</a></li>
       <li><a href="korporaciya-zvezd.html">Игры</a></li>
@@ -473,7 +476,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 
 <footer>
   <div class="footer-inner">
-    <a href="index.html" class="footer-logo">Hipo Academy</a>
+    <a href="index.html" class="footer-logo"><img src="logo-icon.png" alt="" class="footer-logo-img">Hipo Academy</a>
     <div class="footer-links">
       <a href="index.html">На главную</a>
       <a href="cases.html">Кейсы</a>
@@ -482,7 +485,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     </div>
     <div class="footer-copy">
       <div style="margin-bottom:.5rem">© 2025 Hipo Academy · hipoacademy.ru</div>
-      <div style="opacity:.85">Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590</div>
+      <div style="opacity:.85">Коновалова Надежда Викторовна · Самозанятый (НПД) · ИНН 027708088590</div>
       <div style="margin-top:.4rem"><a href="privacy.html">Политика конфиденциальности</a></div>
     </div>
   </div>
