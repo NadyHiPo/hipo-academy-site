@@ -26,21 +26,24 @@
   --navy:#0a0c14;
   --navy2:#0f1220;
   --navy3:#141828;
-  --navy4:#1e2555;
-  --gold:#f5c842;
-  --gold2:#fad96a;
-  --teal:#4ecdc4;
+  --bg2:#0f1220;
+  --gold:#c9a257;
+  --gold2:#ddb96a;
+  --gold-border:rgba(201,162,87,.25);
+  --gold-border2:rgba(201,162,87,.45);
+  --teal:#5ab4ae;
   --white:#ffffff;
-  --text:#f0f2fa;
-  --muted:#bbc4e0;
-  --border:rgba(245,200,66,.2);
-  --border2:rgba(245,200,66,.35);
+  --text:#e8eaf2;
+  --text2:#c8ccd8;
+  --muted:#8e94ab;
+  --border:rgba(201,162,87,.25);
+  --border2:rgba(201,162,87,.45);
 }
 html{scroll-behavior:smooth}
 body{background:var(--navy);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(13,16,51,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2rem}
 .logo{display:flex;align-items:center;gap:.5rem;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
 .logo-img{height:28px;width:28px;object-fit:contain;flex-shrink:0}
@@ -56,7 +59,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(13,16,51,.96
 .mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;padding:.7rem 0;border-bottom:1px solid var(--gold-border)}
 .mob-menu a:last-child{color:var(--gold);border-bottom:none}
 .nav-back:hover{color:var(--gold)}
-.nav-btn{background:var(--gold);color:var(--navy);padding:.45rem 1.4rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.nav-btn{background:transparent;border:1px solid var(--gold-border2);color:var(--gold);padding:.45rem 1.4rem;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:2px;transition:all .2s}
 .nav-btn:hover{background:var(--gold2)}
 
 /* BUTTONS */
