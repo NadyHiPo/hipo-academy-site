@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Подбор персонала — Hipo Academy</title>
+<meta name="description" content="Профильный подбор менеджеров продаж, тимлидов и руководителей. Найм с глубоким погружением в бизнес клиента, тестированием и адаптацией 30 дней. Hipo Academy — Надежда Коновалова.">
+<meta property="og:title" content="Подбор персонала — Hipo Academy">
+<meta property="og:description" content="Профильный найм: менеджеры продаж, тимлиды, руководители и директора направлений. Полный цикл — от профиля должности до адаптации.">
+<meta property="og:image" content="https://hipoacademy.ru/nadezhda-photo.jpg">
+<meta property="og:url" content="https://hipoacademy.ru/naim.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0c14;--bg2:#0f1220;--bg3:#141828;--bg4:#1a1f32;
+  --gold:#c9a257;--gold-light:#ddb96a;--gold-border:rgba(201,162,87,.25);--gold-border2:rgba(201,162,87,.45);
+  --white:#ffffff;--text:#e8eaf2;--text2:#c8ccd8;--muted:#8e94ab;--teal:#5ab4ae;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2.5rem}
+.logo{display:flex;align-items:center;gap:.5rem;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
+.logo-img{height:28px;width:28px;object-fit:contain;flex-shrink:0}
+.logo span{color:var(--text);font-weight:400}
+.nav-links{display:flex;gap:2.25rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.75rem;font-weight:500;letter-spacing:.06em;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:22px;height:1px;background:var(--text)}
+.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--gold-border);z-index:299;padding:1rem 2rem 1.5rem}
+.mob-menu.open{display:block}
+.mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;padding:.7rem 0;border-bottom:1px solid var(--gold-border)}
+.mob-menu a:last-child{color:var(--gold);border-bottom:none}
+.nav-btn{background:transparent;border:1px solid var(--gold-border2);color:var(--gold);padding:.45rem 1.4rem;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:2px;transition:all .2s}
+.nav-btn:hover{background:var(--gold);color:var(--bg)}
+
+.btn-gold{background:var(--gold);color:var(--bg);padding:.8rem 2.25rem;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid var(--gold);border-radius:2px}
+.btn-gold:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.btn-outline{background:transparent;color:var(--text);padding:.8rem 2.25rem;font-size:.8rem;font-weight:500;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid rgba(232,234,242,.25);border-radius:2px}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+.wrap{max-width:1100px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1}
+section{padding:5rem 2.5rem}
+.eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+.eyebrow-sec{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow-sec::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+h2.sec{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:500;color:var(--white);line-height:1.12;margin-bottom:.75rem}
+h2.sec em{font-style:italic;color:var(--gold)}
+.sec-sub{font-size:1rem;color:var(--text2);max-width:580px;line-height:1.85;margin-bottom:3rem;font-weight:300}
+hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border2),transparent)}
+
+/* HERO */
+.hero{padding:9rem 2.5rem 5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-20%;right:-5%;width:50%;height:80%;background:radial-gradient(ellipse,rgba(201,162,87,.05) 0%,transparent 65%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5.5vw,4.5rem);font-weight:500;line-height:1.05;color:var(--white);margin-bottom:1.25rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:var(--text2);max-width:560px;line-height:1.85;font-weight:300;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
+
+/* HERO CARD */
+.hero-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2.25rem;position:relative}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.hero-card-tag{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:1.25rem}
+.hero-card-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;color:var(--white);margin-bottom:.35rem}
+.hero-card-sub{font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.pos-list{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.pos-item{display:flex;align-items:center;gap:.75rem;font-size:.88rem;color:var(--text2)}
+.pos-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.pos-level{font-size:.65rem;letter-spacing:.08em;color:var(--muted);background:var(--bg4);padding:.15rem .5rem;border-radius:1px;margin-left:auto}
+
+/* DIFF — ОТЛИЧИЯ */
+.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gold-border);margin-top:3rem}
+.diff-item{background:var(--bg3);padding:2rem 1.75rem;transition:background .2s}
+.diff-item:hover{background:var(--bg4)}
+.diff-n{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.75rem}
+.diff-title{font-size:.9rem;font-weight:600;color:var(--text);margin-bottom:.5rem;letter-spacing:.02em}
+.diff-desc{font-size:.85rem;color:var(--text2);line-height:1.7;font-weight:300}
+
+/* POSITIONS */
+.pos-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.pos-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem}
+.pos-card:hover{border-color:var(--gold-border2)}
+.pos-card-tag{font-size:.65rem;font-weight:500;letter-spacing:.12em;color:var(--teal);margin-bottom:.85rem}
+.pos-card-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--white);margin-bottom:1rem}
+.pos-tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.pos-tag{font-size:.75rem;color:var(--muted);border:1px solid var(--gold-border);padding:.3rem .75rem;border-radius:1px}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:2.5rem 0;position:relative}
+.steps::before{content:'';position:absolute;top:1rem;left:12%;right:12%;height:1px;background:linear-gradient(90deg,var(--gold-border),var(--gold-border2),var(--gold-border));z-index:0}
+.step{text-align:center;position:relative;z-index:1}
+.step-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.5rem}
+.step-title{font-size:.95rem;font-weight:600;color:var(--text);letter-spacing:.04em;margin-bottom:.35rem}
+.step-desc{font-size:.92rem;color:var(--text2);line-height:1.6;font-weight:300}
+
+/* PRICE */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.price-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem}
+.price-card.featured{border-color:var(--gold-border2);background:var(--bg4);position:relative}
+.price-card.featured::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold)}
+.price-tag{font-size:.65rem;font-weight:500;letter-spacing:.12em;color:var(--teal);margin-bottom:.75rem}
+.price-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:var(--white);margin-bottom:.85rem;line-height:1.25}
+.price-amount{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:500;color:var(--gold);line-height:1;margin-bottom:.25rem}
+.price-unit{font-size:.75rem;color:var(--muted);margin-bottom:1.5rem}
+.price-includes{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.price-includes li{font-size:.85rem;color:var(--text2);display:flex;gap:.6rem;line-height:1.5}
+.price-includes li::before{content:'—';color:var(--gold);flex-shrink:0}
+
+/* GIFT */
+.gift-strip{background:var(--bg3);border:1px solid var(--gold-border2);border-left:3px solid var(--gold);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.gift-left{}
+.gift-label{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.5rem}
+.gift-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--white);margin-bottom:.4rem}
+.gift-desc{font-size:.88rem;color:var(--text2);line-height:1.6;font-weight:300;max-width:500px}
+
+/* CTA */
+.cta{background:var(--bg2);border-top:1px solid var(--gold-border2);border-bottom:1px solid var(--gold-border2);padding:6rem 2.5rem;text-align:center}
+.cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--white);margin-bottom:.75rem}
+.cta h2 em{font-style:italic;color:var(--gold)}
+.cta p{font-size:1rem;color:var(--text2);max-width:460px;margin:0 auto 2.25rem;line-height:1.8;font-weight:300}
+.cta-btns{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap}
+
+footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{display:flex;align-items:center;gap:.4rem;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-decoration:none}
+.footer-logo-img{height:22px;width:22px;object-fit:contain}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.footer-links a{font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:.78rem;color:#a8b0c8;line-height:1.9;text-align:right}
+.footer-copy a{color:var(--gold);text-decoration:underline}
+
+@media(max-width:900px){
+  .nav-links,.nav-btn{display:none}
+  .burger{display:flex}
+  .hero-grid{grid-template-columns:1fr}
+  .diff-grid{grid-template-columns:1fr}
+  .pos-grid{grid-template-columns:1fr}
+  .price-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .steps::before{display:none}
+  .gift-strip{flex-direction:column}
+}
+@media(max-width:640px){
+  .steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="logo-icon.png" alt="Hipo Academy" class="logo-img">Hipo <span>Academy</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">Об авторе</a></li>
+      <li><a href="korporaciya-zvezd.html">Игры</a></li>
+      <li><a href="obuchenie.html">Обучение</a></li>
+      <li><a href="sales-force.html">Отдел продаж</a></li>
+      <li><a href="consulting.html">Работа со мной</a></li>
+      <li><a href="naim.html" class="active">Найм</a></li>
+      <li><a href="cases.html">Кейсы</a></li>
+    </ul>
+    <div class="burger" onclick="document.getElementById('mob').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+    <a href="https://t.me/hipo_game" target="_blank" class="nav-btn">Написать мне</a>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mob">
+  <a href="index.html#about">Об авторе</a>
+  <a href="korporaciya-zvezd.html">Игры</a>
+  <a href="obuchenie.html">Обучение</a>
+  <a href="sales-force.html">Отдел продаж</a>
+  <a href="consulting.html">Работа со мной</a>
+  <a href="naim.html">Найм</a>
+  <a href="cases.html">Кейсы</a>
+  <a href="https://t.me/hipo_game" target="_blank">Написать мне →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Профильный подбор персонала</div>
+        <h1>Найм, который<br><em>работает</em></h1>
+        <p class="hero-sub">Подбираем менеджеров продаж, тимлидов, руководителей и директоров направлений. Не просто закрываем вакансию — находим человека, который встроится в вашу систему и даст результат.</p>
+        <div class="hero-btns">
+          <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Обсудить вакансию</a>
+          <a href="#profile" class="btn-outline">Скачать профиль должности ↓</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-tag">КОГО ИЩЕМ ДЛЯ КЛИЕНТОВ</div>
+        <div class="hero-card-title">Линейные позиции</div>
+        <div class="hero-card-sub">Отделы продаж и сервиса</div>
+        <ul class="pos-list">
+          <li class="pos-item"><span class="pos-dot"></span>Менеджер по продажам<span class="pos-level">линейный</span></li>
+          <li class="pos-item"><span class="pos-dot"></span>Менеджер по работе с клиентами<span class="pos-level">линейный</span></li>
+          <li class="pos-item"><span class="pos-dot"></span>Специалист по продукту<span class="pos-level">линейный</span></li>
+        </ul>
+        <div style="height:1.5rem"></div>
+        <div class="hero-card-title">Ключевые позиции</div>
+        <div class="hero-card-sub">Управление и стратегия</div>
+        <ul class="pos-list">
+          <li class="pos-item"><span class="pos-dot"></span>Тимлид / Старший менеджер<span class="pos-level">ключевая</span></li>
+          <li class="pos-item"><span class="pos-dot"></span>Руководитель отдела<span class="pos-level">ключевая</span></li>
+          <li class="pos-item"><span class="pos-dot"></span>Директор направления<span class="pos-level">ключевая</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ЧЕМ МЫ ОТЛИЧАЕМСЯ -->
+<section style="background:var(--bg);padding:5rem 2.5rem">
+  <div class="wrap">
+    <div class="eyebrow-sec">Наш подход</div>
+    <h2 class="sec">Чем мы <em>отличаемся</em></h2>
+    <p class="sec-sub">Агентство находит кандидата и уходит. Мы остаёмся — потому что работаем внутри вашей системы, а не снаружи.</p>
+    <div class="diff-grid">
+      <div class="diff-item">
+        <div class="diff-n">01</div>
+        <div class="diff-title">Глубокое погружение в бизнес</div>
+        <div class="diff-desc">Мы работаем с вашей системой продаж, CRM и командой — поэтому понимаем, кто реально нужен, а не просто закрываем вакансию по описанию. Найм идёт параллельно с выстраиванием процессов, а не в отрыве от них.</div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-n">02</div>
+        <div class="diff-title">Методология отбора Алии Киекбаевой</div>
+        <div class="diff-desc">Тестирование на совместимость с командой и задачами, оценка мотивационного профиля и зон роста. Не угадываем по резюме — проверяем по поведению и реакциям в реальных ситуациях.</div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-n">03</div>
+        <div class="diff-title">Адаптация 30 дней входит в стоимость</div>
+        <div class="diff-desc">Рынок берёт деньги за подбор и уходит. Мы сопровождаем сотрудника первые 30 дней: вводим в процессы, контролируем первые результаты, снижаем риск «не зашёл». Адаптация входит в цену — без доплат.</div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-n">04</div>
+        <div class="diff-title">Профиль должности — до старта поиска</div>
+        <div class="diff-desc">Перед тем как открыть вакансию, мы составляем профиль должности: зоны ответственности, KPI, компетенции, мотивационный тип. Это убирает «кандидат не оправдал ожиданий» уже на этапе отбора.</div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-n">05</div>
+        <div class="diff-title">Работаем по приоритетам, а не наугад</div>
+        <div class="diff-desc">Сначала разбираемся, кого закрывать первым и зачем. Иногда новый человек — не решение, а симптом. Мы помогаем это понять до того, как деньги потрачены на поиск.</div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-n">06</div>
+        <div class="diff-title">Повторный найм дешевле</div>
+        <div class="diff-desc">Если закрывали эту позицию раньше — база уже сформирована. Повторное закрытие на ту же должность стоит дешевле: используем готовый пул кандидатов и проверенный процесс отбора.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- КАК МЫ РАБОТАЕМ -->
+<section style="background:var(--bg2);padding:5rem 2.5rem">
+  <div class="wrap">
+    <div class="eyebrow-sec">Процесс</div>
+    <h2 class="sec">Как проходит <em>подбор</em></h2>
+    <p class="sec-sub">От заявки до выхода сотрудника — четыре чётких шага.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-title">Профиль должности</div>
+        <div class="step-desc">Составляем вместе с вами: роль, KPI, компетенции, мотивационный профиль. Это фундамент — без него поиск вслепую.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-title">Формирование пула</div>
+        <div class="step-desc">Сбор откликов, первичный скрининг, тестирование по методологии Алии. Отсеиваем случайных — оставляем подходящих.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-title">Финальный отбор</div>
+        <div class="step-desc">Представляем 2–3 финалистов с рекомендацией. Помогаем с оффером и принятием решения. Вы выбираете, мы объясняем почему.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-title">Адаптация 30 дней</div>
+        <div class="step-desc">Сопровождаем сотрудника в первый месяц: введение в процессы, первые KPI, контроль. Адаптация входит в стоимость.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- СТОИМОСТЬ -->
+<section style="background:var(--bg);padding:5rem 2.5rem">
+  <div class="wrap">
+    <div class="eyebrow-sec">Стоимость</div>
+    <h2 class="sec">Прозрачная <em>цена</em></h2>
+    <p class="sec-sub">Оплата по факту закрытия вакансии. Никаких предоплат за «просто поискать».</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-tag">НОВАЯ ПОЗИЦИЯ</div>
+        <div class="price-title">Первая вакансия на должность</div>
+        <div class="price-amount">60 000 ₽</div>
+        <div class="price-unit">за закрытую позицию</div>
+        <ul class="price-includes">
+          <li>Составление профиля должности</li>
+          <li>Сбор базы откликов</li>
+          <li>Тестирование кандидатов</li>
+          <li>Финальный отбор</li>
+          <li>Адаптация 30 дней</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <div class="price-tag">ПОВТОРНЫЙ НАЙМ</div>
+        <div class="price-title">Та же должность повторно</div>
+        <div class="price-amount">50 000 ₽</div>
+        <div class="price-unit">за закрытую позицию</div>
+        <ul class="price-includes">
+          <li>Использование готовой базы кандидатов</li>
+          <li>Тестирование по готовому профилю</li>
+          <li>Финальный отбор</li>
+          <li>Адаптация 30 дней</li>
+          <li>Быстрее и дешевле за счёт базы</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="price-tag">НОВАЯ РОЛЬ</div>
+        <div class="price-title">Ранее не закрывавшаяся должность</div>
+        <div class="price-amount">60 000 ₽</div>
+        <div class="price-unit">за закрытую позицию</div>
+        <ul class="price-includes">
+          <li>Полный цикл с нуля</li>
+          <li>Новый профиль должности</li>
+          <li>Формирование новой базы</li>
+          <li>Тестирование и финальный отбор</li>
+          <li>Адаптация 30 дней</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:.8rem;color:var(--muted);margin-top:1.5rem;text-align:center">Для сравнения: рыночные агентства берут 40 000–100 000 ₽ за линейную позицию без адаптации.<br>Мы включаем адаптацию в цену, потому что найм без неё — половина работы.</p>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ПОДАРОК — ПРОФИЛЬ ДОЛЖНОСТИ -->
+<section id="profile" style="background:var(--bg2);padding:4rem 2.5rem">
+  <div class="wrap">
+    <div class="gift-strip">
+      <div class="gift-left">
+        <div class="gift-label">БЕСПЛАТНО ДЛЯ ВАС</div>
+        <div class="gift-title">Шаблоны профилей должностей</div>
+        <div class="gift-desc">Готовая Google-таблица с профилями офис-менеджера, консультанта и управляющего — требования, обязанности, компетенции, KPI. Открывайте, копируйте и заполняйте под свою роль.<br><br>
+        <span style="color:var(--muted);font-size:.82rem">Больше шаблонов, разбор профилей и инструменты найма — в Telegram-канале <a href="https://t.me/Hipo_academy" target="_blank" style="color:var(--gold);text-decoration:none">@Hipo_academy</a></span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.75rem;align-items:flex-end;flex-shrink:0">
+        <a href="https://docs.google.com/spreadsheets/d/1p-OPKZE-_XNPfncabwMBmT-xPlXInVTGcqXuwd-cSCc/edit?gid=479611502" target="_blank" class="btn-gold" style="white-space:nowrap">Открыть шаблоны →</a>
+        <a href="https://t.me/Hipo_academy" target="_blank" style="font-size:.75rem;color:var(--teal);text-decoration:none;text-align:right">Подписаться на канал @Hipo_academy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Есть вакансия —<br><em>давайте разберёмся</em></h2>
+    <p>Расскажите, кого ищете. Я скажу, реалистично ли это, сколько займёт и что нужно подготовить до старта поиска.</p>
+    <div class="cta-btns">
+      <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Написать в Telegram</a>
+      <a href="cases.html" class="btn-outline">Смотреть кейсы</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo"><img src="logo-icon.png" alt="" class="footer-logo-img">Hipo Academy</a>
+    <div class="footer-links">
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:1.5rem;border-top:1px solid var(--gold-border);padding-top:1.25rem">
+    <div style="text-align:center">
+      <div class="footer-copy">© 2025 Hipo Academy · hipoacademy.ru</div>
+      <div style="opacity:.85;font-size:.78rem;color:#a8b0c8">Коновалова Надежда Викторовна · Самозанятый (НПД) · ИНН 027708088590</div>
+      <div style="margin-top:.5rem"><a href="privacy.html" style="font-size:.72rem;color:var(--gold);text-decoration:underline">Политика конфиденциальности</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
