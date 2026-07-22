@@ -37,8 +37,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97
 .nav-links{display:flex;gap:2.25rem;list-style:none}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:.75rem;font-weight:500;letter-spacing:.06em;transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-btn{background:transparent;border:1px solid var(--gold-border2);color:var(--gold);padding:.45rem 1.4rem;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:2px;transition:all .2s}
+.nav-btn:hover{background:var(--gold);color:var(--bg)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .burger span{display:block;width:22px;height:1px;background:var(--text)}
+.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(10,12,20,.98);border-bottom:1px solid var(--gold-border);z-index:299;padding:1rem 2rem 1.5rem}
+.mob-menu.open{display:block}
+.mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.85rem;letter-spacing:.04em;padding:.65rem 0;border-bottom:1px solid var(--gold-border)}
+.mob-menu a:last-child{color:var(--gold);border-bottom:none}
 .mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--gold-border);z-index:299;padding:1rem 2rem 1.5rem}
 .mob-menu.open{display:block}
 .mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;padding:.7rem 0;border-bottom:1px solid var(--gold-border)}
@@ -174,22 +180,19 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
       <li><a href="naim.html" class="active">Найм</a></li>
       <li><a href="cases.html">Кейсы</a></li>
     </ul>
-    <div class="burger" onclick="document.getElementById('mob').classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="burger" onclick="this.closest('nav').nextElementSibling.classList.toggle('open')"><span></span><span></span><span></span></div>
     <a href="https://t.me/hipo_game" target="_blank" class="nav-btn">Написать мне</a>
   </div>
 </nav>
-
-<div class="mob-menu" id="mob">
+<div class="mob-menu">
   <a href="index.html#about">Об авторе</a>
   <a href="korporaciya-zvezd.html">Игры</a>
   <a href="obuchenie.html">Обучение</a>
   <a href="sales-force.html">Отдел продаж</a>
   <a href="consulting.html">Работа со мной</a>
-  <a href="naim.html">Найм</a>
+  <a href="naim.html" class="active">Найм</a>
   <a href="cases.html">Кейсы</a>
-  <a href="https://t.me/hipo_game" target="_blank">Написать мне →</a>
+  <a href="https://t.me/hipo_game" target="_blank">Написать мне</a>
 </div>
 
 <!-- HERO -->
