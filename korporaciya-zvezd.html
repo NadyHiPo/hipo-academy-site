@@ -194,11 +194,18 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 
 
 /* GAME2 — Сила аргумента */
-.game2{border:1px solid var(--gold-border);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;position:relative;overflow:hidden;isolation:isolate}
-.game2::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(90deg,rgba(10,12,20,.96) 0%,rgba(10,12,20,.88) 55%,rgba(10,12,20,.6) 100%),url('direction-sales.jpg');background-position:center;background-size:cover;animation:directionBackground 16s ease-in-out infinite alternate;will-change:transform}
-.game2::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(201,162,87,.06),transparent 50%,rgba(90,180,174,.04));pointer-events:none}
-.game2-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--white);margin-bottom:.3rem}
-.game2-desc{font-size:.88rem;color:var(--text2);font-weight:300;max-width:520px}
+.game2{border:1px solid var(--gold-border2);padding:4rem 3rem;margin-top:2rem;position:relative;overflow:hidden;isolation:isolate;text-align:center}
+.game2::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(180deg,rgba(10,12,20,.92) 0%,rgba(10,12,20,.78) 50%,rgba(10,12,20,.92) 100%),url('direction-sales.jpg');background-position:center;background-size:cover;animation:directionBackground 18s ease-in-out infinite alternate;will-change:transform}
+.game2::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(201,162,87,.07),transparent 45%,rgba(90,180,174,.05));pointer-events:none}
+.game2-badge{font-size:.65rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1.5rem;display:inline-flex;align-items:center;gap:.5rem}
+.game2-badge::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s ease-in-out infinite}
+.game2-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:var(--gold);line-height:1.1;margin-bottom:.5rem}
+.game2-title em{color:var(--white);font-style:italic}
+.game2-sub{font-size:1rem;color:var(--text2);max-width:620px;margin:0 auto 2rem;line-height:1.8;font-weight:300}
+.game2-divider{width:60px;height:1px;background:var(--gold-border2);margin:2rem auto}
+.game2-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.4rem);font-style:italic;color:var(--white);max-width:700px;margin:0 auto 2rem;line-height:1.55}
+.game2-tagline{font-size:.82rem;color:var(--muted);max-width:580px;margin:0 auto 2.5rem;line-height:1.7}
+.game2-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 /* REVEAL АНИМАЦИИ */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -296,12 +303,16 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   <!-- Сила аргумента — вторая игра -->
   <div class="wrap" style="padding-bottom:3rem">
     <div class="game2 reveal">
-      <div>
-        <div style="font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.35rem">В разработке</div>
-        <h3 class="game2-title">«Сила аргумента»</h3>
-        <div class="game2-desc">Игра на развитие навыков убеждения и аргументации. Демо доступно на английском языке.</div>
+      <div class="game2-badge">В разработке · Argument OS</div>
+      <h3 class="game2-title">Прокачай мозг,<br><em>так, чтобы убеждать.</em></h3>
+      <p class="game2-sub">Аргумент силён не тогда, когда ты что-то сказал. Он силён тогда, когда попал в центр принятия решения другого человека. Argument OS — платформа аргументации — тренирует именно это.</p>
+      <div class="game2-divider"></div>
+      <div class="game2-quote">«Мир учит людей что говорить.<br>Мы учим как это попадает в решение.»</div>
+      <p class="game2-tagline">Duolingo доказал, что через игры можно учить языку. Мы доказываем, что через игры можно учить мышлению.</p>
+      <div class="game2-btns">
+        <a href="https://argumentos.netlify.app/" target="_blank" class="btn-gold">Попробовать демо (EN) →</a>
+        <a href="https://t.me/hipo_game" target="_blank" class="btn-outline">Узнать первым о запуске</a>
       </div>
-      <a href="https://argumentos.netlify.app/" target="_blank" class="btn-outline" style="font-size:.75rem;padding:.6rem 1.5rem;white-space:nowrap">Демо (EN) →</a>
     </div>
   </div>
 </section>
