@@ -192,6 +192,13 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .footer-links a:hover{color:var(--gold)}
 .footer-copy{font-size:.78rem;color:#a8b0c8;line-height:1.9;text-align:right}
 
+
+/* GAME2 — Сила аргумента */
+.game2{border:1px solid var(--gold-border);padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;position:relative;overflow:hidden;isolation:isolate}
+.game2::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(90deg,rgba(10,12,20,.96) 0%,rgba(10,12,20,.88) 55%,rgba(10,12,20,.6) 100%),url('direction-sales.jpg');background-position:center;background-size:cover;animation:directionBackground 16s ease-in-out infinite alternate;will-change:transform}
+.game2::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(201,162,87,.06),transparent 50%,rgba(90,180,174,.04));pointer-events:none}
+.game2-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--white);margin-bottom:.3rem}
+.game2-desc{font-size:.88rem;color:var(--text2);font-weight:300;max-width:520px}
 /* REVEAL АНИМАЦИИ */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -283,6 +290,18 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
         <span class="price-note">· индивидуально от 7 000 ₽ · команда от 30 000 ₽</span>
       </div>
       <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold" style="display:block;text-align:center;margin-top:1.25rem">Демо бесплатно →</a>
+    </div>
+  </div>
+
+  <!-- Сила аргумента — вторая игра -->
+  <div class="wrap" style="padding-bottom:3rem">
+    <div class="game2 reveal">
+      <div>
+        <div style="font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.35rem">В разработке</div>
+        <h3 class="game2-title">«Сила аргумента»</h3>
+        <div class="game2-desc">Игра на развитие навыков убеждения и аргументации. Демо доступно на английском языке.</div>
+      </div>
+      <a href="https://argumentos.netlify.app/" target="_blank" class="btn-outline" style="font-size:.75rem;padding:.6rem 1.5rem;white-space:nowrap">Демо (EN) →</a>
     </div>
   </div>
 </section>
@@ -407,9 +426,6 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     <div class="eyebrow-sec">Форматы</div>
     <h2 class="sec">Выберите свой <em>формат</em></h2>
     <p class="sec-sub">От бесплатного демо до корпоративных ассесментов.</p>
-    <div class="formats-photo">
-      <img src="game-cover-new.jpg" alt="Обложка игры «Корпорация Звёзд»">
-    </div>
     <div style="text-align:center;margin-bottom:2rem">
       <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold">Демо бесплатно — попробуйте прямо сейчас →</a>
     </div>
