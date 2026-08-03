@@ -163,6 +163,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overf
 
 nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2.5rem}
+.logo-img{height:28px;width:28px;object-fit:contain;flex-shrink:0}
 .logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
 .logo span{color:var(--text);font-weight:400}
 .nav-links{display:flex;gap:2.5rem;list-style:none}
@@ -242,9 +243,11 @@ hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(-
 .cred-text{font-size:.95rem;color:var(--text2);line-height:1.7;font-weight:300}
 .cred-text strong{color:var(--text);font-weight:500}
 .about-btns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2.25rem}
-.mission-strip{background:var(--bg3);border:1px solid var(--gold-border2);border-left:3px solid var(--gold);padding:1.75rem 2.25rem;margin:2.5rem 0;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
-.mission-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--gold);line-height:1;flex-shrink:0}
-.mission-text{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--text);line-height:1.4}
+.mission-strip{background:var(--bg3);border:1px solid var(--gold-border2);border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);border-left:none;border-right:none;padding:3rem 2.5rem;margin:2.5rem 0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.75rem}
+.mission-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--gold-light);line-height:1;width:4.5rem;height:4.5rem;display:flex;align-items:center;justify-content:center;background:rgba(10,12,20,.82);border:1px solid rgba(221,185,106,.65);border-radius:50%;box-shadow:0 0 0 6px rgba(201,162,87,.07),0 8px 28px rgba(0,0,0,.35);text-shadow:0 1px 12px rgba(201,162,87,.3);animation:missionPulse 3s ease-in-out infinite}
+@keyframes missionPulse{0%,100%{box-shadow:0 0 0 6px rgba(201,162,87,.07),0 8px 28px rgba(0,0,0,.35)}50%{box-shadow:0 0 0 10px rgba(201,162,87,.13),0 8px 32px rgba(0,0,0,.4)}}
+.mission-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.25rem,2.5vw,1.6rem);font-style:italic;color:var(--white);line-height:1.45;font-weight:500;max-width:700px}
+.mission-author{font-size:.78rem;color:var(--muted);letter-spacing:.1em;font-weight:400}
 .competence-line{font-size:.95rem;color:var(--text2);margin-top:.5rem;font-weight:300}
 .competence-line strong{color:var(--gold);font-weight:500}
 
@@ -416,7 +419,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="logo">Hipo <span>Academy</span></a>
+    <a href="index.html" class="logo"><img src="logo-icon.png" alt="Hipo Academy" class="logo-img">Hipo <span>Academy</span></a>
     <ul class="nav-links">
       <li><a href="#about">Об авторе</a></li>
       <li><a href="korporaciya-zvezd.html">Игры</a></li>
@@ -509,9 +512,10 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
           <div class="cred"><div class="cred-n">02</div><div class="cred-text"><strong>Международные проекты</strong> — строю продажи и команды в России, Казахстане, Турции, ОАЭ, Испании и на Бали.</div></div>
           <div class="cred"><div class="cred-n">03</div><div class="cred-text"><strong>Системный результат</strong> — выстраиваю механизмы, которые работают без постоянного участия собственника.</div></div>
         </div>
-        <div class="mission-strip">
+        <div class="mission-strip reveal">
           <div class="mission-num">7</div>
-          <div class="mission-text">«1 хороший управленец = минимум 7 счастливых людей» — моя миссия</div>
+          <div class="mission-text">«1 хороший управленец = минимум 7 счастливых людей»</div>
+          <div class="mission-author">— моя миссия</div>
         </div>
         <p class="competence-line"><strong>Ключевая компетенция:</strong> я мотивирую и выстраиваю систему — роли, структуру, KPI, продажи, команду, масштаб.</p>
         <div class="about-btns">
@@ -772,7 +776,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     </div>
     <div class="footer-copy">
       <div style="margin-bottom:.5rem">© 2026 Hipo Academy · hipoacademy.ru</div>
-      <div style="opacity:.85">Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590</div>
+      <div style="opacity:.85">Коновалова Надежда Викторовна · Самозанятый (НПД) · ИНН 027708088590</div>
       <div style="margin-top:.4rem"><a href="privacy.html">Политика конфиденциальности</a></div>
     </div>
   </div>
