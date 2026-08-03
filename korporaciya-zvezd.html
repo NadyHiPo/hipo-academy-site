@@ -77,7 +77,7 @@ hr.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,v
   0%{transform:scale(1.06) translate3d(-1.2%,0,0)}
   100%{transform:scale(1.13) translate3d(1.8%,-1.2%,0)}
 }
-.hero-wrap{max-width:1100px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center;width:100%}
+.hero-wrap{max-width:1200px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 320px 320px;gap:2rem;align-items:start;width:100%}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5rem);font-weight:700;line-height:1.05;color:var(--gold);margin-bottom:.75rem}
 .hero h1 em{font-style:italic;color:var(--white)}
 .hero-tag{font-size:.68rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem}
@@ -193,17 +193,25 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .footer-copy{font-size:.78rem;color:#a8b0c8;line-height:1.9;text-align:right}
 
 
-/* GAME2 — Сила аргумента */
-.game2{border:1px solid var(--gold-border2);padding:4rem 3rem;margin-top:2rem;position:relative;overflow:hidden;isolation:isolate;text-align:center}
-.game2::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(180deg,rgba(10,12,20,.92) 0%,rgba(10,12,20,.78) 50%,rgba(10,12,20,.92) 100%),url('direction-sales.jpg');background-position:center;background-size:cover;animation:directionBackground 18s ease-in-out infinite alternate;will-change:transform}
-.game2::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(201,162,87,.07),transparent 45%,rgba(90,180,174,.05));pointer-events:none}
-.game2-badge{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:1rem;display:inline-flex;align-items:center;gap:.5rem}
+
+.game2{display:grid;grid-template-columns:1fr 340px;gap:0;margin-top:2rem;border:1px solid var(--gold-border);overflow:hidden}
+.game2-bg{position:relative;overflow:hidden;isolation:isolate;min-height:280px}
+.game2-bg::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(90deg,rgba(10,12,20,.55) 0%,rgba(10,12,20,.82) 100%),url('direction-sales.jpg');background-position:center;background-size:cover;animation:directionBackground 18s ease-in-out infinite alternate;will-change:transform}
+.game2-bg::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(90,180,174,.06),transparent 50%);pointer-events:none}
+.game2-bg-inner{position:relative;z-index:1;padding:2.25rem;height:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.game2-bg-label{font-size:.65rem;letter-spacing:.14em;color:var(--teal);margin-bottom:.5rem}
+.game2-bg-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--gold);line-height:1.2;margin-bottom:.35rem}
+.game2-bg-sub{font-size:.82rem;color:var(--text2);line-height:1.6;font-weight:300}
+.game2-card{background:rgba(20,24,40,.95);border-left:1px solid var(--gold-border2);padding:2.25rem;position:relative}
+.game2-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),transparent)}
+.game2-badge{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
 .game2-badge::before{content:'●';font-size:.4rem}
-.game2-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--gold);line-height:1.2;margin-bottom:.35rem}
-.game2-title em{color:var(--white);font-style:italic}
-.game2-sub{font-size:.88rem;color:var(--text2);max-width:580px;margin:0 auto 1.5rem;line-height:1.75;font-weight:300}
-.game2-tagline{font-size:.82rem;color:var(--muted);max-width:540px;margin:0 auto 2rem;line-height:1.7}
-.game2-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.game2-card-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--gold);margin-bottom:.35rem;line-height:1.2}
+.game2-card-sub{font-size:.82rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.6;font-weight:300}
+.game2-card-body{font-size:.85rem;color:var(--text2);line-height:1.75;font-weight:300;margin-bottom:1.5rem}
+.game2-card-note{font-size:.72rem;color:var(--muted);line-height:1.6;margin-bottom:1.75rem;padding-top:.75rem;border-top:1px solid var(--gold-border)}
+.game2-btns{display:flex;flex-direction:column;gap:.6rem}
+@media(max-width:900px){.game2{grid-template-columns:1fr}.game2-bg{min-height:180px}.game2-card{border-left:none;border-top:1px solid var(--gold-border2)}}
 /* REVEAL АНИМАЦИИ */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -296,19 +304,13 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
       </div>
       <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold" style="display:block;text-align:center;margin-top:1.25rem">Демо бесплатно →</a>
     </div>
-  </div>
-
-  <!-- Сила аргумента — вторая игра -->
-  <div class="wrap" style="padding-bottom:3rem">
-    <div class="game2 reveal">
-      <div class="game2-badge">В разработке · Argument OS</div>
-      <h3 class="game2-title">Прокачай мозг,<br><em>так, чтобы убеждать.</em></h3>
-      <p class="game2-sub">Аргумент силён не тогда, когда ты что-то сказал. Он силён тогда, когда попал в центр принятия решения другого человека. Argument OS — платформа аргументации — тренирует именно это.</p>
-      <p class="game2-tagline">Duolingo доказал, что через игры можно учить языку. Мы доказываем, что через игры можно учить мышлению.</p>
-      <div class="game2-btns">
-        <a href="https://argumentos.netlify.app/" target="_blank" class="btn-gold">Попробовать демо (EN) →</a>
-        <a href="https://t.me/hipo_game" target="_blank" class="btn-outline">Узнать первым о запуске</a>
-      </div>
+    <div class="hero-card">
+      <div class="hero-card-tag"><span class="live-dot" style="width:6px;height:6px;display:inline-block;border-radius:50%;background:var(--teal);animation:pulse 2s ease-in-out infinite;margin-right:.4rem"></span>В разработке</div>
+      <div class="hero-card-title">Argument OS</div>
+      <div class="hero-card-sub">Прокачай мозг, так, чтобы убеждать. Платформа аргументации.</div>
+      <div style="font-size:.85rem;color:var(--text2);line-height:1.75;font-weight:300;margin-bottom:1.25rem">Аргумент силён не тогда, когда ты что-то сказал. Он силён тогда, когда попал в центр принятия решения другого человека.</div>
+      <div style="font-size:.72rem;color:var(--muted);line-height:1.6;padding-top:.85rem;border-top:1px solid var(--gold-border);margin-bottom:1.5rem">* Duolingo доказал, что через игры можно учить языку. Мы доказываем, что через игры можно учить мышлению.</div>
+      <a href="https://argumentos.netlify.app/" target="_blank" class="btn-gold" style="display:block;text-align:center">Попробовать демо (EN) →</a>
     </div>
   </div>
 </section>
