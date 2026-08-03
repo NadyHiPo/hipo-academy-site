@@ -3,28 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Корпорация Звёзд — Управленческая игра | Hipo Academy</title>
+<title>Корпорация Звёзд — управленческая бизнес-игра | Hipo Academy</title>
+<meta name="description" content="«Корпорация Звёзд» — бизнес-трансформационная игра для руководителей. 15 управленческих компетенций, SWOT-анализ, онлайн и оффлайн форматы. Более 200 игр онлайн.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Надежда Коновалова">
+<meta name="theme-color" content="#0a0c14">
+<link rel="canonical" href="https://hipoacademy.ru/korporaciya-zvezd.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Корпорация Звёзд — управленческая бизнес-игра">
+<meta property="og:description" content="Единственная в мире управленческая симуляция. 15 компетенций, SWOT-анализ, до 16 игроков одновременно.">
+<meta property="og:url" content="https://hipoacademy.ru/korporaciya-zvezd.html">
+<meta property="og:image" content="https://hipoacademy.ru/game-cover-new.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Яндекс.Метрика -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(106926169,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --navy:#0a0c14;
-  --navy2:#0f1220;
-  --navy3:#141828;
-  --navy4:#1e2555;
-  --gold:#f5c842;
-  --gold2:#fad96a;
-  --teal:#4ecdc4;
-  --white:#ffffff;
-  --text:#f0f2fa;
-  --muted:#bbc4e0;
-  --border:rgba(245,200,66,.2);
-  --border2:rgba(245,200,66,.35);
+  --bg:#0a0c14;--bg2:#0f1220;--bg3:#141828;--bg4:#1a1f32;
+  --gold:#c9a257;--gold-light:#ddb96a;--gold-border:rgba(201,162,87,.25);--gold-border2:rgba(201,162,87,.45);
+  --white:#ffffff;--text:#e8eaf2;--text2:#c8ccd8;--muted:#8e94ab;--teal:#5ab4ae;
 }
 html{scroll-behavior:smooth}
-body{background:var(--navy);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
@@ -43,149 +52,179 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97
 .mob-menu.open{display:block}
 .mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.85rem;letter-spacing:.04em;padding:.65rem 0;border-bottom:1px solid var(--gold-border)}
 .mob-menu a:last-child{color:var(--gold);border-bottom:none}
-.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--gold-border);z-index:299;padding:1rem 2rem 1.5rem}
-.mob-menu.open{display:block}
-.mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;padding:.7rem 0;border-bottom:1px solid var(--gold-border)}
-.mob-menu a:last-child{color:var(--gold);border-bottom:none}
-.nav-back:hover{color:var(--gold)}
-.nav-btn{background:var(--gold);color:var(--navy);padding:.45rem 1.4rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .2s}
-.nav-btn:hover{background:var(--gold2)}
 
 /* BUTTONS */
-.btn-gold{background:var(--gold);color:var(--navy);padding:.85rem 2.5rem;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .2s;border:2px solid var(--gold)}
-.btn-gold:hover{background:var(--gold2);border-color:var(--gold2)}
-.btn-outline{background:transparent;color:var(--text);padding:.85rem 2.5rem;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .2s;border:2px solid rgba(255,255,255,.3)}
+.btn-gold{background:var(--gold);color:var(--bg);padding:.8rem 2.25rem;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid var(--gold);border-radius:2px}
+.btn-gold:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.btn-outline{background:transparent;color:var(--text);padding:.8rem 2.25rem;font-size:.8rem;font-weight:500;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid rgba(232,234,242,.25);border-radius:2px}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
 
+.wrap{max-width:1100px;margin:0 auto;padding:0 2.5rem}
+.eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+.eyebrow-sec{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow-sec::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+h2.sec{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:500;color:var(--white);line-height:1.12;margin-bottom:.75rem}
+h2.sec em{font-style:italic;color:var(--gold)}
+.sec-sub{font-size:1rem;color:var(--text2);max-width:620px;line-height:1.85;margin-bottom:3rem;font-weight:300}
+hr.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border2),transparent)}
+
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:8rem 2rem 5rem;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 30% 50%,rgba(245,200,66,.07) 0%,transparent 60%);pointer-events:none}
-.hero-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;width:100%}
-.hero-tag{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:700;line-height:1.05;color:var(--gold);margin-bottom:.75rem}
-.hero-title em{font-style:italic;color:var(--white)}
-.hero-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--muted);margin-bottom:1.75rem;line-height:1.4;font-style:italic}
-.hero-desc{font-size:1.05rem;color:var(--text);line-height:1.85;margin-bottom:2.5rem;font-weight:400}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.hero-author{display:flex;align-items:center;gap:1rem;padding-top:1.75rem;border-top:1px solid var(--border)}
-.author-ava{width:48px;height:48px;border-radius:50%;background:var(--navy3);border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);font-weight:600;flex-shrink:0}
-.author-name{font-size:.9rem;font-weight:600;color:var(--text)}
-.author-role{font-size:.78rem;color:var(--muted)}
-.hero-visual{background:var(--navy3);border:2px solid var(--border);padding:3rem 2rem;text-align:center;position:relative;overflow:hidden}
-.hero-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(245,200,66,.06),transparent);pointer-events:none}
-.hero-icon{font-size:5rem;display:block;margin-bottom:1.25rem}
-.hero-visual-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--gold);margin-bottom:.5rem}
-.hero-visual-sub{font-size:.85rem;color:var(--muted);margin-bottom:2rem;line-height:1.6}
-.hero-feats{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:2rem;text-align:left}
-.hf{display:flex;align-items:flex-start;gap:.5rem;font-size:.82rem;color:var(--text);line-height:1.5}
-.hf::before{content:'✦';color:var(--gold);font-size:.55rem;margin-top:.4rem;flex-shrink:0}
-.live-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(78,205,196,.1);border:1px solid rgba(78,205,196,.3);color:var(--teal);font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.35rem .9rem;margin-bottom:1.5rem}
-.live-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);display:block}
+.hero{min-height:100vh;display:flex;align-items:center;padding:8rem 2.5rem 5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(90deg,rgba(10,12,20,.97) 0%,rgba(10,12,20,.82) 50%,rgba(10,12,20,.55) 100%),url('direction-games.jpg');background-position:center;background-size:cover;opacity:.7;transform:scale(1.06) translate3d(-1.2%,0,0);animation:heroBackground 18s ease-in-out infinite alternate;will-change:transform}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(201,162,87,.06),transparent 45%,rgba(90,180,174,.04));pointer-events:none}
+@keyframes heroBackground{
+  0%{transform:scale(1.06) translate3d(-1.2%,0,0)}
+  100%{transform:scale(1.13) translate3d(1.8%,-1.2%,0)}
+}
+.hero-wrap{max-width:1100px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center;width:100%}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5rem);font-weight:700;line-height:1.05;color:var(--gold);margin-bottom:.75rem}
+.hero h1 em{font-style:italic;color:var(--white)}
+.hero-tag{font-size:.68rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem}
+.hero-tag::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
+.hero-sub{font-size:1.05rem;color:var(--text2);max-width:520px;line-height:1.85;font-weight:300;margin-bottom:2rem}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:3rem}
+.live-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:500;letter-spacing:.08em;color:var(--teal);border:1px solid rgba(90,180,174,.35);padding:.35rem .9rem;border-radius:20px;margin-bottom:1.5rem}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
 
-/* SECTION */
-section{padding:5rem 2rem}
-.wrap{max-width:1200px;margin:0 auto}
-.sec-tag{font-family:'Inter',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:.75rem}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:600;color:var(--gold);line-height:1.1;margin-bottom:.75rem}
-.sec-title span{color:var(--white)}
-.sec-sub{font-size:1.05rem;color:var(--muted);max-width:600px;line-height:1.85;margin-bottom:3rem;font-weight:400}
-.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent)}
 
-/* QUOTE BLOCK */
-.quote-block{background:var(--navy3);border-left:3px solid var(--gold);padding:2.5rem 3rem;margin:0 auto;max-width:900px;text-align:center}
-.quote-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.5vw,1.9rem);font-weight:500;color:var(--white);line-height:1.5;font-style:italic;margin-bottom:1.25rem}
-.quote-author{font-size:.82rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;font-weight:600}
 
-/* SKILLS GRID */
-.skills-intro{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start;margin-bottom:4rem}
-.skills-left-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--gold);line-height:1.3;margin-bottom:1rem}
-.skills-photo{width:100%;aspect-ratio:4/3;max-height:240px;border-radius:2px;overflow:hidden;position:relative;background:var(--navy2)}
-.skills-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.skills-left-desc{font-size:1rem;color:var(--text);line-height:1.85}
-.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
-.skill-card{background:var(--navy2);padding:1.5rem;transition:background .2s}
-.skill-card:hover{background:var(--navy3)}
-.skill-n{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;color:var(--gold);line-height:1;margin-bottom:.5rem;opacity:.85}
-.skill-card:nth-child(3n+2) .skill-n{color:var(--teal)}
-.skill-title{font-size:.88rem;font-weight:600;color:var(--text);line-height:1.5;margin-bottom:.3rem}
-.skill-desc{font-size:.8rem;color:var(--muted);line-height:1.55}
+/* HERO CARD */
+.hero-card{background:rgba(20,24,40,.92);border:1px solid var(--gold-border2);padding:2.25rem;position:relative;backdrop-filter:blur(12px)}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.hero-card-tag{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.hero-card-tag::before{content:'●';font-size:.4rem}
+.hero-card-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--gold);margin-bottom:.35rem;line-height:1.2}
+.hero-card-sub{font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.feat-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.75rem}
+.feat{display:flex;align-items:center;gap:.65rem;font-size:.88rem;color:var(--text2)}
+.feat-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.hero-card-price{display:flex;align-items:baseline;gap:.5rem;padding-top:1.25rem;border-top:1px solid var(--gold-border)}
+.price-free{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold)}
+.price-note{font-size:.78rem;color:var(--muted)}
 
-/* WHY GAME */
-.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-.why-card{background:var(--navy2);border:1px solid var(--border);padding:2rem}
-.why-card:hover{border-color:var(--border2);background:var(--navy3)}
-.why-icon{font-size:2rem;margin-bottom:.9rem;display:block}
-.why-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--gold);margin-bottom:.6rem;line-height:1.2}
-.why-text{font-size:.95rem;color:var(--text);line-height:1.8}
+/* DIRECTIONS с анимированными фонами */
+.dirs{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
+.dir{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;cursor:pointer;transition:all .25s;position:relative;overflow:hidden;isolation:isolate}
+.dir::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(90deg,rgba(15,18,32,.97) 0%,rgba(15,18,32,.86) 46%,rgba(15,18,32,.48) 100%),var(--dir-image);background-position:center;background-size:cover;opacity:.52;transform:scale(1.06) translate3d(-1.2%,0,0);animation:directionBackground 14s ease-in-out infinite alternate;transition:opacity .35s ease,filter .35s ease;will-change:transform}
+.dir::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(201,162,87,.08),transparent 45%,rgba(90,180,174,.06));pointer-events:none}
+.dir:nth-child(1){--dir-image:url('direction-games.jpg')}
+.dir:nth-child(2){--dir-image:url('direction-learning.jpg')}
+.dir:nth-child(3){--dir-image:url('direction-sales.jpg')}
+.dir:nth-child(4){--dir-image:url('direction-consulting.jpg')}
+.dir:nth-child(2)::before,.dir:nth-child(4)::before{animation-delay:-7s}
+.dir:hover::before{opacity:.68;filter:saturate(1.12) brightness(1.08)}
+.dir:hover{border-color:var(--gold-border2);background:var(--bg4)}
+@keyframes directionBackground{
+  0%{transform:scale(1.06) translate3d(-1.2%,0,0)}
+  100%{transform:scale(1.13) translate3d(1.8%,-1.2%,0)}
+}
+.dir-n{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.5rem}
+.dir-en{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.75rem}
+.dir-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--white);margin-bottom:.6rem}
+.dir-desc{font-size:.85rem;color:var(--text2);line-height:1.65;margin-bottom:1.25rem;font-weight:300}
+.dir-link{font-size:.75rem;color:var(--gold);text-decoration:none;letter-spacing:.06em;display:inline-flex;align-items:center;gap:.4rem}
+.dir-link:hover{color:var(--gold-light)}
 
-/* FORMATS */
-.formats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.formats-photo{width:100%;aspect-ratio:21/8;max-height:220px;background:var(--navy2);border-radius:2px;margin-bottom:2.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
-.formats-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 45%,var(--navy2) 100%);pointer-events:none}
-.formats-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
-.fmt-card{background:var(--navy2);border:1px solid var(--border);padding:2rem;text-align:center;transition:all .25s}
-.fmt-card:hover{border-color:var(--gold);background:var(--navy3)}
-.fmt-card.featured{border-color:var(--gold);background:rgba(245,200,66,.05)}
-.fmt-icon{font-size:2.5rem;margin-bottom:1rem;display:block}
-.fmt-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--gold);margin-bottom:.5rem}
-.fmt-desc{font-size:.9rem;color:var(--text);line-height:1.75;margin-bottom:1.5rem}
-.fmt-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--gold2);margin-bottom:.3rem}
-.fmt-price-sub{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+/* STATS CIRCLES — с подложкой */
+.stats-section-new{padding:5rem 2.5rem;position:relative;overflow:hidden;isolation:isolate}
+.stats-section-new::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(180deg,rgba(10,12,20,.92) 0%,rgba(10,12,20,.78) 50%,rgba(10,12,20,.92) 100%),url('direction-games.jpg');background-position:center;background-size:cover;animation:directionBackground 18s ease-in-out infinite alternate;will-change:transform}
+.circles-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.5rem;margin-top:3rem;position:relative;z-index:1}
+.circle-stat{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.85rem}
+.circle-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold-light);line-height:1;width:5.5rem;height:5.5rem;display:flex;align-items:center;justify-content:center;background:rgba(10,12,20,.82);border:1px solid rgba(221,185,106,.65);border-radius:50%;box-shadow:0 0 0 6px rgba(201,162,87,.07),0 8px 28px rgba(0,0,0,.35);text-shadow:0 1px 12px rgba(201,162,87,.3);transition:box-shadow .3s,border-color .3s}
+.circle-stat:hover .circle-n{border-color:rgba(221,185,106,.9);box-shadow:0 0 0 8px rgba(201,162,87,.12),0 12px 32px rgba(0,0,0,.4)}
+.circle-l{font-size:.75rem;color:var(--muted);letter-spacing:.06em;line-height:1.4;font-weight:300;max-width:90px}
+@media(max-width:900px){.circles-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:500px){.circles-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* SKILLS */
+.skills-section{padding:5rem 2.5rem}
+.skills-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:start;margin-bottom:3rem}
+.skills-photo{width:100%;aspect-ratio:4/3;max-height:260px;border-radius:2px;overflow:hidden;background:var(--bg3)}
+.skills-photo img{width:100%;height:100%;object-fit:cover}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gold-border)}
+.skill-card{background:var(--bg3);padding:1.5rem;transition:background .2s}
+.skill-card:hover{background:var(--bg4)}
+.skill-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.35rem}
+.skill-title{font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:.25rem}
+.skill-desc{font-size:.78rem;color:var(--muted);line-height:1.55;font-weight:300}
 
 /* PROCESS */
-.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:3rem}
-.game-process-photo{width:100%;aspect-ratio:16/7;max-height:200px;background:var(--navy2);border-radius:2px;margin-bottom:2.5rem;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
-.game-process-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 50%,var(--navy) 100%);pointer-events:none}
-.game-process-photo img{width:100%;height:100%;object-fit:cover}
-.game-process-photo-placeholder{color:var(--muted);font-size:.78rem;letter-spacing:.04em;text-align:center}
-.ps{background:var(--navy2);padding:1.75rem 1.5rem;position:relative}
-.ps::after{content:'→';position:absolute;right:-1px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:1.2rem;z-index:1;background:var(--navy2);padding:.25rem}
-.ps:last-child::after{display:none}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gold-border);margin-bottom:3rem}
+.ps{background:var(--bg3);padding:2rem 1.5rem;position:relative}
+.ps-arrow{color:var(--gold);font-size:.9rem;margin-bottom:.5rem;display:block}
 .ps-n{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:400;color:var(--gold);line-height:1;margin-bottom:.5rem}
-.ps-title{font-family:'Inter',sans-serif;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--white);margin-bottom:.4rem}
-.ps-desc{font-size:.88rem;color:var(--text);line-height:1.6}
+.ps-title{font-size:.82rem;font-weight:600;color:var(--text);letter-spacing:.04em;margin-bottom:.4rem}
+.ps-desc{font-size:.8rem;color:var(--muted);line-height:1.6;font-weight:300}
+
+/* FORMATS */
+.formats-section{background:var(--bg2);padding:5rem 2.5rem}
+.formats-photo{width:100%;aspect-ratio:21/8;max-height:220px;background:var(--bg3);border-radius:2px;margin-bottom:2.5rem;overflow:hidden}
+.formats-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.formats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.fmt-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem;transition:border-color .2s}
+.fmt-card:hover{border-color:var(--gold-border2)}
+.fmt-card.featured{border-color:var(--gold-border2);background:var(--bg4);position:relative}
+.fmt-card.featured::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold)}
+.fmt-tag{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.75rem}
+.fmt-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--white);margin-bottom:.75rem}
+.fmt-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;color:var(--gold);margin-bottom:.25rem}
+.fmt-price-note{font-size:.75rem;color:var(--muted);margin-bottom:1.25rem}
+.fmt-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.fmt-list li{font-size:.83rem;color:var(--text2);display:flex;gap:.5rem;line-height:1.5}
+.fmt-list li::before{content:'—';color:var(--gold);flex-shrink:0}
 
 /* CTA */
-.cta{background:var(--navy3);border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);padding:6rem 2rem;text-align:center}
-.cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:600;color:var(--gold);margin-bottom:.75rem;line-height:1.1}
-.cta p{font-size:1.05rem;color:var(--muted);max-width:500px;margin:0 auto 2.5rem;line-height:1.8}
-.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.cta-note{font-size:.8rem;color:var(--muted)}
+.cta{background:var(--bg3);border-top:1px solid var(--gold-border2);border-bottom:1px solid var(--gold-border2);padding:6rem 2.5rem;text-align:center}
+.cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--white);margin-bottom:.75rem}
+.cta h2 em{font-style:italic;color:var(--gold)}
+.cta p{font-size:1rem;color:var(--text2);max-width:460px;margin:0 auto 2.25rem;line-height:1.8;font-weight:300}
+.cta-btns{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap}
 
 /* FOOTER */
-footer{padding:2rem;border-top:1px solid var(--border)}
+footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
-.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
-.footer-links a{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.footer-logo{display:flex;align-items:center;gap:.4rem;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-decoration:none}
+.footer-logo-img{height:22px;width:22px;object-fit:contain}
+.footer-links a{font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-decoration:none}
 .footer-links a:hover{color:var(--gold)}
 .footer-copy{font-size:.78rem;color:#a8b0c8;line-height:1.9;text-align:right}
-.footer-copy a{color:var(--gold);text-decoration:underline}
 
-/* RESPONSIVE */
+/* REVEAL АНИМАЦИИ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-24px);transition:opacity .65s ease,transform .65s ease}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(24px);transition:opacity .65s ease,transform .65s ease}
+.reveal-right.visible{opacity:1;transform:none}
+.reveal-scale{opacity:0;transform:scale(.96);transition:opacity .55s ease,transform .55s ease}
+.reveal-scale.visible{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ADAPTIVE */
 @media(max-width:900px){
   .nav-links,.nav-btn{display:none}
   .burger{display:flex}
   .hero-wrap{grid-template-columns:1fr}
-  .hero-visual{display:none}
+  .hero-card{display:none}
+  .stats-grid{grid-template-columns:repeat(3,1fr)}
+  .dirs{grid-template-columns:1fr}
   .skills-intro{grid-template-columns:1fr}
-  .skills-grid{grid-template-columns:1fr 1fr}
-  .why-grid{grid-template-columns:1fr}
-  .formats-grid{grid-template-columns:1fr}
-  .formats-photo{aspect-ratio:16/9;max-height:180px}
   .process-steps{grid-template-columns:1fr 1fr}
-  .ps::after{display:none}
+  .formats-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:640px){
-  .skills-grid{grid-template-columns:1fr}
-  .hero-feats{grid-template-columns:1fr}
+@media(max-width:600px){
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
   .process-steps{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo"><img src="logo-icon.png" alt="Hipo Academy" class="logo-img">Hipo <span>Academy</span></a>
@@ -198,237 +237,211 @@ footer{padding:2rem;border-top:1px solid var(--border)}
       <li><a href="naim.html">Найм</a></li>
       <li><a href="cases.html">Кейсы</a></li>
     </ul>
-    <div class="burger" onclick="this.closest('nav').nextElementSibling.classList.toggle('open')"><span></span><span></span><span></span></div>
     <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="nav-btn">Играть сейчас</a>
+    <div class="burger" onclick="document.getElementById('mobMenu').classList.toggle('open')"><span></span><span></span><span></span></div>
   </div>
 </nav>
-<div class="mob-menu">
+
+<div class="mob-menu" id="mobMenu">
   <a href="index.html#about">Об авторе</a>
-  <a href="korporaciya-zvezd.html" class="active">Игры</a>
+  <a href="korporaciya-zvezd.html">Игры</a>
   <a href="obuchenie.html">Обучение</a>
   <a href="sales-force.html">Отдел продаж</a>
   <a href="consulting.html">Работа со мной</a>
   <a href="naim.html">Найм</a>
   <a href="cases.html">Кейсы</a>
-  <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank">Играть сейчас</a>
+  <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank">Играть сейчас →</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
   <div class="hero-wrap">
     <div>
+      <div class="live-badge"><span class="live-dot"></span>Демо доступно сейчас — бесплатно</div>
       <div class="hero-tag">Бизнес-трансформационная игра</div>
-      <div class="hero-title">Корпорация<br><em>Звёзд</em></div>
-      <div class="hero-subtitle">Единственная в мире управленческая симуляция</div>
-      <p class="hero-desc">Участники погружаются в виртуальную реальность и принимают решения, исходя из своей привычной модели поведения. Игра показывает, как вы управляете командой прямо сейчас — и где ваши зоны роста.</p>
+      <h1>Корпорация<br><em>Звёзд</em></h1>
+      <p class="hero-sub">Единственная в мире управленческая симуляция. Участники принимают решения в реальных рабочих ситуациях — игра показывает, как они управляют командой прямо сейчас.</p>
       <div class="hero-btns">
         <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold">Играть бесплатно</a>
         <a href="https://t.me/hipo_game" target="_blank" class="btn-outline">Игра для команды</a>
       </div>
-      <div class="hero-author">
-        <div class="author-ava">НК</div>
-        <div>
-          <div class="author-name">Надежда Коновалова</div>
-          <div class="author-role">Создатель игры · руководитель с 10-летним опытом</div>
-        </div>
-      </div>
+
     </div>
-    <div class="hero-visual">
-      <div class="live-badge">Демо доступно сейчас — бесплатно</div>
-      <span class="hero-icon">⭐</span>
-      <div class="hero-visual-title">Корпорация Звёзд</div>
-      <div class="hero-visual-sub">14 ситуаций · SWOT-анализ · 20–30 минут</div>
-      <div class="hero-feats">
-        <div class="hf">14 управленческих кейсов</div>
-        <div class="hf">Реальные дилеммы</div>
-        <div class="hf">Счётчик баллов</div>
-        <div class="hf">SWOT по 4 компетенциям</div>
-        <div class="hf">Полностью онлайн</div>
-        <div class="hf">Без регистрации</div>
+    <div class="hero-card">
+      <div class="hero-card-tag">Флагманская игра · демо-версия бесплатно</div>
+      <div class="hero-card-title">«Корпорация Звёзд»</div>
+      <div class="hero-card-sub">Единственная в мире управленческая симуляция. Разработана командой Hipo Academy.</div>
+      <ul class="feat-list">
+        <li class="feat"><span class="feat-dot"></span>14 управленческих ситуаций</li>
+        <li class="feat"><span class="feat-dot"></span>SWOT-анализ компетенций в финале</li>
+        <li class="feat"><span class="feat-dot"></span>Счётчик баллов в реальном времени</li>
+        <li class="feat"><span class="feat-dot"></span>20–30 минут, без регистрации</li>
+        <li class="feat"><span class="feat-dot"></span>До 16 игроков одновременно</li>
+      </ul>
+      <div class="hero-card-price">
+        <span class="price-free">Демо бесплатно</span>
+        <span class="price-note">· индивидуально от 7 000 ₽ · команда от 30 000 ₽</span>
       </div>
-      <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold" style="font-size:.8rem;padding:.7rem 1.75rem">Начать демо →</a>
     </div>
   </div>
 </section>
 
 <hr class="divider">
 
-<!-- QUOTE -->
-<section style="padding:4rem 2rem;background:var(--navy2)">
+<!-- СЧЁТЧИКИ -->
+<section class="stats-section-new">
   <div class="wrap">
-    <div class="quote-block">
-      <div class="quote-text">«В игре участники демонстрируют, как они сейчас выстраивают процесс управления в командах, на основании чего принимают решения. Они показывают и отрабатывают свои Soft Skills, выявляют сильные стороны и понимают свои зоны роста на всех этапах цикла управления»</div>
-      <div class="quote-author">— Надежда Коновалова, создатель игры</div>
+    <div class="eyebrow-sec" style="position:relative;z-index:1">В цифрах</div>
+    <h2 class="sec" style="position:relative;z-index:1">«Корпорация Звёзд» <em>в цифрах</em></h2>
+    <div class="circles-grid">
+      <div class="circle-stat">
+        <div class="circle-n stat-big">200+</div>
+        <div class="circle-l">игр онлайн</div>
+      </div>
+      <div class="circle-stat">
+        <div class="circle-n stat-big">60</div>
+        <div class="circle-l">игр оффлайн</div>
+      </div>
+      <div class="circle-stat">
+        <div class="circle-n stat-big">4</div>
+        <div class="circle-l">ассесмента</div>
+      </div>
+      <div class="circle-stat">
+        <div class="circle-n stat-big">1</div>
+        <div class="circle-l">игро-практик</div>
+      </div>
+      <div class="circle-stat">
+        <div class="circle-n stat-big">4</div>
+        <div class="circle-l">года игре</div>
+      </div>
+      <div class="circle-stat">
+        <div class="circle-n stat-big">16</div>
+        <div class="circle-l">игроков одновременно</div>
+      </div>
     </div>
   </div>
 </section>
 
 <hr class="divider">
 
-<!-- SKILLS -->
-<section style="background:var(--navy)">
+<!-- ЧТО ПРОВЕРЯЕТ ИГРА -->
+<section class="skills-section">
   <div class="wrap">
     <div class="skills-intro">
       <div>
-        <div class="sec-tag">Что проверяет игра</div>
-        <div class="skills-left-title">15 управленческих компетенций в одной игре</div>
-        <p class="skills-left-desc">Механики игры диагностируют весь цикл управления — от эмоциональной готовности быть руководителем до умения подводить итоги и работать с обратной связью.</p>
+        <div class="eyebrow-sec">Что проверяет игра</div>
+        <h2 class="sec">15 управленческих <em>компетенций</em> в одной игре</h2>
+        <p class="sec-sub">Механики игры диагностируют весь цикл управления — от эмоциональной готовности быть руководителем до умения подводить итоги и работать с обратной связью.</p>
       </div>
-      <div class="skills-photo"><img src="skills-photo-crop.jpg" alt="Игровое поле «Корпорация Звёзд» во время сессии"></div>
+      <div class="skills-photo">
+        <img src="skills-photo-crop.jpg" alt="Игровое поле «Корпорация Звёзд» во время сессии">
+      </div>
     </div>
     <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-n">01</div>
-        <div class="skill-title">Эмоциональная готовность</div>
-        <div class="skill-desc">Принять роль руководителя и брать ответственность за результат</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">02</div>
-        <div class="skill-title">Функции руководителя</div>
-        <div class="skill-desc">Понимание и выполнение ключевых управленческих функций</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">03</div>
-        <div class="skill-title">Лидерские качества</div>
-        <div class="skill-desc">Способность вести за собой и принимать ответственность</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">04</div>
-        <div class="skill-title">Грамотное делегирование</div>
-        <div class="skill-desc">Умение передавать задачи и доверять команде</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">05</div>
-        <div class="skill-title">Анализ и прогнозирование</div>
-        <div class="skill-desc">Умение анализировать ситуацию и предвидеть результат</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">06</div>
-        <div class="skill-title">Гибкость и адаптивность</div>
-        <div class="skill-desc">Реакция на внешние факторы и изменение обстоятельств</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">07</div>
-        <div class="skill-title">Мотивация команды</div>
-        <div class="skill-desc">Работа с мотивацией своей и сотрудников</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">08</div>
-        <div class="skill-title">Оцифровка результатов</div>
-        <div class="skill-desc">Подсчёт и учёт результатов, работа с цифрами</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">09</div>
-        <div class="skill-title">Выстраивание партнёрства</div>
-        <div class="skill-desc">Умение строить доверительные рабочие отношения</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">10</div>
-        <div class="skill-title">Лидерство на встречах</div>
-        <div class="skill-desc">Умение вести встречу и грамотно распределять роли</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">11</div>
-        <div class="skill-title">Обратная связь</div>
-        <div class="skill-desc">Работа с ОС: давать, принимать и запрашивать</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">12</div>
-        <div class="skill-title">Подведение итогов</div>
-        <div class="skill-desc">Анализ промежуточных этапов и финального результата</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">13</div>
-        <div class="skill-title">Умение выделять главное</div>
-        <div class="skill-desc">Расстановка приоритетов в потоке задач</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">14</div>
-        <div class="skill-title">Эмоциональный интеллект</div>
-        <div class="skill-desc">Понимание своих и чужих эмоций в рабочих ситуациях</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-n">15</div>
-        <div class="skill-title">Цикл управления</div>
-        <div class="skill-desc">Работа с полным управленческим циклом от постановки до контроля</div>
-      </div>
+      <div class="skill-card"><div class="skill-n">01</div><div class="skill-title">Эмоциональная готовность</div><div class="skill-desc">Готовность принимать управленческую роль и нести ответственность</div></div>
+      <div class="skill-card"><div class="skill-n">02</div><div class="skill-title">Функции руководителя</div><div class="skill-desc">Планирование, организация, контроль, мотивация и коммуникация</div></div>
+      <div class="skill-card"><div class="skill-n">03</div><div class="skill-title">Лидерские качества</div><div class="skill-desc">Влияние, авторитет и умение вести команду за собой</div></div>
+      <div class="skill-card"><div class="skill-n">04</div><div class="skill-title">Работа с командой</div><div class="skill-desc">Делегирование, развитие сотрудников, работа с конфликтами</div></div>
+      <div class="skill-card"><div class="skill-n">05</div><div class="skill-title">Стратегическое мышление</div><div class="skill-desc">Видение перспективы, расстановка приоритетов, принятие решений</div></div>
+      <div class="skill-card"><div class="skill-n">06</div><div class="skill-title">Управление изменениями</div><div class="skill-desc">Адаптация к новым вводным, гибкость в нестандартных ситуациях</div></div>
+      <div class="skill-card"><div class="skill-n">07</div><div class="skill-title">Коммуникация</div><div class="skill-desc">Качество переговоров, подачи информации и обратной связи</div></div>
+      <div class="skill-card"><div class="skill-n">08</div><div class="skill-title">Мотивация команды</div><div class="skill-desc">Понимание мотивационных профилей и умение их активировать</div></div>
+      <div class="skill-card"><div class="skill-n">09</div><div class="skill-title">Постановка задач</div><div class="skill-desc">Чёткость, измеримость и контроль исполнения</div></div>
+      <div class="skill-card"><div class="skill-n">10</div><div class="skill-title">Работа с KPI</div><div class="skill-desc">Умение ставить, считать и применять показатели эффективности</div></div>
+      <div class="skill-card"><div class="skill-n">11</div><div class="skill-title">Принятие решений</div><div class="skill-desc">Скорость, качество и последствия управленческих решений</div></div>
+      <div class="skill-card"><div class="skill-n">12</div><div class="skill-title">Управление временем</div><div class="skill-desc">Расстановка приоритетов в условиях ограниченных ресурсов</div></div>
+      <div class="skill-card"><div class="skill-n">13</div><div class="skill-title">Работа с конфликтами</div><div class="skill-desc">Диагностика, деэскалация и извлечение пользы из конфликтов</div></div>
+      <div class="skill-card"><div class="skill-n">14</div><div class="skill-title">Обратная связь</div><div class="skill-desc">Умение давать развивающую обратную связь и принимать её</div></div>
+
     </div>
   </div>
 </section>
 
 <hr class="divider">
 
-<!-- WHY GAME FORMAT -->
-<section style="background:var(--navy2)">
+<!-- КАК ПРОХОДИТ ИГРА -->
+<section style="background:var(--bg2);padding:5rem 2.5rem">
   <div class="wrap">
-    <div class="sec-tag">Почему игровой формат</div>
-    <h2 class="sec-title">Почему это <span>работает</span></h2>
-    <p class="sec-sub">Игровой формат — не развлечение. Это научно обоснованный метод обучения взрослых, который даёт результат там, где лекции и тренинги не работают.</p>
-    <div class="why-grid">
-      <div class="why-card">
-        <span class="why-icon">🎯</span>
-        <div class="why-title">Мотивация и вовлечённость</div>
-        <p class="why-text">Игры активируют внутренние механизмы вознаграждения и создают ощущение прогресса. Взрослые учатся эффективнее, когда активно участвуют, а не пассивно получают информацию. Высокий уровень внимания на протяжении всего процесса.</p>
-      </div>
-      <div class="why-card">
-        <span class="why-icon">🔬</span>
-        <div class="why-title">Практическое применение</div>
-        <p class="why-text">Безопасная среда для экспериментов с разными стратегиями и подходами. Участники анализируют результаты своих решений и учатся на ошибках без реальных последствий. Развивается критическое мышление и аналитика.</p>
-      </div>
-      <div class="why-card">
-        <span class="why-icon">🤝</span>
-        <div class="why-title">Развитие социальных навыков</div>
-        <p class="why-text">Игра создаёт условия для переговоров, принятия решений в группе, разрешения конфликтов и лидерства. Участники учатся понимать роли и динамику команды — ключевое для успешного управления.</p>
-      </div>
-      <div class="why-card">
-        <span class="why-icon">🛡️</span>
-        <div class="why-title">Безопасная среда для ошибок</div>
-        <p class="why-text">Менее формальная атмосфера снижает страх неудачи. Ошибки воспринимаются как часть учебного процесса, что способствует более свободному и креативному мышлению. Никаких последствий для реального бизнеса.</p>
-      </div>
-      <div class="why-card">
-        <span class="why-icon">🧠</span>
-        <div class="why-title">Глубокое запоминание</div>
-        <p class="why-text">Исследования когнитивной психологии показывают: обучение с положительными эмоциями и активным участием закрепляется в памяти лучше. Многократное повторение в разных контекстах — ключ к долгосрочному усвоению.</p>
-      </div>
-      <div class="why-card">
-        <span class="why-icon">⚙️</span>
-        <div class="why-title">Гибкость и адаптивность</div>
-        <p class="why-text">Содержание и сложность адаптируются под конкретные потребности участников. Каждый продвигается в своём темпе и фокусируется на аспектах, требующих внимания. Персонализированное обучение без шаблонных программ.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- HOW IT WORKS -->
-<section style="background:var(--navy)">
-  <div class="wrap">
-    <div class="sec-tag">Как устроена игра</div>
-    <h2 class="sec-title">Как проходит <span>игра</span></h2>
+    <div class="eyebrow-sec">Как проходит игра</div>
+    <h2 class="sec">4 шага к <em>результату</em></h2>
     <p class="sec-sub">Четыре шага — от старта до развёрнутого анализа ваших управленческих компетенций.</p>
-    <div class="game-process-photo" data-slot="how-game-works"><img src="game-process-v2.jpg" alt="Игровое поле «Корпорация Звёзд» во время сессии" style="object-position:center 35%"></div>
     <div class="process-steps">
       <div class="ps">
         <div class="ps-n">1</div>
         <div class="ps-title">Погружение</div>
-        <p class="ps-desc">Вы попадаете в виртуальную реальность — управляете компанией и принимаете решения в реальных ситуациях</p>
+        <div class="ps-desc">Вы попадаете в виртуальную реальность — управляете компанией и принимаете решения в реальных ситуациях</div>
       </div>
       <div class="ps">
         <div class="ps-n">2</div>
         <div class="ps-title">14 ситуаций</div>
-        <p class="ps-desc">В каждой ситуации несколько вариантов ответа. Вы выбираете так, как поступили бы в реальной рабочей жизни</p>
+        <div class="ps-desc">В каждой ситуации несколько вариантов ответа. Вы выбираете так, как поступили бы в реальной рабочей жизни</div>
       </div>
       <div class="ps">
+        <span class="ps-arrow">→</span>
         <div class="ps-n">3</div>
         <div class="ps-title">Подсчёт баллов</div>
-        <p class="ps-desc">Счётчик фиксирует каждый выбор в реальном времени по 4 ключевым компетенциям руководителя</p>
+        <div class="ps-desc">Счётчик фиксирует каждый выбор в реальном времени по 4 ключевым компетенциям руководителя</div>
       </div>
       <div class="ps">
+        <span class="ps-arrow">→</span>
         <div class="ps-n">4</div>
         <div class="ps-title">SWOT-анализ</div>
-        <p class="ps-desc">В финале — развёрнутый анализ: сильные стороны, зоны роста, угрозы и возможности именно вашего стиля управления</p>
+        <div class="ps-desc">В финале — развёрнутый анализ: сильные стороны, зоны роста, угрозы и возможности именно вашего стиля управления</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1rem">
+      <img src="skills-photo-crop.jpg" alt="Игра в процессе" style="width:100%;max-height:280px;object-fit:cover;object-position:center 40%;border-radius:2px;opacity:.85">
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ФОРМАТЫ -->
+<section class="formats-section">
+  <div class="wrap">
+    <div class="eyebrow-sec">Форматы</div>
+    <h2 class="sec">Выберите свой <em>формат</em></h2>
+    <p class="sec-sub">От бесплатного демо до корпоративных ассесментов.</p>
+    <div class="formats-photo">
+      <img src="game-cover-new.jpg" alt="Обложка игры «Корпорация Звёзд»">
+    </div>
+    <div class="formats-grid">
+      <div class="fmt-card">
+        <div class="fmt-tag">ОНЛАЙН · ОФФЛАЙН · ИНДИВИДУАЛЬНО</div>
+        <div class="fmt-title">Индивидуальная игра</div>
+        <div class="fmt-price">15 000 ₽</div>
+        <div class="fmt-price-note">онлайн или оффлайн · с разбором</div>
+        <ul class="fmt-list">
+          <li>14 управленческих ситуаций</li>
+          <li>Счётчик баллов в реальном времени</li>
+          <li>SWOT-анализ компетенций в финале</li>
+          <li>Индивидуальный разбор результатов</li>
+        </ul>
+      </div>
+      <div class="fmt-card featured">
+        <div class="fmt-tag">ОНЛАЙН · ОФФЛАЙН · КОМАНДНО</div>
+        <div class="fmt-title">Командная игра</div>
+        <div class="fmt-price">от 30 000 ₽</div>
+        <div class="fmt-price-note">до 16 игроков · с фасилитатором</div>
+        <ul class="fmt-list">
+          <li>Полная версия игры для команды</li>
+          <li>Фасилитация Надежды Коноваловой</li>
+          <li>Групповой SWOT-анализ</li>
+          <li>Рекомендации по развитию команды</li>
+        </ul>
+      </div>
+      <div class="fmt-card">
+        <div class="fmt-tag">ОНЛАЙН · ОФФЛАЙН · АССЕСМЕНТ</div>
+        <div class="fmt-title">Корпоративный ассесмент</div>
+        <div class="fmt-price">от 7 000 ₽</div>
+        <div class="fmt-price-note">с человека · индивидуальный отчёт</div>
+        <ul class="fmt-list">
+          <li>Онлайн или оффлайн формат</li>
+          <li>Индивидуальный разбор компетенций</li>
+          <li>Отчёт по каждому участнику</li>
+          <li>Рекомендации по развитию</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -436,92 +449,145 @@ footer{padding:2rem;border-top:1px solid var(--border)}
 
 <hr class="divider">
 
-<!-- FORMATS -->
-<section style="background:var(--navy2)">
+<!-- ДРУГИЕ НАПРАВЛЕНИЯ -->
+<section style="padding:5rem 2.5rem">
   <div class="wrap">
-    <div class="sec-tag">Форматы участия</div>
-    <h2 class="sec-title">Выберите <span>свой формат</span></h2>
-    <p class="sec-sub">От бесплатного демо до сертификации игропрактика — выберите формат под свою задачу.</p>
-    <div class="formats-photo"><img src="game-cover-new.jpg" alt="Обложка игры «Корпорация Звёзд» — взлети на новый уровень"></div>
-    <div class="formats-grid" style="grid-template-columns:repeat(4,1fr)">
-      <div class="fmt-card">
-        <span class="fmt-icon">🎮</span>
-        <div class="fmt-title">Демо-версия</div>
-        <p class="fmt-desc" style="font-size:.85rem">Попробуйте механику игры онлайн — несколько ситуаций для знакомства с форматом.</p>
-        <div class="fmt-price">Бесплатно</div>
-        <div class="fmt-price-sub">онлайн · без регистрации</div>
-        <div style="margin-top:1.5rem">
-          <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.65rem 1.5rem;width:100%;text-align:center;display:block">Играть бесплатно</a>
-        </div>
+    <div class="eyebrow-sec">Другие направления</div>
+    <h2 class="sec">Системный рост <em>бизнеса</em></h2>
+    <p class="sec-sub">Игра — это только один из инструментов. Работаю комплексно.</p>
+    <div class="dirs">
+      <div class="dir" onclick="location.href='obuchenie.html'">
+        <div class="dir-n">01</div>
+        <div class="dir-en">EDUCATION</div>
+        <div class="dir-title">Обучение</div>
+        <div class="dir-desc">Курс «Мастер управления» — 9 модулей. Бесплатный стартовый курс в подарок.</div>
+        <a class="dir-link" href="obuchenie.html">Подробнее →</a>
       </div>
-      <div class="fmt-card">
-        <span class="fmt-icon">👤</span>
-        <div class="fmt-title">Индивидуально</div>
-        <p class="fmt-desc" style="font-size:.85rem">Полная версия игры один на один с ведущим. SWOT-анализ вашего стиля управления.</p>
-        <div class="fmt-price">7 000 ₽</div>
-        <div class="fmt-price-sub">1 игра · 20–30 минут</div>
-        <div style="margin-top:1.5rem">
-          <a href="https://t.me/hipo_game" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.65rem 1.5rem;width:100%;text-align:center;display:block">Записаться</a>
-        </div>
+      <div class="dir" onclick="location.href='sales-force.html'">
+        <div class="dir-n">02</div>
+        <div class="dir-en">SALES FORCE</div>
+        <div class="dir-title">Отдел продаж</div>
+        <div class="dir-desc">Построение системного отдела продаж под ключ. Запуск за 30 дней.</div>
+        <a class="dir-link" href="sales-force.html">Подробнее →</a>
       </div>
-      <div class="fmt-card featured">
-        <span class="fmt-icon">👥</span>
-        <div class="fmt-title">Для команды</div>
-        <p class="fmt-desc" style="font-size:.85rem">Игровая сессия для команды руководителей с фасилитацией и разбором результатов. Онлайн или очно.</p>
-        <div class="fmt-price">от 30 000 ₽</div>
-        <div class="fmt-price-sub">корпоративный формат · с разбором</div>
-        <div style="margin-top:1.5rem">
-          <a href="https://t.me/hipo_game" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.65rem 1.5rem;width:100%;text-align:center;display:block">Обсудить формат</a>
-        </div>
+      <div class="dir" onclick="location.href='consulting.html'">
+        <div class="dir-n">03</div>
+        <div class="dir-en">CONSULTING</div>
+        <div class="dir-title">Работа со мной</div>
+        <div class="dir-desc">Бизнес-консалтинг для фаундеров и топ-менеджеров. Остаюсь до результата.</div>
+        <a class="dir-link" href="consulting.html">Подробнее →</a>
       </div>
-      <div class="fmt-card">
-        <span class="fmt-icon">🎓</span>
-        <div class="fmt-title">Игропрактик</div>
-        <p class="fmt-desc" style="font-size:.85rem">Купите игру и пройдите обучение, чтобы проводить её самостоятельно. Обучение входит в стоимость.</p>
-        <div class="fmt-price">60 000 ₽</div>
-        <div class="fmt-price-sub">игра + сертификация</div>
-        <div style="margin-top:1.5rem">
-          <a href="https://t.me/hipo_game" target="_blank" class="btn-outline" style="font-size:.78rem;padding:.65rem 1.5rem;width:100%;text-align:center;display:block">Узнать подробнее</a>
-        </div>
+      <div class="dir" onclick="location.href='naim.html'">
+        <div class="dir-n">04</div>
+        <div class="dir-en">HIRING</div>
+        <div class="dir-title">Найм</div>
+        <div class="dir-desc">Профильный подбор менеджеров, тимлидов и руководителей. Адаптация входит в стоимость.</div>
+        <a class="dir-link" href="naim.html">Подробнее →</a>
       </div>
     </div>
-    <p style="text-align:center;font-size:.85rem;color:var(--muted);margin-top:2rem">Также доступно для HR и корпоративного обучения — индивидуальные условия по запросу</p>
   </div>
 </section>
 
-<!-- CTA -->
-<div class="cta">
-  <div class="wrap">
-    <h2>Узнайте свой стиль<br>управления прямо сейчас</h2>
-    <p>20–30 минут — и вы получите развёрнутый SWOT-анализ своих управленческих компетенций. Бесплатно, онлайн, без регистрации.</p>
-    <div class="cta-btns">
-      <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold">Играть бесплатно</a>
-      <a href="https://t.me/hipo_game" target="_blank" class="btn-outline">Игра для команды — от 30 000 ₽</a>
-    </div>
-    <div class="cta-note">Есть вопросы? Напишите в Telegram <a href="https://t.me/hipo_game" target="_blank" style="color:var(--gold);text-decoration:none">@hipo_game</a></div>
-  </div>
-</div>
+<hr class="divider">
 
-<!-- FOOTER -->
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Готовы <em>попробовать?</em></h2>
+    <p>Запустите демо прямо сейчас — бесплатно, без регистрации. Или напишите, чтобы организовать игру для вашей команды.</p>
+    <div class="cta-btns">
+      <a href="https://nadyhipo.github.io/korporaciya-zvezd-demo/" target="_blank" class="btn-gold">Играть бесплатно →</a>
+      <a href="https://t.me/hipo_game" target="_blank" class="btn-outline">Написать в Telegram</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="footer-inner">
-    <a href="index.html" class="footer-logo">Hipo Academy</a>
+    <a href="index.html" class="footer-logo"><img src="logo-icon.png" alt="" class="footer-logo-img">Hipo Academy</a>
     <div class="footer-links">
-      <a href="index.html">На главную</a>
-      <a href="https://hipoacademy.ru/master_management" target="_blank">Курс «Мастер управления»</a>
-      <a href="https://t.me/Hipo_academy" target="_blank">Telegram-канал</a>
+      <a href="privacy.html">Политика конфиденциальности</a>
     </div>
-    <div class="footer-copy">
-      <div style="margin-bottom:.5rem">© 2025 Hipo Academy · hipoacademy.ru</div>
-      <div style="opacity:.85">Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590</div>
-      <div style="margin-top:.4rem"><a href="privacy.html">Политика конфиденциальности</a></div>
-    </div>
+  </div>
+  <div class="wrap" style="margin-top:1.5rem;border-top:1px solid var(--gold-border);padding-top:1.25rem;text-align:center">
+    <div class="footer-copy">© 2025 Hipo Academy · hipoacademy.ru</div>
+    <div style="opacity:.85;font-size:.78rem;color:#a8b0c8">Коновалова Надежда Викторовна · Самозанятый (НПД) · ИНН 027708088590</div>
+    <div style="margin-top:.5rem"><a href="privacy.html" style="font-size:.72rem;color:var(--gold);text-decoration:underline">Политика конфиденциальности</a></div>
   </div>
 </footer>
 
 <script>
 function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open')}
-function closeMob(){document.getElementById('mobMenu').classList.remove('open')}
 </script>
+
+<script>
+(function(){
+  // Reveal анимации
+  document.querySelectorAll('section').forEach(function(sec){
+    sec.classList.add('reveal');
+  });
+  document.querySelectorAll('.skill-card').forEach(function(el,i){
+    el.classList.add('reveal-scale');
+    el.style.transitionDelay=(i*0.05)+'s';
+  });
+  document.querySelectorAll('.stat-card').forEach(function(el,i){
+    el.classList.add('reveal');
+    el.classList.add(['d1','d2','d3','d4','d5','d5'][i]||'d5');
+  });
+  document.querySelectorAll('.fmt-card').forEach(function(el,i){
+    el.classList.add('reveal');
+    el.classList.add(['d1','d2','d3'][i]||'d3');
+  });
+  document.querySelectorAll('.dir').forEach(function(el,i){
+    el.classList.add('reveal');
+    el.classList.add(['d1','d2','d3','d4'][i]||'d4');
+  });
+  document.querySelectorAll('.ps').forEach(function(el,i){
+    el.classList.add('reveal');
+    el.classList.add(['d1','d2','d3','d4'][i]||'d4');
+  });
+
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+    });
+  },{threshold:0.1});
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(function(el){
+    io.observe(el);
+  });
+})();
+
+// Счётчики цифр
+(function(){
+  var stats=document.querySelectorAll('.stat-big');
+  var done=false;
+  function animate(el,to,suffix){
+    var start=null;
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/1400,1);
+      var ease=p===1?1:1-Math.pow(2,-10*p);
+      el.textContent=Math.round(to*ease)+(suffix||'');
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var vals=[
+    {n:200,s:'+'},{n:60,s:''},{n:4,s:''},{n:1,s:''},{n:4,s:''},{n:16,s:''}
+  ];
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting&&!done){
+        done=true;
+        stats.forEach(function(el,i){
+          if(vals[i])animate(el,vals[i].n,vals[i].s);
+        });
+      }
+    });
+  },{threshold:0.4});
+  if(stats[0])io.observe(stats[0]);
+})();
+</script>
+
 </body>
 </html>
