@@ -147,8 +147,13 @@ hr.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,v
 .competence-box::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(180deg,rgba(10,12,20,.96) 0%,rgba(10,12,20,.9) 100%),url('direction-consulting.jpg');background-position:center;background-size:cover;animation:directionBackground 22s ease-in-out infinite alternate;will-change:transform}
 .competence-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--white);margin-bottom:1.5rem;position:relative;z-index:1}
 .ctags{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;position:relative;z-index:1}
-.ctag{font-size:.82rem;color:var(--text2);border:1px solid var(--gold-border);padding:.45rem 1rem;transition:all .2s}
-.ctag:hover{border-color:var(--gold);color:var(--gold)}
+.ctag{font-size:.82rem;color:var(--text2);border:1px solid var(--gold-border);padding:.45rem 1rem;animation:tagGlow 3s ease-in-out infinite alternate}
+.ctag:nth-child(2){animation-delay:.5s}
+.ctag:nth-child(3){animation-delay:1s}
+.ctag:nth-child(4){animation-delay:1.5s}
+.ctag:nth-child(5){animation-delay:2s}
+.ctag:nth-child(6){animation-delay:2.5s}
+@keyframes tagGlow{0%{border-color:var(--gold-border);color:var(--text2)}100%{border-color:var(--gold-border2);color:var(--gold-light)}}
 
 /* MINI CASES */
 .cases-section{padding:5rem 2.5rem}
