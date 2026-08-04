@@ -164,7 +164,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overf
 nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2.5rem}
 .logo-img{height:28px;width:28px;object-fit:contain;flex-shrink:0}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
+.logo{display:flex;align-items:center;gap:.5rem;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
 .logo span{color:var(--text);font-weight:400}
 .nav-links{display:flex;gap:2.5rem;list-style:none}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:.75rem;font-weight:500;letter-spacing:.06em;transition:color .2s}
@@ -635,14 +635,14 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 <!-- КНИГА -->
 <section style="background:var(--bg2);padding:3.5rem 2.5rem">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:center;background:rgba(201,162,87,.06);border:1px solid var(--gold-border2);border-left:3px solid var(--gold);padding:2rem 2.5rem">
-      <div style="font-size:2.5rem;line-height:1">📖</div>
-      <div>
+    <div style="display:flex;flex-wrap:wrap;gap:1.75rem;align-items:center;background:rgba(201,162,87,.06);border:1px solid var(--gold-border2);border-left:3px solid var(--gold);padding:2rem 2.5rem">
+      <div style="font-size:2.5rem;line-height:1;flex-shrink:0">📖</div>
+      <div style="flex:1;min-width:200px">
         <div style="font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.5rem">Новая аудиокнига · ЛитРес</div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--gold);margin-bottom:.3rem">«Что должен делать РОП»</div>
         <div style="font-size:.85rem;color:var(--text2);line-height:1.65;font-weight:300">Система продаж глазами собственника. Авторская методология Надежды Коноваловой на ЛитРес.</div>
       </div>
-      <a href="https://www.litres.ru/audiobook/nadezhda-konovalova/chto-dolzhen-delat-rop-sistema-prodazh-glazami-sobstv-74273889/" target="_blank" style="background:var(--gold);color:var(--bg);padding:.7rem 1.75rem;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-decoration:none;white-space:nowrap;flex-shrink:0;border-radius:2px">Слушать на ЛитРес →</a>
+      <a href="https://www.litres.ru/audiobook/nadezhda-konovalova/chto-dolzhen-delat-rop-sistema-prodazh-glazami-sobstv-74273889/" target="_blank" style="background:var(--gold);color:var(--bg);padding:.7rem 1.75rem;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-decoration:none;white-space:nowrap;flex-shrink:0;border-radius:2px;align-self:center">Слушать на ЛитРес →</a>
     </div>
   </div>
 </section>

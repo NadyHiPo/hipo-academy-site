@@ -74,7 +74,7 @@ hr.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,v
 .hero-inner{max-width:1100px;margin:0 auto;padding:0 2.5rem;width:100%;display:grid;grid-template-columns:1fr 340px;gap:3.5rem;align-items:center}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5.5vw,4.5rem);font-weight:700;line-height:1.05;color:var(--white);margin-bottom:1.25rem}
 .hero h1 em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:1.05rem;color:var(--text2);max-width:520px;line-height:1.85;font-weight:300;margin-bottom:2rem}
+.hero-sub{overflow-wrap:break-word;word-break:break-word;font-size:1.05rem;color:var(--text2);max-width:520px;line-height:1.85;font-weight:300;margin-bottom:2rem}
 .hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
 
 /* HERO CARD */
@@ -190,7 +190,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .book-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--gold);margin-bottom:.3rem;line-height:1.25}
 .book-sub{font-size:.85rem;color:var(--text2);line-height:1.65;font-weight:300;max-width:560px}
 .book-author{font-size:.78rem;color:var(--muted);margin-top:.4rem}
-@media(max-width:700px){.book-strip{grid-template-columns:1fr}.book-icon{display:none}}
+@media(max-width:700px){.book-strip{grid-template-columns:1fr;gap:1.25rem}.book-icon{display:none}.book-strip a{width:100%;text-align:center;box-sizing:border-box}}
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -251,7 +251,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     <div>
       <div class="eyebrow">Hipo Sales Force</div>
       <h1>Системный отдел продаж<br><em>под ключ</em></h1>
-      <p class="hero-sub">Заявки есть, а продаж меньше, чем должно быть? Значит, у вас не отдел продаж — у вас люди, которые что-то продают. Я строю систему: запуск за 30 дней, отчёты каждую неделю, эксклюзивность по сегменту.</p>
+      <p class="hero-sub">Заявки есть, а продаж меньше, чем должно быть?<br>Значит, у вас не отдел продаж — у вас люди, которые что-то продают.<br>Я строю систему: запуск за 30 дней, отчёты каждую неделю, эксклюзивность по сегменту.</p>
       <div class="hero-btns">
         <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Обсудить проект</a>
         <a href="https://t.me/Hipo_academy" target="_blank" class="btn-outline">Получить чек-лист команды</a>
