@@ -4,9 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Обучение — Hipo Academy</title>
+<meta name="description" content="Курс «Мастер управления» — 9 модулей по системному управлению командой. Бесплатный стартовый курс в подарок. Авторская методология Надежды Коноваловой.">
+<link rel="canonical" href="https://hipoacademy.ru/obuchenie.html">
+<meta property="og:title" content="Обучение «Мастер управления» — Hipo Academy">
+<meta property="og:description" content="9 модулей по системному управлению людьми и командами. От бесплатного старта до глубокого погружения.">
+<meta property="og:image" content="https://hipoacademy.ru/master-management-course.jpg">
+<meta property="og:url" content="https://hipoacademy.ru/obuchenie.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(106926169,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -17,6 +31,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
 
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2.5rem}
 .logo{display:flex;align-items:center;gap:.5rem;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none}
@@ -33,138 +48,161 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97
 .mob-menu.open{display:block}
 .mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.85rem;letter-spacing:.04em;padding:.65rem 0;border-bottom:1px solid var(--gold-border)}
 .mob-menu a:last-child{color:var(--gold);border-bottom:none}
-.mob-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--gold-border);z-index:299;padding:1rem 2rem 1.5rem}
-.mob-menu.open{display:block}
-.mob-menu a{display:block;color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.06em;padding:.7rem 0;border-bottom:1px solid var(--gold-border)}
-.mob-menu a:last-child{color:var(--gold);border-bottom:none}
-.nav-back:hover{color:var(--gold)}
-.nav-btn{background:transparent;border:1px solid var(--gold-border2);color:var(--gold);padding:.45rem 1.4rem;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-decoration:none;border-radius:2px;transition:all .2s}
-.nav-btn:hover{background:var(--gold);color:var(--bg)}
 
+/* BUTTONS */
 .btn-gold{background:var(--gold);color:var(--bg);padding:.8rem 2.25rem;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid var(--gold);border-radius:2px}
 .btn-gold:hover{background:var(--gold-light);border-color:var(--gold-light)}
 .btn-outline{background:transparent;color:var(--text);padding:.8rem 2.25rem;font-size:.8rem;font-weight:500;letter-spacing:.06em;text-decoration:none;display:inline-block;transition:all .2s;border:1px solid rgba(232,234,242,.25);border-radius:2px}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
 
-.hero{padding:9rem 2.5rem 4rem;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-20%;left:-10%;width:50%;height:70%;background:radial-gradient(ellipse,rgba(201,162,87,.06) 0%,transparent 65%);pointer-events:none}
-.wrap{max-width:1100px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1}
-.hero .wrap{padding:0}
+.wrap{max-width:1100px;margin:0 auto;padding:0 2.5rem}
 .eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem}
 .eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,4.3rem);font-weight:500;line-height:1.1;color:var(--white);margin-bottom:1rem}
-.hero h1 em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:1.05rem;color:var(--text2);max-width:600px;line-height:1.85;font-weight:300;margin-bottom:2.5rem}
-.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
-
-section{padding:5rem 2.5rem}
 .eyebrow-sec{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
 .eyebrow-sec::before{content:'';display:block;width:20px;height:1px;background:var(--teal)}
 h2.sec{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:500;color:var(--white);line-height:1.12;margin-bottom:.75rem}
 h2.sec em{font-style:italic;color:var(--gold)}
-.sec-sub{font-size:1rem;color:var(--text2);max-width:560px;line-height:1.85;margin-bottom:3rem;font-weight:300}
-hr.div{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border2),transparent)}
+.sec-sub{font-size:1rem;color:var(--text2);max-width:620px;line-height:1.85;margin-bottom:3rem;font-weight:300}
+hr.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border2),transparent)}
 
-/* FREE COURSE BANNER */
-.free-banner{background:var(--bg3);border:1px solid var(--gold-border2);padding:2.5rem;display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:center}
-.free-banner-photo{width:120px;height:120px;border-radius:2px;background:var(--bg4);overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.free-banner-photo img{width:100%;height:100%;object-fit:cover}
-.free-banner-photo-placeholder{color:var(--muted);font-size:.65rem;text-align:center;padding:.5rem}
-.free-tag{display:inline-block;background:var(--gold);color:var(--bg);font-size:.65rem;font-weight:600;letter-spacing:.1em;padding:.28rem .8rem;margin-bottom:1rem;border-radius:1px}
-.free-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--white);margin-bottom:.6rem}
-.free-desc{font-size:.95rem;color:var(--text2);line-height:1.75;max-width:480px;font-weight:300}
+/* HERO */
+.hero{min-height:80vh;display:flex;align-items:center;padding:8rem 2.5rem 5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(90deg,rgba(10,12,20,.97) 0%,rgba(10,12,20,.85) 55%,rgba(10,12,20,.55) 100%),url('direction-learning.jpg');background-position:center;background-size:cover;animation:heroBackground 18s ease-in-out infinite alternate;will-change:transform}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(201,162,87,.05),transparent 45%,rgba(90,180,174,.04));pointer-events:none}
+@keyframes heroBackground{0%{transform:scale(1.06) translate3d(-1.2%,0,0)}100%{transform:scale(1.13) translate3d(1.8%,-1.2%,0)}}
+@keyframes directionBackground{0%{transform:scale(1.06) translate3d(-1.2%,0,0)}100%{transform:scale(1.13) translate3d(1.8%,-1.2%,0)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
+.hero-inner{max-width:1100px;margin:0 auto;padding:0 2.5rem;width:100%;display:grid;grid-template-columns:1fr 340px;gap:3.5rem;align-items:center}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5.5vw,4.5rem);font-weight:700;line-height:1.05;color:var(--white);margin-bottom:1.25rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:var(--text2);max-width:520px;line-height:1.85;font-weight:300;margin-bottom:2rem}
+.hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
 
-/* MAIN COURSE */
-.course-hero{display:grid;grid-template-columns:1.3fr 1fr;gap:4rem;align-items:start}
+/* HERO CARD */
+.hero-card{background:rgba(20,24,40,.92);border:1px solid var(--gold-border2);padding:2.25rem;position:relative;backdrop-filter:blur(12px)}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.hero-card-tag{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.hero-card-tag::before{content:'●';font-size:.4rem}
+.hero-card-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--gold);margin-bottom:.35rem;line-height:1.2}
+.hero-card-sub{font-size:.82rem;color:var(--muted);margin-bottom:1.5rem}
+.feat-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.75rem}
+.feat{display:flex;align-items:center;gap:.65rem;font-size:.88rem;color:var(--text2)}
+.feat-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
 
-/* TARIFF BLOCKS */
-.tariff-block{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;margin-bottom:1.5rem}
-.tariff-block.featured{border-color:var(--gold-border2);background:rgba(201,162,87,.04)}
-.tariff-block-head{display:grid;grid-template-columns:auto 1fr auto;gap:1.75rem;align-items:start;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--gold-border)}
-.tariff-photo{width:88px;height:88px;border-radius:2px;background:var(--bg4);overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.tariff-photo img{width:100%;height:100%;object-fit:cover}
-.tariff-photo-placeholder{color:var(--muted);font-size:.6rem;text-align:center;padding:.4rem}
-.tariff-block-tag{font-size:.68rem;font-weight:500;letter-spacing:.16em;color:var(--teal);margin-bottom:.4rem;text-transform:uppercase}
-.tariff-block-name{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;color:var(--gold);margin-bottom:.85rem;line-height:1.1}
-.tariff-block-desc{font-size:.95rem;color:var(--text2);line-height:1.8;font-weight:300;max-width:640px}
-.tariff-block-price{text-align:right;min-width:160px}
-.tp-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--white);line-height:1}
-.module-detail{margin-bottom:1.75rem}
-.module-detail:last-child{margin-bottom:0}
-.included-box{background:rgba(201,162,87,.06);border:1px solid var(--gold-border2);padding:1.5rem 1.75rem;margin-bottom:2rem;display:grid;grid-template-columns:repeat(2,1fr);gap:.65rem 1.5rem}
-.included-label{grid-column:1/-1;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
-.included-item{font-size:.88rem;color:var(--text2);padding-left:1.1rem;position:relative;line-height:1.5;font-weight:300}
-.included-item::before{content:'✓';position:absolute;left:0;color:var(--gold);font-size:.78rem}
-.module-num{font-size:.68rem;font-weight:600;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:.4rem}
-.module-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;color:var(--white);margin-bottom:.85rem;line-height:1.25}
-.module-points{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.5rem}
-.module-points li{font-size:.87rem;color:var(--text2);padding-left:1rem;position:relative;line-height:1.5;font-weight:300}
-.module-points li::before{content:'—';position:absolute;left:0;color:var(--gold)}
-.course-tag{font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:1rem}
-.course-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:500;color:var(--white);line-height:1.1;margin-bottom:1.25rem}
-.course-title em{font-style:italic;color:var(--gold)}
-.course-desc{font-size:1rem;color:var(--text2);line-height:1.85;margin-bottom:2rem;font-weight:300}
-.levels-box{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem}
-.levels-title{font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--gold);text-transform:uppercase;margin-bottom:1.25rem}
-.level{display:flex;gap:1rem;padding:.9rem 0;border-top:1px solid var(--gold-border)}
-.level:first-child{border-top:none;padding-top:0}
-.level-n{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);font-weight:400;min-width:24px}
-.level-text{font-size:.9rem;color:var(--text2);line-height:1.55;font-weight:300}
-.level-text strong{color:var(--text);font-weight:500}
+/* FREE BANNER */
+.free-section{padding:5rem 2.5rem;background:var(--bg2);position:relative;overflow:hidden;isolation:isolate}
+.free-section::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(90deg,rgba(10,12,20,.88) 0%,rgba(10,12,20,.96) 100%),url('direction-games.jpg');background-position:center;background-size:cover;animation:directionBackground 16s ease-in-out infinite alternate;will-change:transform}
+.free-banner{display:grid;grid-template-columns:1fr auto;gap:2.5rem;align-items:center;background:rgba(201,162,87,.07);border:1px solid var(--gold-border2);border-left:3px solid var(--gold);padding:2.5rem 3rem}
+.free-tag{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.free-tag::before{content:'●';font-size:.4rem}
+.free-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--gold);margin-bottom:.4rem}
+.free-desc{font-size:.88rem;color:var(--text2);line-height:1.75;font-weight:300;max-width:540px}
 
-/* MODULES */
-.mods-full{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gold-border);margin:2.5rem 0}
-.mod-card{background:var(--bg3);padding:1.75rem;transition:background .2s}
-.mod-card:hover{background:var(--bg4)}
-.mod-n{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:rgba(201,162,87,.25);font-weight:400;line-height:1;margin-bottom:.6rem}
-.mod-title{font-size:.92rem;font-weight:600;color:var(--text);line-height:1.4}
+/* LEVELS */
+.levels-section{padding:5rem 2.5rem}
+.levels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gold-border);margin-top:2.5rem}
+.level-card{background:var(--bg3);padding:2rem;transition:background .2s;position:relative;overflow:hidden;isolation:isolate}
+.level-card::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(180deg,rgba(14,18,35,.97) 0%,rgba(14,18,35,.92) 100%),var(--lc-img);background-position:center;background-size:cover;animation:directionBackground 20s ease-in-out infinite alternate;will-change:transform;opacity:.6}
+.level-card:nth-child(1){--lc-img:url('direction-learning.jpg')}
+.level-card:nth-child(2){--lc-img:url('direction-sales.jpg')}
+.level-card:nth-child(3){--lc-img:url('direction-consulting.jpg')}
+.level-card:nth-child(2)::before{animation-delay:-7s}
+.level-card:nth-child(3)::before{animation-delay:-12s}
+.level-n{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.6rem;position:relative;z-index:1}
+.level-title{font-size:.9rem;font-weight:600;color:var(--text);margin-bottom:.4rem;position:relative;z-index:1}
+.level-desc{font-size:.82rem;color:var(--text2);line-height:1.65;font-weight:300;position:relative;z-index:1}
 
 /* TARIFFS */
-.tariffs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
-.tcard{background:var(--bg3);border:1px solid var(--gold-border);padding:2.25rem;text-align:center;transition:border-color .2s}
-.tcard:hover{border-color:var(--gold-border2)}
-.tcard.featured{border-color:var(--gold);background:rgba(201,162,87,.05)}
-.t-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--gold);margin-bottom:.5rem}
-.t-price{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--white);margin-bottom:1.25rem}
-.t-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;text-align:left;margin-bottom:1.75rem}
-.t-list li{font-size:.87rem;color:var(--text2);padding-left:1.1rem;position:relative;line-height:1.5;font-weight:300}
-.t-list li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-size:.78rem}
+.tariffs-section{padding:5rem 2.5rem;background:var(--bg2)}
+.tariff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.tariff{background:var(--bg3);border:1px solid var(--gold-border);padding:2.25rem;position:relative;overflow:hidden;isolation:isolate;transition:border-color .2s}
+.tariff::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(180deg,rgba(10,12,20,.96) 0%,rgba(10,12,20,.88) 100%),var(--t-img);background-position:center;background-size:cover;animation:directionBackground 18s ease-in-out infinite alternate;will-change:transform}
+.tariff:nth-child(1){--t-img:url('tariff-osnova.jpg')}
+.tariff:nth-child(2){--t-img:url('tariff-master.jpg')}
+.tariff:nth-child(3){--t-img:url('tariff-expert.jpg')}
+.tariff:nth-child(2)::before{animation-delay:-6s}
+.tariff:nth-child(3)::before{animation-delay:-12s}
+.tariff.featured{border-color:var(--gold-border2)}
+.tariff.featured::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold)}
+.tariff:hover{border-color:var(--gold-border2)}
+.tariff-tag{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.75rem;position:relative;z-index:1}
+.tariff-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--gold);margin-bottom:.35rem;position:relative;z-index:1}
+.tariff-desc{font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:1.5rem;position:relative;z-index:1}
+.tariff-price{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;color:var(--gold);line-height:1;margin-bottom:.25rem;position:relative;z-index:1}
+.tariff-price-note{font-size:.72rem;color:var(--muted);margin-bottom:1.5rem;position:relative;z-index:1}
+.tariff-includes{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.75rem;position:relative;z-index:1}
+.tariff-includes li{font-size:.82rem;color:var(--text2);display:flex;gap:.5rem;line-height:1.5}
+.tariff-includes li::before{content:'—';color:var(--gold);flex-shrink:0}
+.tariff-btn{position:relative;z-index:1;display:block;text-align:center}
+
+/* MODULES */
+.modules-section{padding:5rem 2.5rem}
+.modules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gold-border);margin-top:2.5rem}
+.mod-card{background:var(--bg3);padding:1.75rem;transition:background .2s}
+.mod-card:hover{background:var(--bg4)}
+.mod-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.4rem}
+.mod-title{font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:.35rem;letter-spacing:.02em}
 
 /* TESTIMONIALS */
-.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.testi-card{background:var(--bg3);border:1px solid var(--gold-border);padding:2rem}
-.testi-text{font-size:.93rem;color:var(--text2);line-height:1.75;font-style:italic;font-weight:300;margin-bottom:1rem}
-.testi-author{font-size:.82rem;color:var(--gold);font-weight:500}
-.testi-result{font-size:.78rem;color:var(--muted);margin-top:.3rem}
+.testi-section{padding:5rem 2.5rem;background:var(--bg2)}
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
+.testi-card{background:var(--bg3);border:1px solid var(--gold-border);border-left:3px solid var(--gold);padding:2rem}
+.testi-text{font-size:.9rem;color:var(--text2);line-height:1.75;font-style:italic;margin-bottom:1.25rem;font-weight:300}
+.testi-author{font-size:.78rem;font-weight:600;color:var(--gold);margin-bottom:.2rem}
+.testi-result{font-size:.75rem;color:var(--muted)}
 
-.cta{background:var(--bg2);border-top:1px solid var(--gold-border2);border-bottom:1px solid var(--gold-border2);padding:6rem 2.5rem;text-align:center}
+/* DIRS */
+.dirs{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
+.dir{background:var(--bg3);border:1px solid var(--gold-border);padding:2.5rem;cursor:pointer;transition:all .25s;position:relative;overflow:hidden;isolation:isolate}
+.dir::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(90deg,rgba(15,18,32,.97) 0%,rgba(15,18,32,.86) 46%,rgba(15,18,32,.48) 100%),var(--dir-image);background-position:center;background-size:cover;opacity:.52;transform:scale(1.06) translate3d(-1.2%,0,0);animation:directionBackground 14s ease-in-out infinite alternate;transition:opacity .35s ease;will-change:transform}
+.dir:hover::before{opacity:.68}
+.dir:hover{border-color:var(--gold-border2)}
+.dir:nth-child(1){--dir-image:url('direction-games.jpg')}
+.dir:nth-child(2){--dir-image:url('direction-sales.jpg')}
+.dir:nth-child(3){--dir-image:url('direction-consulting.jpg')}
+.dir:nth-child(4){--dir-image:url('direction-learning.jpg')}
+.dir:nth-child(2)::before,.dir:nth-child(4)::before{animation-delay:-7s}
+.dir-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.4rem}
+.dir-en{font-size:.65rem;font-weight:500;letter-spacing:.14em;color:var(--teal);margin-bottom:.65rem}
+.dir-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--white);margin-bottom:.5rem}
+.dir-desc{font-size:.83rem;color:var(--text2);line-height:1.6;margin-bottom:1.1rem;font-weight:300}
+.dir-link{font-size:.75rem;color:var(--gold);text-decoration:none;letter-spacing:.06em}
+
+/* CTA */
+.cta{background:var(--bg3);border-top:1px solid var(--gold-border2);border-bottom:1px solid var(--gold-border2);padding:6rem 2.5rem;text-align:center}
 .cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--white);margin-bottom:.75rem}
 .cta h2 em{font-style:italic;color:var(--gold)}
 .cta p{font-size:1rem;color:var(--text2);max-width:460px;margin:0 auto 2.25rem;line-height:1.8;font-weight:300}
 .cta-btns{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap}
 
+/* FOOTER */
 footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-decoration:none}
-.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.footer-logo{display:flex;align-items:center;gap:.4rem;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-decoration:none}
+.footer-logo-img{height:22px;width:22px;object-fit:contain}
 .footer-links a{font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-decoration:none}
 .footer-links a:hover{color:var(--gold)}
 .footer-copy{font-size:.78rem;color:#a8b0c8;line-height:1.9;text-align:right}
-.footer-copy a{color:var(--gold);text-decoration:underline}
 
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-scale{opacity:0;transform:scale(.96);transition:opacity .55s ease,transform .55s ease}
+.reveal-scale.visible{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ADAPTIVE */
 @media(max-width:900px){
   .nav-links,.nav-btn{display:none}
   .burger{display:flex}
-  .free-banner,.course-hero{grid-template-columns:1fr}
-  .mods-full,.tariffs-grid,.testi-grid{grid-template-columns:1fr}
-  .tariff-block-head{grid-template-columns:1fr}
-  .tariff-photo{width:64px;height:64px}
-  .included-box{grid-template-columns:1fr}
-  .tariff-block-price{text-align:left}
-  .module-points{grid-template-columns:1fr}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .levels-grid,.tariff-grid,.modules-grid,.dirs{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .free-banner{grid-template-columns:1fr}
 }
-@media(max-width:640px){
-  .mods-full{grid-template-columns:1fr 1fr}
+@media(max-width:600px){
+  .modules-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -182,311 +220,279 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
       <li><a href="naim.html">Найм</a></li>
       <li><a href="cases.html">Кейсы</a></li>
     </ul>
-    <div class="burger" onclick="this.closest('nav').nextElementSibling.classList.toggle('open')"><span></span><span></span><span></span></div>
     <a href="https://t.me/hipo_game" target="_blank" class="nav-btn">Обсудить задачу</a>
+    <div class="burger" onclick="document.getElementById('mobMenu').classList.toggle('open')"><span></span><span></span><span></span></div>
   </div>
 </nav>
-<div class="mob-menu">
+
+<div class="mob-menu" id="mobMenu">
   <a href="index.html#about">Об авторе</a>
   <a href="korporaciya-zvezd.html">Игры</a>
-  <a href="obuchenie.html" class="active">Обучение</a>
+  <a href="obuchenie.html">Обучение</a>
   <a href="sales-force.html">Отдел продаж</a>
   <a href="consulting.html">Работа со мной</a>
   <a href="naim.html">Найм</a>
   <a href="cases.html">Кейсы</a>
-  <a href="https://t.me/hipo_game" target="_blank">Обсудить задачу</a>
+  <a href="https://t.me/hipo_game" target="_blank">Обсудить задачу →</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Обучение и развитие</div>
-    <h1>Курсы для тех,<br>кто хочет управлять <em>без хаоса</em></h1>
-    <p class="hero-sub">От бесплатного старта до глубокого погружения в систему управления людьми и командами. Авторская методология, проверенная на реальной практике.</p>
-    <div class="hero-btns">
-      <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold">Получить бесплатный курс</a>
-      <a href="#tariffs" class="btn-outline">Смотреть тарифы</a>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Обучение и развитие</div>
+      <h1>Курсы для тех,<br>кто хочет управлять <em>без хаоса</em></h1>
+      <p class="hero-sub">От бесплатного старта до глубокого погружения в систему управления людьми и командами. Авторская методология, проверенная на реальной практике.</p>
+      <div class="hero-btns">
+        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold">Начать бесплатно →</a>
+        <a href="#tariffs" class="btn-outline">Выбрать тариф</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-tag">Флагманский курс</div>
+      <div class="hero-card-title">«Мастер управления»</div>
+      <div class="hero-card-sub">Системная программа для руководителей — от фундамента до полного погружения.</div>
+      <ul class="feat-list">
+        <li class="feat"><span class="feat-dot"></span>9 модулей</li>
+        <li class="feat"><span class="feat-dot"></span>3 уровня глубины</li>
+        <li class="feat"><span class="feat-dot"></span>Авторская игра «Корпорация Звёзд»</li>
+        <li class="feat"><span class="feat-dot"></span>Чат поддержки весь период</li>
+        <li class="feat"><span class="feat-dot"></span>Практические инструменты</li>
+      </ul>
+      <div style="font-size:.78rem;color:var(--muted);padding-top:1rem;border-top:1px solid var(--gold-border)">от 36 000 ₽ · бесплатный старт в подарок</div>
     </div>
   </div>
 </section>
 
-<hr class="div">
+<hr class="divider">
 
-<!-- FREE COURSE -->
-<section style="background:var(--bg2)">
+<!-- FREE BANNER -->
+<section class="free-section">
   <div class="wrap">
-    <div class="free-banner">
-      <div class="free-banner-photo" data-slot="stress-free-course"><img src="stress-free-course.jpg" alt="Командная работа над задачами"></div>
+    <div class="free-banner reveal">
       <div>
-        <div class="free-tag">Бесплатно · Подарок</div>
-        <div class="free-title">Управление без стресса за 3 шага</div>
-        <p class="free-desc">Три практических шага, чтобы перестать гореть на работе и начать управлять легко. Мини-курс доступен прямо сейчас в нашем Telegram-боте — без оплаты и регистрации на сайте.</p>
+        <div class="free-tag">Бесплатно · Telegram-бот</div>
+        <div class="free-title">Бесплатный стартовый курс</div>
+        <p class="free-desc">«Как перестать гореть на работе и начать управлять легко» — мини-курс доступен прямо сейчас в нашем Telegram-боте. Без оплаты и регистрации на сайте.</p>
       </div>
       <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold" style="white-space:nowrap">Получить курс →</a>
     </div>
   </div>
 </section>
 
-<hr class="div">
+<hr class="divider">
 
-<!-- MAIN COURSE -->
-<section style="background:var(--bg)">
+<!-- LEVELS -->
+<section class="levels-section">
   <div class="wrap">
-    <div class="eyebrow-sec">Флагманский курс</div>
-    <h2 class="sec">«Мастер управления»</h2>
-    <p class="sec-sub">Системная программа для руководителей — от фундамента до полного погружения в управление командой.</p>
-
-    <div class="levels-box" style="margin-bottom:3rem">
-      <div class="levels-title">Работаем на трёх уровнях</div>
-      <div class="level"><div class="level-n">01</div><div class="level-text"><strong>Личность руководителя</strong><br>уверенность, эмоциональный интеллект, готовность к роли</div></div>
-      <div class="level"><div class="level-n">02</div><div class="level-text"><strong>Команда и процессы</strong><br>делегирование, KPI, обратная связь, мотивация</div></div>
-      <div class="level"><div class="level-n">03</div><div class="level-text"><strong>Бизнес-модель и масштабирование</strong><br>системное мышление и рост без хаоса</div></div>
-    </div>
-
-    <!-- TARIFF OSNOVA -->
-    <div class="tariff-block">
-      <div class="tariff-block-head">
-        <div class="tariff-photo" data-slot="tariff-osnova"><img src="tariff-osnova.jpg" alt="Надежда Коновалова, старт пути в управлении" style="object-position:center 25%"></div>
-        <div>
-          <div class="tariff-block-tag">Тариф</div>
-          <div class="tariff-block-name">Основа</div>
-          <p class="tariff-block-desc">Базовые знания об управлении — фундаментальные основы, от которых можно дальше развивать навыки и инструменты. Первые 3 модуля — стартовая точка в управлении.</p>
-        </div>
-        <div class="tariff-block-price">
-          <div class="tp-num">36 000 ₽</div>
-          <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline" style="font-size:.78rem;padding:.6rem 1.5rem;margin-top:.75rem">Выбрать тариф</a>
-        </div>
+    <div class="eyebrow-sec">Программа</div>
+    <h2 class="sec">Три <em>уровня</em> развития</h2>
+    <p class="sec-sub">Программа «Мастер управления» работает на трёх уровнях одновременно — это не просто теория, а трансформация подхода к управлению.</p>
+    <div class="levels-grid">
+      <div class="level-card reveal d1">
+        <div class="level-n">01</div>
+        <div class="level-title">Личность руководителя</div>
+        <div class="level-desc">Уверенность, эмоциональный интеллект, готовность к роли. Как перестать сомневаться и начать действовать как лидер.</div>
       </div>
-      <div class="included-box">
-        <div class="included-label">В этот тариф входит</div>
-        <div class="included-item">Авторская игра «Корпорация Звёзд»</div>
-        <div class="included-item">Чат поддержки на весь период обучения</div>
-        <div class="included-item">3 групповые встречи с разбором кейсов</div>
-        <div class="included-item">Участие в обучающих играх программы</div>
+      <div class="level-card reveal d2">
+        <div class="level-n">02</div>
+        <div class="level-title">Команда и процессы</div>
+        <div class="level-desc">Делегирование, KPI, обратная связь, мотивация. Инструменты которые работают без ежедневного ручного управления.</div>
       </div>
-      <div class="module-detail">
-        <div class="module-num">Модуль 1</div>
-        <div class="module-name">Основы управления персоналом</div>
-        <ul class="module-points">
-          <li>Что такое управление персоналом</li>
-          <li>Этапы формирования команды</li>
-          <li>Командная культура и ценности</li>
-          <li>Круги влияния и ответственности</li>
-          <li>Работа с конфликтами</li>
-          <li>Нейронаука и психология в управлении</li>
-        </ul>
+      <div class="level-card reveal d3">
+        <div class="level-n">03</div>
+        <div class="level-title">Бизнес-модель и масштабирование</div>
+        <div class="level-desc">Системное мышление и рост без хаоса. Как выстроить структуру которая работает без вас.</div>
       </div>
-      <div class="module-detail">
-        <div class="module-num">Модуль 2</div>
-        <div class="module-name">Роль руководителя и управление процессами</div>
-        <ul class="module-points">
-          <li>Роль руководителя</li>
-          <li>Цикл управления персоналом</li>
-          <li>Планирование</li>
-          <li>Организация процессов и ресурсов</li>
-          <li>Мотивация</li>
-          <li>Контроль</li>
-        </ul>
-      </div>
-      <div class="module-detail">
-        <div class="module-num">Модуль 3</div>
-        <div class="module-name">Ситуационное лидерство</div>
-        <ul class="module-points">
-          <li>Концепция ситуационного лидерства</li>
-          <li>Уровни развития сотрудников и стили руководства</li>
-          <li>Диагностика стиля</li>
-          <li>Применение в реальных кейсах</li>
-          <li>Закрепление через фильмы</li>
-          <li>Типология DISC</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- TARIFF MASTER -->
-    <div class="tariff-block featured">
-      <div class="tariff-block-head">
-        <div class="tariff-photo" data-slot="tariff-master"><img src="tariff-master.jpg" alt="Надежда Коновалова с буклетом игры «Корпорация Звёзд»"></div>
-        <div>
-          <div class="tariff-block-tag">Тариф</div>
-          <div class="tariff-block-name">Мастер</div>
-          <p class="tariff-block-desc">Углубление в знания и навыки. Если у вас уже есть база — начните сразу с тарифа «Мастер» и совершенствуйтесь. Включает модули 4–9.</p>
-        </div>
-        <div class="tariff-block-price">
-          <div class="tp-num">44 000 ₽</div>
-          <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.6rem 1.5rem;margin-top:.75rem">Выбрать тариф</a>
-        </div>
-      </div>
-      <div class="included-box">
-        <div class="included-label">В этот тариф входит</div>
-        <div class="included-item">Авторская игра «Корпорация Звёзд»</div>
-        <div class="included-item">Чат поддержки на весь период обучения</div>
-        <div class="included-item">3 групповые встречи с разбором кейсов</div>
-        <div class="included-item">Участие в обучающих играх программы</div>
-      </div>
-      <div class="module-detail">
-        <div class="module-num">Модуль 4</div>
-        <div class="module-name">Гибкое управление и адаптация к реальности</div>
-        <ul class="module-points">
-          <li>Управление в нестабильных условиях</li>
-          <li>Диагностика команды</li>
-          <li>Коррекция процессов</li>
-          <li>Быстрая смена курса без потерь</li>
-          <li>Работа с сопротивлением</li>
-          <li>Инструменты антикризисного управления</li>
-        </ul>
-      </div>
-      <div class="module-detail">
-        <div class="module-num">Модуль 5</div>
-        <div class="module-name">Найм и адаптация сотрудников</div>
-        <ul class="module-points">
-          <li>Подбор под задачи</li>
-          <li>Интервью по компетенциям</li>
-          <li>Адаптационный маршрут</li>
-          <li>Наставничество</li>
-          <li>Ошибки в найме и как их избежать</li>
-        </ul>
-      </div>
-      <div class="module-detail">
-        <div class="module-num">Модуль 6</div>
-        <div class="module-name">Мотивация и самомотивация</div>
-        <ul class="module-points">
-          <li>Внутренние и внешние стимулы</li>
-          <li>Типы мотивации сотрудников</li>
-          <li>Как не «перегорать» самому</li>
-          <li>Поддержание вовлечённости</li>
-          <li>Мотивационные ошибки</li>
-          <li>Система признания и смысла</li>
-        </ul>
-      </div>
-      <div class="module-detail">
-        <div class="module-num">Модуль 7</div>
-        <div class="module-name">Контроль, который не душит</div>
-        <ul class="module-points">
-          <li>Методы контроля</li>
-          <li>KPI, OKR, информационные панели</li>
-          <li>Как делегировать полномочия и при этом знать, что всё под контролем</li>
-          <li>Финансовый контроль</li>
-          <li>Инструменты визуализации</li>
-          <li>Ретроспективы</li>
-        </ul>
-      </div>
-      <div class="module-detail">
-        <div class="module-num">Модуль 8</div>
-        <div class="module-name">Коучинг-стиль управления</div>
-        <ul class="module-points">
-          <li>Коучинговый подход</li>
-          <li>Вопросы, которые развивают</li>
-          <li>GROW-модель</li>
-          <li>Доверие в команде</li>
-          <li>Возвращение ответственности сотрудникам</li>
-          <li>Коучинг под развитие</li>
-        </ul>
-      </div>
-      <div class="module-detail">
-        <div class="module-num">Модуль 9</div>
-        <div class="module-name">Работа с манипуляциями и стрессом</div>
-        <ul class="module-points">
-          <li>Как распознавать манипуляции</li>
-          <li>Эмоциональная устойчивость</li>
-          <li>Стресс-менеджмент</li>
-          <li>Конфликты и сложные переговоры</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- TARIFF EXPERT -->
-    <div class="tariff-block">
-      <div class="tariff-block-head">
-        <div class="tariff-photo" data-slot="tariff-expert"><img src="tariff-expert.jpg" alt="Живое общение на мероприятии"></div>
-        <div>
-          <div class="tariff-block-tag">Тариф</div>
-          <div class="tariff-block-name">Эксперт</div>
-          <p class="tariff-block-desc">Все блоки вместе — для тех, кто любит полное погружение в обучение. Все 9 модулей сразу: от фундамента «Основы» до глубины «Мастера».</p>
-        </div>
-        <div class="tariff-block-price">
-          <div class="tp-num">69 000 ₽</div>
-          <div style="font-size:.72rem;color:var(--muted);margin-bottom:.5rem">все 9 модулей</div>
-          <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline" style="font-size:.78rem;padding:.6rem 1.5rem">Выбрать тариф</a>
-        </div>
-      </div>
-      <div class="included-box">
-        <div class="included-label">В этот тариф входит</div>
-        <div class="included-item">Авторская игра «Корпорация Звёзд»</div>
-        <div class="included-item">Чат поддержки на весь период обучения</div>
-        <div class="included-item">3 групповые встречи с разбором кейсов</div>
-        <div class="included-item">Участие в обучающих играх программы</div>
-      </div>
-      <p style="font-size:.9rem;color:var(--text2);font-weight:300;line-height:1.7">Включает полную программу тарифов «Основа» и «Мастер» — все 9 модулей, персональная обратная связь от эксперта на каждом этапе.</p>
     </div>
   </div>
 </section>
 
-<hr class="div">
+<hr class="divider">
 
-<!-- TESTIMONIALS -->
-<section style="background:var(--bg2)">
+<!-- TARIFFS -->
+<section class="tariffs-section" id="tariffs">
   <div class="wrap">
-    <div class="eyebrow-sec">Отзывы участников</div>
-    <h2 class="sec">Что говорят после курса</h2>
-    <p class="sec-sub">Реальные сообщения от людей, прошедших программу «Мастер управления».</p>
+    <div class="eyebrow-sec">Тарифы</div>
+    <h2 class="sec">Выберите свой <em>формат</em></h2>
+    <p class="sec-sub">Три уровня погружения — начните с того, где вы сейчас.</p>
+    <div class="tariff-grid">
+      <div class="tariff reveal d1">
+        <div class="tariff-tag">ТАРИФ · НАЧАЛО</div>
+        <div class="tariff-name">Основа</div>
+        <div class="tariff-desc">Фундаментальные основы управления. Первые 3 модуля — стартовая точка для тех, кто только входит в роль руководителя.</div>
+        <div class="tariff-price">36 000 ₽</div>
+        <div class="tariff-price-note">3 модуля · старт прямо сейчас</div>
+        <ul class="tariff-includes">
+          <li>Авторская игра «Корпорация Звёзд»</li>
+          <li>Чат поддержки на весь период</li>
+          <li>Модули 1–3: основы управления</li>
+          <li>Практические инструменты</li>
+        </ul>
+        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline tariff-btn">Выбрать тариф</a>
+      </div>
+      <div class="tariff featured reveal d2">
+        <div class="tariff-tag">ТАРИФ · ГЛУБИНА</div>
+        <div class="tariff-name">Мастер</div>
+        <div class="tariff-desc">Углубление в знания и навыки. Если у вас уже есть база — начните сразу с тарифа Мастер. 6 модулей.</div>
+        <div class="tariff-price">44 000 ₽</div>
+        <div class="tariff-price-note">6 модулей · полное погружение</div>
+        <ul class="tariff-includes">
+          <li>Авторская игра «Корпорация Звёзд»</li>
+          <li>Чат поддержки на весь период</li>
+          <li>Модули 1–6: от основ до лидерства</li>
+          <li>Разбор ситуаций с Надеждой</li>
+        </ul>
+        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold tariff-btn">Выбрать тариф</a>
+      </div>
+      <div class="tariff reveal d3">
+        <div class="tariff-tag">ТАРИФ · МАКСИМУМ</div>
+        <div class="tariff-name">Эксперт</div>
+        <div class="tariff-desc">Все 9 модулей сразу — для тех, кто хочет полное погружение. От фундамента «Основы» до глубины «Мастера».</div>
+        <div class="tariff-price">69 000 ₽</div>
+        <div class="tariff-price-note">все 9 модулей · максимальный результат</div>
+        <ul class="tariff-includes">
+          <li>Авторская игра «Корпорация Звёзд»</li>
+          <li>Чат поддержки на весь период</li>
+          <li>Все 9 модулей программы</li>
+          <li>Персональная сессия с Надеждой</li>
+        </ul>
+        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-outline tariff-btn">Выбрать тариф</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- MODULES -->
+<section class="modules-section">
+  <div class="wrap">
+    <div class="eyebrow-sec">Содержание</div>
+    <h2 class="sec">9 модулей <em>программы</em></h2>
+    <p class="sec-sub">Каждый модуль — это практический инструмент, который можно применить в работе сразу после занятия.</p>
+    <div class="modules-grid">
+      <div class="mod-card reveal d1"><div class="mod-n">01</div><div class="mod-title">Основы управления персоналом</div></div>
+      <div class="mod-card reveal d2"><div class="mod-n">02</div><div class="mod-title">Роль руководителя и управление процессами</div></div>
+      <div class="mod-card reveal d3"><div class="mod-n">03</div><div class="mod-title">Ситуационное лидерство</div></div>
+      <div class="mod-card reveal d1"><div class="mod-n">04</div><div class="mod-title">Гибкое управление и адаптация к реальности</div></div>
+      <div class="mod-card reveal d2"><div class="mod-n">05</div><div class="mod-title">Найм и адаптация сотрудников</div></div>
+      <div class="mod-card reveal d3"><div class="mod-n">06</div><div class="mod-title">Мотивация и самомотивация</div></div>
+      <div class="mod-card reveal d1"><div class="mod-n">07</div><div class="mod-title">Контроль, который не душит</div></div>
+      <div class="mod-card reveal d2"><div class="mod-n">08</div><div class="mod-title">Коучинг-стиль управления</div></div>
+      <div class="mod-card reveal d3"><div class="mod-n">09</div><div class="mod-title">Работа с манипуляциями и стрессом</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ОТЗЫВЫ -->
+<section class="testi-section">
+  <div class="wrap">
+    <div class="eyebrow-sec">Отзывы</div>
+    <h2 class="sec">Что говорят <em>после курса</em></h2>
     <div class="testi-grid">
-      <div class="testi-card">
-        <p class="testi-text">«Хотела с тобой поделиться, я как пошла на обучение всё вокруг стало меняться в компании. А благодаря курсу я влетела в это подготовленная, и соответственно меньше стресса, тревоги, страхов за невыполнение KPI»</p>
+      <div class="testi-card reveal d1">
+        <div class="testi-text">«Хотела поделиться — я как пошла на обучение, всё вокруг стало меняться в компании. Я чётко отлавливаю ситуации, которые мы разбирали. Я тебе безумно благодарна за курс и игру — настолько это всё чётко и применимо на практике.»</div>
         <div class="testi-author">Ксения Каюмова</div>
         <div class="testi-result">Руководитель в банке → лучший руководитель по NPS</div>
       </div>
-      <div class="testi-card">
-        <p class="testi-text">«Тебе спасибо, Надя, мне бы без твоего обучения было тяжко. В нём и понимание процессов, как все должно проходить, и сама мотивация реально так подкинула, что хочется нестись на всех крыльях роста и счастья»</p>
-        <div class="testi-author">Участница программы «Мастер управления»</div>
+      <div class="testi-card reveal d2">
+        <div class="testi-text">«Тебе спасибо, Надя, мне бы без твоего обучения было тяжко. В нём и понимание процессов, как всё должно проходить, и само-мотивация — реально так подкинула, что хочется нестись на всех крыльях роста и счастья.»</div>
+        <div class="testi-author">Ксения Каюмова</div>
         <div class="testi-result">Изменение подхода к задачам и команде</div>
       </div>
-      <div class="testi-card">
-        <p class="testi-text">«Надя, и тебе спасибо! Твои вопросы и знания, которые ты мне передала — это новый уровень, который способствует лучшему качеству моей жизни и совершенно новый виток в моей работе!»</p>
+      <div class="testi-card reveal d1">
+        <div class="testi-text">«Ура, я досмотрела — и даже больше скажу, даже не чувствую перегруза! Информация легла очень мягко. Надя, благодарю, что была на связи и помогла сделать это.»</div>
         <div class="testi-author">Дарья Вебер</div>
         <div class="testi-result">От участницы игры — к роли кризисного управляющего</div>
       </div>
-      <div class="testi-card">
-        <p class="testi-text">«О, неожиданно было увидеть завершающий модуль! Супер, спасибо! Я зачем парилась вчера как и куда я буду встраивать инструменты курса. А ты даже план внедрения для нас подготовила»</p>
-        <div class="testi-author">Участница программы</div>
+      <div class="testi-card reveal d2">
+        <div class="testi-text">«О, неожиданно было увидеть завершающий модуль! Надя, супер, спасибо! Я зачем парилась вчера — как и куда я буду встраивать инструменты курса? А ты даже план внедрения для нас подготовила.»</div>
+        <div class="testi-author">Дарья Вебер</div>
         <div class="testi-result">Завершение курса с готовым планом внедрения</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<div class="cta">
-  <div class="wrap" style="padding:0">
-    <h2>Готовы начать <em>с малого?</em></h2>
-    <p>Заберите бесплатный мини-курс — а потом решите, нужен ли вам полный «Мастер управления».</p>
-    <div class="cta-btns">
-      <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold">Получить бесплатный курс</a>
-      <a href="https://t.me/hipo_game" target="_blank" class="btn-outline">Спросить о программе</a>
+<hr class="divider">
+
+<!-- ДРУГИЕ НАПРАВЛЕНИЯ -->
+<section style="padding:5rem 2.5rem">
+  <div class="wrap">
+    <div class="eyebrow-sec">Другие направления</div>
+    <h2 class="sec">Системный рост <em>бизнеса</em></h2>
+    <div class="dirs">
+      <div class="dir reveal d1" onclick="location.href='korporaciya-zvezd.html'">
+        <div class="dir-n">01</div><div class="dir-en">GAMES</div>
+        <div class="dir-title">Бизнес-игры</div>
+        <div class="dir-desc">«Корпорация Звёзд» — управленческая симуляция. Демо бесплатно.</div>
+        <a class="dir-link" href="korporaciya-zvezd.html">Подробнее →</a>
+      </div>
+      <div class="dir reveal d2" onclick="location.href='sales-force.html'">
+        <div class="dir-n">02</div><div class="dir-en">SALES FORCE</div>
+        <div class="dir-title">Отдел продаж</div>
+        <div class="dir-desc">Построение системного отдела продаж под ключ. Запуск за 30 дней.</div>
+        <a class="dir-link" href="sales-force.html">Подробнее →</a>
+      </div>
+      <div class="dir reveal d3" onclick="location.href='consulting.html'">
+        <div class="dir-n">03</div><div class="dir-en">CONSULTING</div>
+        <div class="dir-title">Работа со мной</div>
+        <div class="dir-desc">Бизнес-консалтинг для фаундеров и топ-менеджеров.</div>
+        <a class="dir-link" href="consulting.html">Подробнее →</a>
+      </div>
+      <div class="dir reveal d4" onclick="location.href='naim.html'">
+        <div class="dir-n">04</div><div class="dir-en">HIRING</div>
+        <div class="dir-title">Найм</div>
+        <div class="dir-desc">Профильный подбор менеджеров, тимлидов и руководителей.</div>
+        <a class="dir-link" href="naim.html">Подробнее →</a>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<hr class="divider">
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2>Готовы <em>начать?</em></h2>
+    <p>Начните с бесплатного мини-курса прямо сейчас — или напишите, чтобы подобрать нужный тариф.</p>
+    <div class="cta-btns">
+      <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold">Начать бесплатно →</a>
+      <a href="https://t.me/hipo_game" target="_blank" class="btn-outline">Написать в Telegram</a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="footer-inner">
-    <a href="index.html" class="footer-logo">Hipo Academy</a>
-    <div class="footer-links">
-      <a href="index.html">На главную</a>
-      <a href="naim.html">Найм</a>
-  <a href="cases.html">Кейсы</a>
-      <a href="korporaciya-zvezd.html">Игра «Корпорация Звёзд»</a>
-      <a href="https://t.me/Hipo_academy" target="_blank">Telegram-канал</a>
-    </div>
-    <div class="footer-copy">
-      <div style="margin-bottom:.5rem">© 2025 Hipo Academy · hipoacademy.ru</div>
-      <div style="opacity:.85">Коновалова Надежда Алексеевна · Самозанятый (НПД) · ИНН 027708088590</div>
-      <div style="margin-top:.4rem"><a href="privacy.html">Политика конфиденциальности</a></div>
-    </div>
+    <a href="index.html" class="footer-logo"><img src="logo-icon.png" alt="" class="footer-logo-img">Hipo Academy</a>
+    <div class="footer-links"><a href="privacy.html">Политика конфиденциальности</a></div>
+  </div>
+  <div class="wrap" style="margin-top:1.5rem;border-top:1px solid var(--gold-border);padding-top:1.25rem;text-align:center">
+    <div class="footer-copy">© 2025 Hipo Academy · hipoacademy.ru</div>
+    <div style="opacity:.85;font-size:.78rem;color:#a8b0c8">Коновалова Надежда Викторовна · Самозанятый (НПД) · ИНН 027708088590</div>
+    <div style="margin-top:.5rem"><a href="privacy.html" style="font-size:.72rem;color:var(--gold);text-decoration:underline">Политика конфиденциальности</a></div>
   </div>
 </footer>
 
 <script>
-function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open')}
-function closeMob(){document.getElementById('mobMenu').classList.remove('open')}
+(function(){
+  document.querySelectorAll('section').forEach(function(s){s.classList.add('reveal')});
+  document.querySelectorAll('.tariff,.mod-card,.testi-card,.dir,.level-card').forEach(function(el){
+    // уже имеют классы reveal через html
+  });
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+    });
+  },{threshold:0.08});
+  document.querySelectorAll('.reveal,.reveal-scale').forEach(function(el){io.observe(el);});
+})();
 </script>
+
 </body>
 </html>
