@@ -71,7 +71,7 @@ hr.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,v
 .hero{min-height:80vh;display:flex;align-items:center;padding:8rem 2.5rem 5rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(90deg,rgba(10,12,20,.97) 0%,rgba(10,12,20,.85) 55%,rgba(10,12,20,.5) 100%),url('direction-sales.jpg');background-position:center;background-size:cover;animation:heroBackground 18s ease-in-out infinite alternate;will-change:transform}
 .hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(201,162,87,.05),transparent 45%,rgba(90,180,174,.04));pointer-events:none}
-.hero-inner{max-width:1100px;margin:0 auto;padding:0 2.5rem;width:100%;display:grid;grid-template-columns:1fr 320px;gap:3.5rem;align-items:center}
+.hero-inner{max-width:1100px;margin:0 auto;padding:0 2.5rem;width:100%;display:grid;grid-template-columns:1fr 400px;gap:2.5rem;align-items:start}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5.5vw,4.5rem);font-weight:700;line-height:1.05;color:var(--white);margin-bottom:1.25rem}
 .hero h1 em{font-style:italic;color:var(--gold)}
 .hero-sub{font-size:1.05rem;color:var(--text2);max-width:520px;line-height:1.85;font-weight:300;margin-bottom:2rem}
@@ -189,6 +189,11 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
 .footer-links a{font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-decoration:none}
 .footer-links a:hover{color:var(--gold)}
 
+
+.hero-pos-mob{display:none;margin-top:1.5rem;padding:1rem 1.25rem;background:rgba(201,162,87,.07);border-left:2px solid var(--gold-border2)}
+.hero-pos-mob-title{font-size:.82rem;color:var(--text2);line-height:1.7;font-weight:300}
+.hero-pos-mob-title+.hero-pos-mob-title{margin-top:.35rem}
+@media(max-width:900px){.hero-pos-mob{display:block}}
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -247,6 +252,10 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
       <div class="hero-btns">
         <a href="https://t.me/hipo_game" target="_blank" class="btn-gold">Обсудить вакансию</a>
         <a href="#gift" class="btn-outline">Шаблон профиля должности ↓</a>
+      </div>
+      <div class="hero-pos-mob">
+        <div class="hero-pos-mob-title">Линейные: менеджеры продаж · менеджеры по работе с клиентами</div>
+        <div class="hero-pos-mob-title">Ключевые: тимлиды · руководители отделов · директора направлений</div>
       </div>
     </div>
     <div class="hero-card">
