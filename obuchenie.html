@@ -66,7 +66,7 @@ h2.sec em{font-style:italic;color:var(--gold)}
 hr.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--gold-border2),transparent)}
 
 /* HERO */
-.hero{min-height:80vh;display:flex;align-items:center;padding:8rem 2.5rem 5rem;position:relative;overflow:hidden}
+.hero{min-height:80vh;display:flex;align-items:center;padding:8rem 2.5rem 4rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:-8%;z-index:-2;background-image:linear-gradient(90deg,rgba(10,12,20,.97) 0%,rgba(10,12,20,.85) 55%,rgba(10,12,20,.55) 100%),url('direction-learning.jpg');background-position:center;background-size:cover;animation:heroBackground 18s ease-in-out infinite alternate;will-change:transform}
 .hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(201,162,87,.05),transparent 45%,rgba(90,180,174,.04));pointer-events:none}
 @keyframes heroBackground{0%{transform:scale(1.06) translate3d(-1.2%,0,0)}100%{transform:scale(1.13) translate3d(1.8%,-1.2%,0)}}
@@ -199,10 +199,21 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   .hero-card{display:none}
   .levels-grid,.tariff-grid,.modules-grid,.dirs{grid-template-columns:1fr}
   .testi-grid{grid-template-columns:1fr}
-  .free-banner{grid-template-columns:1fr}
+  .free-banner{grid-template-columns:1fr;gap:1.5rem;padding:1.5rem 1.25rem}
+  .free-banner a.btn-gold{width:100%;text-align:center;box-sizing:border-box;display:block}
+  .tariff{padding:1.5rem}
+  .levels-grid{gap:1px}
+  .dirs{gap:1px}
 }
-@media(max-width:600px){
-  .modules-grid{grid-template-columns:1fr}
+@media(max-width:640px){
+  section{padding-left:1.25rem!important;padding-right:1.25rem!important}
+  .wrap{padding-left:1.25rem;padding-right:1.25rem}
+  .modules-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .hero h1{font-size:2.4rem}
+  .sec{font-size:1.75rem}
+  .tariff-grid{gap:.75rem}
+  .dirs .dir{padding:1.5rem}
 }
 </style>
 </head>

@@ -159,7 +159,7 @@ ym(106926169,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
   --teal:#5ab4ae;
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(10,12,20,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-border)}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 2.5rem}
@@ -404,6 +404,8 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   .dirs,.formats,.learn-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
   .adv-grid{grid-template-columns:1fr}
+  .requests-grid{grid-template-columns:1fr}
+  .cred-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:640px){
   .nav-links,.nav-btn{display:none}
@@ -411,6 +413,12 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   .steps{grid-template-columns:1fr}
   .game-feats,.mods{grid-template-columns:1fr}
   .tariffs{flex-direction:column}
+  .cred-grid{grid-template-columns:1fr}
+  section{padding-left:1.25rem!important;padding-right:1.25rem!important}
+  .wrap{padding-left:1.25rem;padding-right:1.25rem}
+  .hero-wrap{padding-left:1.25rem;padding-right:1.25rem}
+  .mission-strip{padding:2rem 1.25rem}
+  .about-photo{max-width:280px;margin:0 auto}
 }
 </style>
 </head>
@@ -658,7 +666,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
         <div class="learn-badge">Бесплатно · Подарок</div>
         <h3 class="learn-title">Управление без стресса за 3 шага</h3>
         <p class="learn-desc">Три практических шага, чтобы перестать гореть на работе и начать управлять легко. Доступен в Telegram-боте прямо сейчас.</p>
-        <a href="https://hipoacademy.ru/master_management" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.7rem 1.75rem">Получить бесплатно</a>
+        <a href="https://t.me/hipo_upravlenie_bot" target="_blank" class="btn-gold" style="font-size:.78rem;padding:.7rem 1.75rem">Получить бесплатно</a>
       </div>
       <div class="learn-card">
         <div class="learn-photo"><img src="master-management-course.jpg" alt="Надежда Коновалова выступает с темой про переговоры и конфликты"></div>
@@ -789,7 +797,7 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
     <div class="footer-links">
       <a href="privacy.html">Политика конфиденциальности</a>
       <a href="korporaciya-zvezd.html">Игра «Корпорация Звёзд»</a>
-      <a href="https://hipoacademy.ru/master_management" target="_blank">Курс «Мастер управления»</a>
+      <a href="https://t.me/hipo_upravlenie_bot" target="_blank">Курс «Мастер управления»</a>
       <a href="https://t.me/Hipo_academy" target="_blank">Telegram-канал</a>
     </div>
     <div class="footer-copy">
