@@ -136,7 +136,18 @@ hr.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,v
 .circle-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold-light);line-height:1;width:5.5rem;height:5.5rem;display:flex;align-items:center;justify-content:center;background:rgba(10,12,20,.82);border:1px solid rgba(221,185,106,.65);border-radius:50%;box-shadow:0 0 0 6px rgba(201,162,87,.07),0 8px 28px rgba(0,0,0,.35);text-shadow:0 1px 12px rgba(201,162,87,.3);transition:box-shadow .3s,border-color .3s}
 .circle-stat:hover .circle-n{border-color:rgba(221,185,106,.9);box-shadow:0 0 0 8px rgba(201,162,87,.12),0 12px 32px rgba(0,0,0,.4)}
 .circle-l{font-size:.75rem;color:var(--muted);letter-spacing:.06em;line-height:1.4;font-weight:300;max-width:90px}
-@media(max-width:900px){.circles-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){
+  .circles-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-wrap{grid-template-columns:1fr!important}
+  .hero-card{display:none}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .skills-intro{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .formats-grid{grid-template-columns:1fr}
+  .dirs{grid-template-columns:1fr}
+  .nav-links,.nav-btn{display:none}
+  .burger{display:flex}
+}
 @media(max-width:500px){.circles-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* SKILLS */
@@ -236,10 +247,16 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   .formats-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:600px){
+@media(max-width:640px){
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .process-steps{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:1fr}
+  .circles-grid{grid-template-columns:repeat(2,1fr)}
+  section{padding-left:1.25rem!important;padding-right:1.25rem!important}
+  .wrap{padding-left:1.25rem;padding-right:1.25rem}
+  .hero-wrap{padding-left:1.25rem;padding-right:1.25rem}
+  .skills-intro{gap:2rem}
+  .fmt-cols{grid-template-columns:1fr}
 }
 </style>
 </head>
