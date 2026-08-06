@@ -204,12 +204,27 @@ footer{padding:2rem 2.5rem;border-top:1px solid var(--gold-border)}
   .burger{display:flex}
   .hero-inner{grid-template-columns:1fr}
   .hero-card{display:none}
+  .hero-pos-mob{display:block}
   .diff-grid{grid-template-columns:1fr}
   .steps-grid{grid-template-columns:1fr 1fr}
   .price-grid{grid-template-columns:1fr}
   .dirs{grid-template-columns:1fr}
+  .gift-strip{flex-direction:column;gap:1.25rem}
+  .gift-btns{width:100%}
+  .gift-btns a{width:100%;text-align:center;box-sizing:border-box;display:block}
 }
-@media(max-width:600px){.steps-grid{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .steps-grid{grid-template-columns:1fr}
+  section{padding-left:1.25rem!important;padding-right:1.25rem!important}
+  .wrap{padding-left:1.25rem;padding-right:1.25rem}
+  .hero-inner{padding-left:1.25rem;padding-right:1.25rem}
+  .hero h1{font-size:2.4rem}
+  .sec{font-size:1.75rem}
+  .diff-item{padding:1.5rem}
+  .price-card{padding:1.5rem}
+  .gift-strip{padding:1.5rem 1.25rem}
+  .dirs .dir{padding:1.5rem}
+}
 </style>
 </head>
 <body>
